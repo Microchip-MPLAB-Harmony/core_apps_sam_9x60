@@ -1,6 +1,6 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# USART driver asynchronous - USART multi instance
+# USART driver synchronous - USART multi instance
 
 This example echoes the received characters over the two consoles using the USART driver in synchronous mode.
 
