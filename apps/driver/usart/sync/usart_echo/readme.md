@@ -1,12 +1,12 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# USART driver asynchronous - USART echo
+# USART driver synchronous - USART echo
 
 This example echoes the received characters over the console using the USART driver in synchronous mode.
 
 ## Description
 
-This example uses the USART driver in asynchronous mode in RTOS environment to communicate over the console. It receives and echo's back the characters entered by the user.
+This example uses the USART driver in synchronous mode in RTOS environment to communicate over the console. It receives and echo's back the characters entered by the user.
 
 ## Downloading and building the application
 
@@ -65,7 +65,7 @@ The following table shows the target hardware for the application projects.
 6. Reset the board to run the application
 7. Type a character and observe the output on the console as shown below:
 
-    ![output_async_usart_echo](images/output_async_usart_echo.png)
+    ![output_async_usart_echo](images/output_sync_usart_echo.png)
 
 8. LED toggles each time the character is echoed
 
