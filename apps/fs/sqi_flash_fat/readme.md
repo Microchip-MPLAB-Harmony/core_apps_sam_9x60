@@ -1,15 +1,15 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# FAT filesystem using MX25L Media
+# FAT filesystem using SST26 Media
 
-This application shows an example of using the MPLAB Harmony File System to access SQI based MX25L flash media.
+This application shows an example of using the MPLAB Harmony File System to access SQI based SST26 flash media.
 
 ## Description
 
 ### File System Operations on the On-Board SST26 Flash Memory
 
 - Performs a SYS_FS_FormatDisk
-- Opens a **newfile.txt** on the MX25L flash
+- Opens a **newfile.txt** on the SST26 flash
 - Write and reads back 4KB of data on **newfile.txt**
 - Verifies the Data Read back
 
