@@ -93,5 +93,5 @@ Refer to the following table for switch and LED name:
 
 | Board | Switch Name | LED Name |
 | ----- | ----------- | -------- |
-|  [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)  | SW1 |  RGB_LED(Green) |
+|  [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)  | SW1 |  RGB_LED(Blue) |
 ||||
