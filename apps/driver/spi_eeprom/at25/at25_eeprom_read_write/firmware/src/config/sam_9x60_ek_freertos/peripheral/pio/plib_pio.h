@@ -66,27 +66,27 @@
 #define HOLD_Set()               (PIOB_REGS->PIO_SODR = (1<<13))
 #define HOLD_Clear()             (PIOB_REGS->PIO_CODR = (1<<13))
 #define HOLD_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<13))
-#define HOLD_Get()               ((PIOB_REGS->PIO_PDSR >> 13) & 0x1)
 #define HOLD_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<13))
 #define HOLD_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<13))
+#define HOLD_Get()               ((PIOB_REGS->PIO_PDSR >> 13) & 0x1)
 #define HOLD_PIN                  PIO_PIN_PB13
 
 /*** Macros for WP pin ***/
 #define WP_Set()               (PIOB_REGS->PIO_SODR = (1<<14))
 #define WP_Clear()             (PIOB_REGS->PIO_CODR = (1<<14))
 #define WP_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<14))
-#define WP_Get()               ((PIOB_REGS->PIO_PDSR >> 14) & 0x1)
 #define WP_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<14))
 #define WP_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<14))
+#define WP_Get()               ((PIOB_REGS->PIO_PDSR >> 14) & 0x1)
 #define WP_PIN                  PIO_PIN_PB14
 
 /*** Macros for CS pin ***/
 #define CS_Set()               (PIOA_REGS->PIO_SODR = (1<<14))
 #define CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<14))
 #define CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<14))
-#define CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14) & 0x1)
 #define CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<14))
 #define CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<14))
+#define CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14) & 0x1)
 #define CS_PIN                  PIO_PIN_PA14
 
 
