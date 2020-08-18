@@ -42,10 +42,10 @@ The following applications are provided to demonstrate the typical or interestin
 | [SPI EEPROM AT25 driver - EEPROM Read Write](apps/driver/spi_eeprom/at25/at25_eeprom_read_write/readme.md) | This example application shows how to use the AT25 driver to perform read and write operations on AT25 series of EEPROM |
 | [USART driver asynchronous - USART echo](apps/driver/usart/async/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in asynchronous mode |
 | [USART driver asynchronous - USART multi instance](apps/driver/usart/async/usart_multi_instance/readme.md) | This example echoes the received characters over the two consoles using the USART driver in asynchronous mode |
-| [USART driver asynchronous - USART echo](apps/driver/usart/sync/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in synchronous mode |
-| [USART driver asynchronous - USART multi instance](apps/driver/usart/sync/usart_multi_instance/readme.md) | This example echoes the received characters over the two consoles using the USART driver in synchronous mode |
+| [USART driver synchronous - USART echo](apps/driver/usart/sync/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in synchronous mode |
+| [USART driver synchronous - USART multi instance](apps/driver/usart/sync/usart_multi_instance/readme.md) | This example echoes the received characters over the two consoles using the USART driver in synchronous mode |
 | [FAT filesystem using SDMMC Media](apps/fs/sdmmc_fat/readme.md) | This application shows an example of using the MPLAB Harmony File System to access and modify the contents of a SD card using the SDMMC driver |
-| [FAT filesystem using MX25L Media](apps/fs/sqi_flash_fat/readme.md) | This application shows an example of using the MPLAB Harmony File System to access SQI based MX25L flash media |
+| [FAT filesystem using SST26 Media](apps/fs/sqi_flash_fat/readme.md) | This application shows an example of using the MPLAB Harmony File System to access SQI based SST26 flash media |
 | [FreeRTOS basic](apps/rtos/freertos/basic_freertos/readme.md) | This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status |
 | [FreeRTOS Task Notification](apps/rtos/freertos/task_notification_freertos/readme.md) | This example application is to illustrate the FreeRTOS Task Notification feature which is used as a light weight binary semaphore |
 | [Console Debug System Service using UART](apps/system/console_debug/sys_console_debug_uart_read_write/readme.md) | This example application demonstrates the UART based console and debug system service |
