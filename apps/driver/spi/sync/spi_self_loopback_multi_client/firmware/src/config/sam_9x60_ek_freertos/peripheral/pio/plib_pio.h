@@ -66,18 +66,18 @@
 #define APP_CLIENT1_CS_Set()               (PIOA_REGS->PIO_SODR = (1<<14))
 #define APP_CLIENT1_CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<14))
 #define APP_CLIENT1_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<14))
-#define APP_CLIENT1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14) & 0x1)
 #define APP_CLIENT1_CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<14))
 #define APP_CLIENT1_CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<14))
+#define APP_CLIENT1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14) & 0x1)
 #define APP_CLIENT1_CS_PIN                  PIO_PIN_PA14
 
 /*** Macros for APP_CLIENT2_CS pin ***/
 #define APP_CLIENT2_CS_Set()               (PIOA_REGS->PIO_SODR = (1<<8))
 #define APP_CLIENT2_CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<8))
 #define APP_CLIENT2_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<8))
-#define APP_CLIENT2_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8) & 0x1)
 #define APP_CLIENT2_CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<8))
 #define APP_CLIENT2_CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<8))
+#define APP_CLIENT2_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8) & 0x1)
 #define APP_CLIENT2_CS_PIN                  PIO_PIN_PA8
 
 
