@@ -66,54 +66,54 @@
 #define APP_EEPROM1_HOLD_Set()               (PIOB_REGS->PIO_SODR = (1<<13))
 #define APP_EEPROM1_HOLD_Clear()             (PIOB_REGS->PIO_CODR = (1<<13))
 #define APP_EEPROM1_HOLD_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<13))
-#define APP_EEPROM1_HOLD_Get()               ((PIOB_REGS->PIO_PDSR >> 13) & 0x1)
 #define APP_EEPROM1_HOLD_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<13))
 #define APP_EEPROM1_HOLD_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<13))
+#define APP_EEPROM1_HOLD_Get()               ((PIOB_REGS->PIO_PDSR >> 13) & 0x1)
 #define APP_EEPROM1_HOLD_PIN                  PIO_PIN_PB13
 
 /*** Macros for APP_EEPROM1_WP pin ***/
 #define APP_EEPROM1_WP_Set()               (PIOB_REGS->PIO_SODR = (1<<14))
 #define APP_EEPROM1_WP_Clear()             (PIOB_REGS->PIO_CODR = (1<<14))
 #define APP_EEPROM1_WP_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<14))
-#define APP_EEPROM1_WP_Get()               ((PIOB_REGS->PIO_PDSR >> 14) & 0x1)
 #define APP_EEPROM1_WP_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<14))
 #define APP_EEPROM1_WP_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<14))
+#define APP_EEPROM1_WP_Get()               ((PIOB_REGS->PIO_PDSR >> 14) & 0x1)
 #define APP_EEPROM1_WP_PIN                  PIO_PIN_PB14
 
 /*** Macros for APP_EEPROM1_CS pin ***/
 #define APP_EEPROM1_CS_Set()               (PIOA_REGS->PIO_SODR = (1<<14))
 #define APP_EEPROM1_CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<14))
 #define APP_EEPROM1_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<14))
-#define APP_EEPROM1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14) & 0x1)
 #define APP_EEPROM1_CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<14))
 #define APP_EEPROM1_CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<14))
+#define APP_EEPROM1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14) & 0x1)
 #define APP_EEPROM1_CS_PIN                  PIO_PIN_PA14
 
 /*** Macros for APP_EEPROM2_WP pin ***/
 #define APP_EEPROM2_WP_Set()               (PIOA_REGS->PIO_SODR = (1<<7))
 #define APP_EEPROM2_WP_Clear()             (PIOA_REGS->PIO_CODR = (1<<7))
 #define APP_EEPROM2_WP_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<7))
-#define APP_EEPROM2_WP_Get()               ((PIOA_REGS->PIO_PDSR >> 7) & 0x1)
 #define APP_EEPROM2_WP_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<7))
 #define APP_EEPROM2_WP_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<7))
+#define APP_EEPROM2_WP_Get()               ((PIOA_REGS->PIO_PDSR >> 7) & 0x1)
 #define APP_EEPROM2_WP_PIN                  PIO_PIN_PA7
 
 /*** Macros for APP_EEPROM2_CS pin ***/
 #define APP_EEPROM2_CS_Set()               (PIOA_REGS->PIO_SODR = (1<<8))
 #define APP_EEPROM2_CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<8))
 #define APP_EEPROM2_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<8))
-#define APP_EEPROM2_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8) & 0x1)
 #define APP_EEPROM2_CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<8))
 #define APP_EEPROM2_CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<8))
+#define APP_EEPROM2_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8) & 0x1)
 #define APP_EEPROM2_CS_PIN                  PIO_PIN_PA8
 
 /*** Macros for APP_EEPROM2_HOLD pin ***/
 #define APP_EEPROM2_HOLD_Set()               (PIOA_REGS->PIO_SODR = (1<<4))
 #define APP_EEPROM2_HOLD_Clear()             (PIOA_REGS->PIO_CODR = (1<<4))
 #define APP_EEPROM2_HOLD_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<4))
-#define APP_EEPROM2_HOLD_Get()               ((PIOA_REGS->PIO_PDSR >> 4) & 0x1)
 #define APP_EEPROM2_HOLD_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<4))
 #define APP_EEPROM2_HOLD_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<4))
+#define APP_EEPROM2_HOLD_Get()               ((PIOA_REGS->PIO_PDSR >> 4) & 0x1)
 #define APP_EEPROM2_HOLD_PIN                  PIO_PIN_PA4
 
 
