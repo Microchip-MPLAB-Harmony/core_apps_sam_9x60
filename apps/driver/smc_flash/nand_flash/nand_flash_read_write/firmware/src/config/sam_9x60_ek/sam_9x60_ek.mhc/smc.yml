@@ -1,0 +1,51 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: smc}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: PMECC_CTRL_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: smc, value: 'true'}
+  - type: Boolean
+    attributes: {id: PMECC_IER_ERRIE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: smc, value: 'false'}
+  - type: Boolean
+    attributes: {id: PMERRLOC_ELIER_DONE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: smc, value: 'false'}
+  - type: Boolean
+    attributes: {id: SMC_CS_ENABLE_3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: smc, value: 'true'}
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: smc_cs3}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: drv_nand_flash}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: drv_nand_flash_NAND_CS_dependency}
+- type: ElementPosition
+  attributes: {x: '320', y: '20', id: smc}
