@@ -72,10 +72,6 @@
 #define LED_RED_Toggle() (PIOB_REGS->PIO_ODSR ^= (1<<11))
 #define LED_RED_On() (PIOB_REGS->PIO_SODR = (1<<11))
 #define LED_RED_Off() (PIOB_REGS->PIO_CODR = (1<<11))
-/*** SWITCH Macros for SW1 ***/
-#define SW1_Get() ((PIOD_REGS->PIO_PDSR >> 18) & 0x1)
-#define SW1_STATE_PRESSED 0
-#define SW1_STATE_RELEASED 1
 
 
 

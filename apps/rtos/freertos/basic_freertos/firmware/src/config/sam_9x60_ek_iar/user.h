@@ -1,4 +1,3 @@
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
@@ -21,7 +20,7 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
+
 /*******************************************************************************
   User Configuration Header
 
@@ -43,6 +42,8 @@
 #ifndef USER_H
 #define USER_H
 
+#include "bsp/bsp.h"
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -51,13 +52,15 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
-#include "bsp/bsp.h"
 // *****************************************************************************
 // *****************************************************************************
 // Section: User Configuration macros
 // *****************************************************************************
 // *****************************************************************************
-#define LED_TOGGLE() LED_GREEN_Toggle()
+#define LED_ON()        LED_GREEN_On()
+#define LED_OFF()       LED_GREEN_Off()
+#define LED_TOGGLE()    LED_GREEN_Toggle()
+
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

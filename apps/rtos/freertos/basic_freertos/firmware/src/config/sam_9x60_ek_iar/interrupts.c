@@ -50,7 +50,9 @@
 // *****************************************************************************
 
 #include "configuration.h"
+#include "interrupts.h"
 #include "definitions.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -140,6 +142,8 @@ void SDRAMC_Handler( void )              __attribute__((weak, alias("DefaultInte
 void MPDDRC_Handler( void )              __attribute__((weak, alias("DefaultInterruptHandler")));
 void SMC_Handler( void )                 __attribute__((weak, alias("DefaultInterruptHandler")));
 
+void PIOD_InterruptHandler(              void );
+void DBGU_InterruptHandler(              void );
 void PIT_InterruptHandler(               void );
 
 /* Handlers for vectors that are shared by multiple interrupts */
@@ -157,6 +161,8 @@ void MC_SharedHandler( void )
 /* data for irq register initialization */
 IrqData irqData[] = {
     { 1,   (uint32_t) AIC_REGS,    SYSC_SharedHandler,         AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
+    { 44,  (uint32_t) AIC_REGS,    PIOD_InterruptHandler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
+    { 47,  (uint32_t) AIC_REGS,    DBGU_InterruptHandler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
 };
 
 uint32_t irqDataEntryCount = sizeof( irqData ) / sizeof( irqData[ 0 ]);
