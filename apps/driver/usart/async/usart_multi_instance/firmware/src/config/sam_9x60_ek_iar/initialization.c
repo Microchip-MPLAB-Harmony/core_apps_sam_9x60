@@ -74,7 +74,7 @@ const DRV_USART_PLIB_INTERFACE drvUsart1PlibAPI = {
     .read = (DRV_USART_PLIB_READ)DBGU_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)DBGU_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)DBGU_ReadCountGet,
-	.readAbort = (DRV_USART_PLIB_READ_ABORT)DBGU_ReadAbort,
+    .readAbort = (DRV_USART_PLIB_READ_ABORT)DBGU_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)DBGU_WriteCallbackRegister,
     .write = (DRV_USART_PLIB_WRITE)DBGU_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)DBGU_WriteIsBusy,
@@ -126,6 +126,8 @@ const DRV_USART_INIT drvUsart1InitData =
     .remapStopBits = drvUsart1remapStopBits,
 
     .remapError = drvUsart1remapError,
+
+    .dataWidth = DRV_USART_DATA_8_BIT,
 };
 
 // </editor-fold>
@@ -141,7 +143,7 @@ const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .read = (DRV_USART_PLIB_READ)FLEXCOM5_USART_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)FLEXCOM5_USART_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)FLEXCOM5_USART_ReadCountGet,
-	.readAbort = (DRV_USART_PLIB_READ_ABORT)FLEXCOM5_USART_ReadAbort,
+    .readAbort = (DRV_USART_PLIB_READ_ABORT)FLEXCOM5_USART_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)FLEXCOM5_USART_WriteCallbackRegister,
     .write = (DRV_USART_PLIB_WRITE)FLEXCOM5_USART_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)FLEXCOM5_USART_WriteIsBusy,
@@ -193,6 +195,8 @@ const DRV_USART_INIT drvUsart0InitData =
     .remapStopBits = drvUsart0remapStopBits,
 
     .remapError = drvUsart0remapError,
+
+    .dataWidth = DRV_USART_DATA_8_BIT,
 };
 
 // </editor-fold>
@@ -298,6 +302,7 @@ static void SYSC_Disable( void )
 
 void SYS_Initialize ( void* data )
 {
+
 	SYSC_Disable( );
 
   
@@ -310,7 +315,7 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
     MMU_Initialize();
 
-    INT_Initialize();
+    AIC_INT_Initialize();
     
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
