@@ -1,20 +1,26 @@
 /*******************************************************************************
-  XDMAC PLIB
+  FLEXCOM4 SPI PLIB
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_xdmac.h
+    plib_flexcom4_spi_master.h
 
   Summary:
-    XDMAC PLIB Header File
+   FLEXCOM4 SPI Master PLIB Header File.
 
-  Description:
-    None
+  Description
+    This file defines the interface to the FLEXCOM SPI peripheral library.
+    This library provides access to and control of the associated
+    peripheral instance.
+
+  Remarks:
+    None.
 
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,63 +43,50 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
-#ifndef PLIB_XDMAC_H
-#define PLIB_XDMAC_H
-
-#include <stddef.h>
-#include <stdbool.h>
-#include "plib_xdmac_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
 // DOM-IGNORE-END
 
+#ifndef PLIB_FLEXCOM4_SPI_MASTER_H // Guards against multiple inclusion
+#define PLIB_FLEXCOM4_SPI_MASTER_H
+
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+/* This section lists the other files that are included in this file.
+*/
 
-/****************************** XDMAC Data Types ******************************/
-/* XDMAC Channels */
-typedef enum {
-    XDMAC_CHANNEL_0,
-    XDMAC_CHANNEL_1,
-} XDMAC_CHANNEL;
-
-
-/****************************** XDMAC API *********************************/
-
-void XDMAC_Initialize( void );
-
-void XDMAC_ChannelCallbackRegister( XDMAC_CHANNEL channel, const XDMAC_CHANNEL_CALLBACK eventHandler, const uintptr_t contextHandle );
-
-bool XDMAC_ChannelTransfer( XDMAC_CHANNEL channel, const void *srcAddr, const void *destAddr, size_t blockSize );
-
-bool XDMAC_ChannelIsBusy (XDMAC_CHANNEL channel);
-
-void XDMAC_ChannelDisable (XDMAC_CHANNEL channel);
-
-XDMAC_CHANNEL_CONFIG XDMAC_ChannelSettingsGet (XDMAC_CHANNEL channel);
-
-bool XDMAC_ChannelSettingsSet (XDMAC_CHANNEL channel, XDMAC_CHANNEL_CONFIG setting);
-
-void XDMAC_ChannelBlockLengthSet (XDMAC_CHANNEL channel, uint16_t length);
-
-void XDMAC_ChannelSuspend (XDMAC_CHANNEL channel);
-
-void XDMAC_ChannelResume (XDMAC_CHANNEL channel);
+#include "device.h"
+#include "plib_flexcom_spi_master_common.h"
 
 // DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
+#ifdef __cplusplus // Provide C++ Compatibility
+
+extern "C" {
+
+#endif
+
+// DOM-IGNORE-END
+
+/****************************** FLEXCOM4 SPI Interface *********************************/
+
+void FLEXCOM4_SPI_Initialize( void );
+bool FLEXCOM4_SPI_WriteRead( void * pTransmitData, size_t txSize, void * pReceiveData, size_t rxSize );
+bool FLEXCOM4_SPI_Write( void * pTransmitData, size_t txSize );
+bool FLEXCOM4_SPI_Read( void * pReceiveData, size_t rxSize );
+bool FLEXCOM4_SPI_TransferSetup( FLEXCOM_SPI_TRANSFER_SETUP * setup, uint32_t spiSourceClock );
+bool FLEXCOM4_SPI_IsBusy( void );
+void FLEXCOM4_SPI_CallbackRegister( FLEXCOM_SPI_CALLBACK callback, uintptr_t context );
+
+/* Provide C++ Compatibility */
+#ifdef __cplusplus
 
     }
 
 #endif
-// DOM-IGNORE-END
-#endif // PLIB_XDMAC_H
+
+#endif // PLIB_FLEXCOM4_SPI_MASTER_H
+
+/*******************************************************************************
+ End of File
+*/
