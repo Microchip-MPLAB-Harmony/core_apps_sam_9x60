@@ -208,7 +208,7 @@ void SYS_Initialize ( void* data )
 
     MMU_Initialize();
 
-    INT_Initialize();
+    AIC_INT_Initialize();
     
     XDMAC_Initialize();
 

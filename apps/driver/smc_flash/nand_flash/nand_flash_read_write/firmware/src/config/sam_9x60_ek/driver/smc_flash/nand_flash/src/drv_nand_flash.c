@@ -57,9 +57,7 @@
 // *****************************************************************************
 
 static DRV_NAND_FLASH_OBJECT gDrvNandFlashObj;
-static DRV_NAND_FLASH_OBJECT *dObj = &gDrvNandFlashObj;
 static DRV_NAND_FLASH_DATA gDrvNandFlashData;
-static DRV_NAND_FLASH_DATA *dNandFlashData = &gDrvNandFlashData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -71,20 +69,20 @@ static void DRV_NAND_FLASH_DMA_CallbackHandler(SYS_DMA_TRANSFER_EVENT event, uin
 {
     if (event == SYS_DMA_TRANSFER_COMPLETE)
     {
-        dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_COMPLETED;
+        gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_COMPLETED;
     }
     else
     {
-        dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_ERROR_UNKNOWN;
+        gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_ERROR_UNKNOWN;
     }
 }
 
 static void DRV_NAND_FLASH_ColumnAddressWrite(uint16_t columnAddress)
 {
-    uint16_t dataSize = dNandFlashData->nandFlashGeometry.pageSize;
+    uint16_t dataSize = gDrvNandFlashData.nandFlashGeometry.pageSize;
 
     /* Check the data bus width */
-    if (dNandFlashData->nandFlashGeometry.dataBusWidth == 16)
+    if (gDrvNandFlashData.nandFlashGeometry.dataBusWidth == 16)
     {
         /* Divide by 2 for 16-bit address */
         columnAddress >>= 1;
@@ -93,13 +91,13 @@ static void DRV_NAND_FLASH_ColumnAddressWrite(uint16_t columnAddress)
     /* Send column address */
     while (dataSize > 2)
     {
-        if (dNandFlashData->nandFlashGeometry.dataBusWidth == 16)
+        if (gDrvNandFlashData.nandFlashGeometry.dataBusWidth == 16)
         {
-            dObj->nandFlashPlib->AddressWrite16(dNandFlashData->dataAddress, (columnAddress & 0xFF));
+            gDrvNandFlashObj.nandFlashPlib->AddressWrite16(gDrvNandFlashData.dataAddress, (columnAddress & 0xFF));
         }
         else
         {
-            dObj->nandFlashPlib->AddressWrite(dNandFlashData->dataAddress, (columnAddress & 0xFF));
+            gDrvNandFlashObj.nandFlashPlib->AddressWrite(gDrvNandFlashData.dataAddress, (columnAddress & 0xFF));
         }
         dataSize >>= 8;
         columnAddress >>= 8;
@@ -109,18 +107,18 @@ static void DRV_NAND_FLASH_ColumnAddressWrite(uint16_t columnAddress)
 static void DRV_NAND_FLASH_RowAddressWrite(uint32_t rowAddress)
 {
     /* Calculate number of pages in Flash device */
-    uint32_t numOfPages = dNandFlashData->nandFlashGeometry.deviceSize / dNandFlashData->nandFlashGeometry.pageSize;
+    uint32_t numOfPages = gDrvNandFlashData.nandFlashGeometry.deviceSize / gDrvNandFlashData.nandFlashGeometry.pageSize;
 
     /* Send row address */
     while (numOfPages > 0)
     {
-        if (dNandFlashData->nandFlashGeometry.dataBusWidth == 16)
+        if (gDrvNandFlashData.nandFlashGeometry.dataBusWidth == 16)
         {
-            dObj->nandFlashPlib->AddressWrite16(dNandFlashData->dataAddress, (rowAddress & 0xFF));
+            gDrvNandFlashObj.nandFlashPlib->AddressWrite16(gDrvNandFlashData.dataAddress, (rowAddress & 0xFF));
         }
         else
         {
-            dObj->nandFlashPlib->AddressWrite(dNandFlashData->dataAddress, (rowAddress & 0xFF));
+            gDrvNandFlashObj.nandFlashPlib->AddressWrite(gDrvNandFlashData.dataAddress, (rowAddress & 0xFF));
         }
         numOfPages >>= 8;
         rowAddress >>= 8;
@@ -133,7 +131,7 @@ static void DRV_NAND_FLASH_DataWrite(uint32_t dataAddress, uint8_t *data, uint32
     uint16_t *data16 = 0;
     uint32_t dataSize16 = 0;
 
-    if (dNandFlashData->nandFlashGeometry.dataBusWidth == 16)
+    if (gDrvNandFlashData.nandFlashGeometry.dataBusWidth == 16)
     {
         data16 = (uint16_t *)data;
         dataSize16 = (size + 1) >> 1;
@@ -141,7 +139,7 @@ static void DRV_NAND_FLASH_DataWrite(uint32_t dataAddress, uint8_t *data, uint32
         /* Write page for 16-bit data bus */
         for (count = 0; count < dataSize16; count++)
         {
-            dObj->nandFlashPlib->DataWrite16(dataAddress, data16[count]);
+            gDrvNandFlashObj.nandFlashPlib->DataWrite16(dataAddress, data16[count]);
         }
     }
     else
@@ -149,7 +147,7 @@ static void DRV_NAND_FLASH_DataWrite(uint32_t dataAddress, uint8_t *data, uint32
         /* Write page for 8-bit data bus */
         for (count = 0; count < size; count++)
         {
-            dObj->nandFlashPlib->DataWrite(dataAddress, data[count]);
+            gDrvNandFlashObj.nandFlashPlib->DataWrite(dataAddress, data[count]);
         }
     }
 }
@@ -160,7 +158,7 @@ static void DRV_NAND_FLASH_DataRead(uint32_t dataAddress, uint8_t *data, uint32_
     uint16_t *data16 = 0;
     uint32_t dataSize16 = 0;
 
-    if (dNandFlashData->nandFlashGeometry.dataBusWidth == 16)
+    if (gDrvNandFlashData.nandFlashGeometry.dataBusWidth == 16)
     {
         data16 = (uint16_t *)data;
         dataSize16 = (size + 1) >> 1;
@@ -168,7 +166,7 @@ static void DRV_NAND_FLASH_DataRead(uint32_t dataAddress, uint8_t *data, uint32_
         /* Read page for 16-bit data bus */
         for (count = 0; count < dataSize16; count++)
         {
-            data16[count] = dObj->nandFlashPlib->DataRead16(dataAddress);
+            data16[count] = gDrvNandFlashObj.nandFlashPlib->DataRead16(dataAddress);
         }
     }
     else
@@ -176,7 +174,7 @@ static void DRV_NAND_FLASH_DataRead(uint32_t dataAddress, uint8_t *data, uint32_
         /* Read page for 8-bit data bus */
         for (count = 0; count < size; count++)
         {
-            data[count] = dObj->nandFlashPlib->DataRead(dataAddress);
+            data[count] = gDrvNandFlashObj.nandFlashPlib->DataRead(dataAddress);
         }
     }
 }
@@ -194,7 +192,7 @@ static bool DRV_NAND_FLASH_PageRead(const DRV_HANDLE handle, uint16_t blockNum, 
     }
 
     /* Row address of the page */
-    rowAddress = blockNum * (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize) + pageNum;
+    rowAddress = blockNum * (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize) + pageNum;
 
     /* Column address of the page */
     if (data)
@@ -203,11 +201,11 @@ static bool DRV_NAND_FLASH_PageRead(const DRV_HANDLE handle, uint16_t blockNum, 
     }
     else
     {
-        columnAddress = dNandFlashData->nandFlashGeometry.pageSize;
+        columnAddress = gDrvNandFlashData.nandFlashGeometry.pageSize;
     }
 
     /* Send read command for cycle 1 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ1);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ1);
 
     /* Send column address */
     DRV_NAND_FLASH_ColumnAddressWrite(columnAddress);
@@ -216,7 +214,7 @@ static bool DRV_NAND_FLASH_PageRead(const DRV_HANDLE handle, uint16_t blockNum, 
     DRV_NAND_FLASH_RowAddressWrite(rowAddress);
 
     /* Send read page command for cycle 2 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ2);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ2);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -227,32 +225,33 @@ static bool DRV_NAND_FLASH_PageRead(const DRV_HANDLE handle, uint16_t blockNum, 
     if (transferStatus == DRV_NAND_FLASH_TRANSFER_COMPLETED)
     {
         /* Re-enable the data output mode by sending read mode command */
-        dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ1);
+        gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ1);
 
         if (data)
         {
             if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
             {
+                /* Invalidate the data buffer to force the CPU to read from the main memory */
+                SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)data, gDrvNandFlashData.nandFlashGeometry.pageSize);
+                gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
                 SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
-                                       (const void *)dNandFlashData->dataAddress,
+                                       (const void *)gDrvNandFlashData.dataAddress,
                                        (const void *)data,
-                                        dNandFlashData->nandFlashGeometry.pageSize);
+                                        gDrvNandFlashData.nandFlashGeometry.pageSize);
 
-                dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
                 /* Wait for DMA transfer completion */
-                while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+                while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-                if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+                if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
                 {
                     return false;
                 }
-                /* Invalidate the data buffer to force the CPU to read from the main memory */
-                SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)data, dNandFlashData->nandFlashGeometry.pageSize);
             }
             else
             {
                 /* Read data page */
-                DRV_NAND_FLASH_DataRead(dNandFlashData->dataAddress, data, dNandFlashData->nandFlashGeometry.pageSize);
+                DRV_NAND_FLASH_DataRead(gDrvNandFlashData.dataAddress, data, gDrvNandFlashData.nandFlashGeometry.pageSize);
             }
         }
 
@@ -260,26 +259,27 @@ static bool DRV_NAND_FLASH_PageRead(const DRV_HANDLE handle, uint16_t blockNum, 
         {
             if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
             {
+                /* Invalidate the spare buffer to force the CPU to read from the main memory */
+                SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)spare, gDrvNandFlashData.nandFlashGeometry.spareSize);
+                gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
                 SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
-                                       (const void *)dNandFlashData->dataAddress,
+                                       (const void *)gDrvNandFlashData.dataAddress,
                                        (const void *)spare,
-                                        dNandFlashData->nandFlashGeometry.spareSize);
+                                        gDrvNandFlashData.nandFlashGeometry.spareSize);
 
-                dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
                 /* Wait for DMA transfer completion */
-                while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+                while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-                if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+                if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
                 {
                     return false;
                 }
-                /* Invalidate the spare buffer to force the CPU to read from the main memory */
-                SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)spare, dNandFlashData->nandFlashGeometry.spareSize);
             }
             else
             {
                 /* Read spare page */
-                DRV_NAND_FLASH_DataRead(dNandFlashData->dataAddress, spare, dNandFlashData->nandFlashGeometry.spareSize);
+                DRV_NAND_FLASH_DataRead(gDrvNandFlashData.dataAddress, spare, gDrvNandFlashData.nandFlashGeometry.spareSize);
             }
         }
 
@@ -303,22 +303,22 @@ static bool DRV_NAND_FLASH_PageWrite(const DRV_HANDLE handle, uint16_t blockNum,
     }
 
     /* Row address of the page */
-    rowAddress = blockNum * (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize) + pageNum;
+    rowAddress = blockNum * (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize) + pageNum;
 
     /* Column address of the page */
     if (data)
     {
         columnAddress = 0;
-        spareDataAddress = dNandFlashData->dataAddress + dNandFlashData->nandFlashGeometry.pageSize;
+        spareDataAddress = gDrvNandFlashData.dataAddress + gDrvNandFlashData.nandFlashGeometry.pageSize;
     }
     else
     {
-        columnAddress = dNandFlashData->nandFlashGeometry.pageSize;
-        spareDataAddress = dNandFlashData->dataAddress;
+        columnAddress = gDrvNandFlashData.nandFlashGeometry.pageSize;
+        spareDataAddress = gDrvNandFlashData.dataAddress;
     }
 
     /* Send page program command for cycle 1 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM1);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM1);
 
     /* Send column address */
     DRV_NAND_FLASH_ColumnAddressWrite(columnAddress);
@@ -331,17 +331,18 @@ static bool DRV_NAND_FLASH_PageWrite(const DRV_HANDLE handle, uint16_t blockNum,
         if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
         {
             /* Clean the data buffer to push the data to the main memory */
-            SYS_CACHE_CleanDCache_by_Addr((uint32_t *)data, dNandFlashData->nandFlashGeometry.pageSize);
+            SYS_CACHE_CleanDCache_by_Addr((uint32_t *)data, gDrvNandFlashData.nandFlashGeometry.pageSize);
+            gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
             SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
                                    (const void *)data,
-                                   (const void *)dNandFlashData->dataAddress,
-                                    dNandFlashData->nandFlashGeometry.pageSize);
+                                   (const void *)gDrvNandFlashData.dataAddress,
+                                    gDrvNandFlashData.nandFlashGeometry.pageSize);
 
-            dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
             /* Wait for DMA transfer completion */
-            while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+            while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-            if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+            if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
             {
                 return false;
             }
@@ -349,7 +350,7 @@ static bool DRV_NAND_FLASH_PageWrite(const DRV_HANDLE handle, uint16_t blockNum,
         else
         {
             /* Write data page */
-            DRV_NAND_FLASH_DataWrite(dNandFlashData->dataAddress, data, dNandFlashData->nandFlashGeometry.pageSize);
+            DRV_NAND_FLASH_DataWrite(gDrvNandFlashData.dataAddress, data, gDrvNandFlashData.nandFlashGeometry.pageSize);
         }
     }
 
@@ -358,17 +359,18 @@ static bool DRV_NAND_FLASH_PageWrite(const DRV_HANDLE handle, uint16_t blockNum,
         if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
         {
             /* Clean the spare buffer to push the data to the main memory */
-            SYS_CACHE_CleanDCache_by_Addr((uint32_t *)spare, dNandFlashData->nandFlashGeometry.spareSize);
+            SYS_CACHE_CleanDCache_by_Addr((uint32_t *)spare, gDrvNandFlashData.nandFlashGeometry.spareSize);
+            gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
             SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
                                    (const void *)spare,
                                    (const void *)spareDataAddress,
-                                    dNandFlashData->nandFlashGeometry.spareSize);
+                                    gDrvNandFlashData.nandFlashGeometry.spareSize);
 
-            dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
             /* Wait for DMA transfer completion */
-            while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+            while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-            if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+            if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
             {
                 return false;
             }
@@ -376,12 +378,12 @@ static bool DRV_NAND_FLASH_PageWrite(const DRV_HANDLE handle, uint16_t blockNum,
         else
         {
             /* Write spare page */
-            DRV_NAND_FLASH_DataWrite(spareDataAddress, spare, dNandFlashData->nandFlashGeometry.spareSize);
+            DRV_NAND_FLASH_DataWrite(spareDataAddress, spare, gDrvNandFlashData.nandFlashGeometry.spareSize);
         }
     }
 
     /* Send page program command for cycle 2 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM2);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM2);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -410,10 +412,10 @@ static bool DRV_NAND_FLASH_PageReadPmecc(const DRV_HANDLE handle, uint16_t block
     }
 
     /* Row address of the page */
-    rowAddress = blockNum * (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize) + pageNum;
+    rowAddress = blockNum * (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize) + pageNum;
 
     /* Send read command for cycle 1 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ1);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ1);
 
     /* Send column address */
     DRV_NAND_FLASH_ColumnAddressWrite(columnAddress);
@@ -422,7 +424,7 @@ static bool DRV_NAND_FLASH_PageReadPmecc(const DRV_HANDLE handle, uint16_t block
     DRV_NAND_FLASH_RowAddressWrite(rowAddress);
 
     /* Send read page command for cycle 2 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ2);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ2);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -433,38 +435,39 @@ static bool DRV_NAND_FLASH_PageReadPmecc(const DRV_HANDLE handle, uint16_t block
     if (transferStatus == DRV_NAND_FLASH_TRANSFER_COMPLETED)
     {
         /* Re-enable the data output mode by sending read mode command */
-        dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ1);
+        gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ1);
 
         /* Enable Read access and start data phase */
-        dObj->nandFlashPlib->DataPhaseStart(0);
+        gDrvNandFlashObj.nandFlashPlib->DataPhaseStart(0);
 
         if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
         {
+            /* Invalidate the data buffer to force the CPU to read from the main memory */
+            SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)data, (gDrvNandFlashData.nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
+            gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
             SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
-                                   (const void *)dNandFlashData->dataAddress,
+                                   (const void *)gDrvNandFlashData.dataAddress,
                                    (const void *)data,
-                                   (dNandFlashData->nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
+                                   (gDrvNandFlashData.nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
 
-            dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
             /* Wait for DMA transfer completion */
-            while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+            while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-            if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+            if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
             {
                 return false;
             }
-            /* Invalidate the data buffer to force the CPU to read from the main memory */
-            SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)data, (dNandFlashData->nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
         }
         else
         {
             /* Read data page */
-            DRV_NAND_FLASH_DataRead(dNandFlashData->dataAddress, data,
-            (dNandFlashData->nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
+            DRV_NAND_FLASH_DataRead(gDrvNandFlashData.dataAddress, data,
+            (gDrvNandFlashData.nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
         }
 
         /* Wait until PMECC is not busy */
-        while (dObj->nandFlashPlib->StatusIsBusy() == true);
+        while (gDrvNandFlashObj.nandFlashPlib->StatusIsBusy() == true);
 
         status = true;
     }
@@ -490,20 +493,20 @@ static bool DRV_NAND_FLASH_PageReadWithPMECC(const DRV_HANDLE handle, uint16_t b
     }
 
     /* Check PMECC Error */
-    pmeccErrorStatus = dObj->nandFlashPlib->ErrorGet();
+    pmeccErrorStatus = gDrvNandFlashObj.nandFlashPlib->ErrorGet();
     if (pmeccErrorStatus)
     {
         /* Check if spare area is erased */
-        DRV_NAND_FLASH_PageRead(handle, blockNum, pageNum, NULL, dNandFlashData->spareBuffer);
+        DRV_NAND_FLASH_PageRead(handle, blockNum, pageNum, NULL, gDrvNandFlashData.spareBuffer);
 
-        for (count = 0; count < dNandFlashData->nandFlashGeometry.spareSize; count++)
+        for (count = 0; count < gDrvNandFlashData.nandFlashGeometry.spareSize; count++)
         {
-            if (dNandFlashData->spareBuffer[count] != 0xFF)
+            if (gDrvNandFlashData.spareBuffer[count] != 0xFF)
             {
                 break;
             }
         }
-        if (count == dNandFlashData->nandFlashGeometry.spareSize)
+        if (count == gDrvNandFlashData.nandFlashGeometry.spareSize)
         {
             pmeccErrorStatus = 0;
         }
@@ -537,16 +540,16 @@ static bool DRV_NAND_FLASH_PageWriteWithPMECC(const DRV_HANDLE handle, uint16_t 
     }
 
     /* Row address of the page */
-    rowAddress = blockNum * (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize) + pageNum;
+    rowAddress = blockNum * (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize) + pageNum;
 
     /* ECC start address of the page */
-    eccStartAddr = dNandFlashData->nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR;
+    eccStartAddr = gDrvNandFlashData.nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR;
 
     /* Enable Write access and start data phase */
-    dObj->nandFlashPlib->DataPhaseStart(1);
+    gDrvNandFlashObj.nandFlashPlib->DataPhaseStart(1);
 
     /* Send page program command for cycle 1 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM1);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM1);
 
     /* Send column address */
     DRV_NAND_FLASH_ColumnAddressWrite(columnAddress);
@@ -557,17 +560,18 @@ static bool DRV_NAND_FLASH_PageWriteWithPMECC(const DRV_HANDLE handle, uint16_t 
     if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
     {
         /* Clean the data buffer to push the data to the main memory */
-        SYS_CACHE_CleanDCache_by_Addr((uint32_t *)data, dNandFlashData->nandFlashGeometry.pageSize);
+        SYS_CACHE_CleanDCache_by_Addr((uint32_t *)data, gDrvNandFlashData.nandFlashGeometry.pageSize);
+        gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
         SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
                                (const void *)data,
-                               (const void *)dNandFlashData->dataAddress,
-                                dNandFlashData->nandFlashGeometry.pageSize);
+                               (const void *)gDrvNandFlashData.dataAddress,
+                                gDrvNandFlashData.nandFlashGeometry.pageSize);
 
-        dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
         /* Wait for DMA transfer completion */
-        while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+        while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-        if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+        if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
         {
             return false;
         }
@@ -575,42 +579,43 @@ static bool DRV_NAND_FLASH_PageWriteWithPMECC(const DRV_HANDLE handle, uint16_t 
     else
     {
         /* Write data page */
-        DRV_NAND_FLASH_DataWrite(dNandFlashData->dataAddress, data, dNandFlashData->nandFlashGeometry.pageSize);
+        DRV_NAND_FLASH_DataWrite(gDrvNandFlashData.dataAddress, data, gDrvNandFlashData.nandFlashGeometry.pageSize);
     }
 
     /* Send change write column (Random data input) command for cycle 1 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_CHANGE_WRITE_COLUMN);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_CHANGE_WRITE_COLUMN);
 
     /* Send ECC start address */
     DRV_NAND_FLASH_ColumnAddressWrite(eccStartAddr);
 
     /* Wait until PMECC is not busy */
-    while (dObj->nandFlashPlib->StatusIsBusy() == true);
+    while (gDrvNandFlashObj.nandFlashPlib->StatusIsBusy() == true);
 
     /* Read all ECC registers */
     for (count = 0; count < DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS; count++)
     {
         for (byteIndex = 0; byteIndex < (DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE / DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS); byteIndex++)
         {
-            dNandFlashData->spareBuffer[count * (DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE / DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS) + byteIndex] =
-            dObj->nandFlashPlib->ECCGet(count, byteIndex);
+            gDrvNandFlashData.spareBuffer[count * (DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE / DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS) + byteIndex] =
+            gDrvNandFlashObj.nandFlashPlib->ECCGet(count, byteIndex);
         }
     }
 
     if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
     {
         /* Clean the data buffer to push the data to the main memory */
-        SYS_CACHE_CleanDCache_by_Addr((uint32_t *)dNandFlashData->spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
+        SYS_CACHE_CleanDCache_by_Addr((uint32_t *)gDrvNandFlashData.spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
+        gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
+
         SYS_DMA_ChannelTransfer(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX,
-                               (const void *)dNandFlashData->spareBuffer,
-                               (const void *)dNandFlashData->dataAddress,
+                               (const void *)gDrvNandFlashData.spareBuffer,
+                               (const void *)gDrvNandFlashData.dataAddress,
                                 DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
 
-        dObj->transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
         /* Wait for DMA transfer completion */
-        while (dObj->transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
+        while (gDrvNandFlashObj.transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY);
 
-        if (dObj->transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
+        if (gDrvNandFlashObj.transferStatus != DRV_NAND_FLASH_TRANSFER_COMPLETED)
         {
             return false;
         }
@@ -618,11 +623,11 @@ static bool DRV_NAND_FLASH_PageWriteWithPMECC(const DRV_HANDLE handle, uint16_t 
     else
     {
         /* Write spare page */
-        DRV_NAND_FLASH_DataWrite(dNandFlashData->dataAddress, dNandFlashData->spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
+        DRV_NAND_FLASH_DataWrite(gDrvNandFlashData.dataAddress, gDrvNandFlashData.spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
     }
 
     /* Send page program command for cycle 2 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM2);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM2);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -653,7 +658,7 @@ bool DRV_NAND_FLASH_ResetFlash(const DRV_HANDLE handle)
         return false;
     }
 
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_RESET);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_RESET);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -679,9 +684,9 @@ DRV_NAND_FLASH_TRANSFER_STATUS DRV_NAND_FLASH_TransferStatusGet(const DRV_HANDLE
         return transferStatus;
     }
 
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ_STATUS);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ_STATUS);
 
-    reg_status = dObj->nandFlashPlib->DataRead(dNandFlashData->dataAddress);
+    reg_status = gDrvNandFlashObj.nandFlashPlib->DataRead(gDrvNandFlashData.dataAddress);
 
     // Check Ready bit
     if (reg_status & (1 << 6))
@@ -715,15 +720,15 @@ bool DRV_NAND_FLASH_IdRead(const DRV_HANDLE handle, uint32_t *readId, uint8_t ad
     }
 
     /* Send Read ID command */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ_ID);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ_ID);
 
     /* Send Address */
-    dObj->nandFlashPlib->AddressWrite(dNandFlashData->dataAddress, address);
+    gDrvNandFlashObj.nandFlashPlib->AddressWrite(gDrvNandFlashData.dataAddress, address);
 
     /* Read data */
     for (count = 0; count < sizeof(*readId); count++)
     {
-        data[count] = dObj->nandFlashPlib->DataRead(dNandFlashData->dataAddress);
+        data[count] = gDrvNandFlashObj.nandFlashPlib->DataRead(gDrvNandFlashData.dataAddress);
     }
 
     return true;
@@ -739,15 +744,15 @@ bool DRV_NAND_FLASH_FeatureSet(const DRV_HANDLE handle, uint8_t *featureData, ui
     }
 
     /* Send set feature command */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_SET_FEATURES);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_SET_FEATURES);
 
     /* Send Address */
-    dObj->nandFlashPlib->AddressWrite(dNandFlashData->dataAddress, featureAddress);
+    gDrvNandFlashObj.nandFlashPlib->AddressWrite(gDrvNandFlashData.dataAddress, featureAddress);
 
     /* Set features data */
     for (count = 0; count < featureDataSize; count++)
     {
-        dObj->nandFlashPlib->DataWrite(dNandFlashData->dataAddress, featureData[count]);
+        gDrvNandFlashObj.nandFlashPlib->DataWrite(gDrvNandFlashData.dataAddress, featureData[count]);
     }
 
     return true;
@@ -763,15 +768,15 @@ bool DRV_NAND_FLASH_FeatureGet(const DRV_HANDLE handle, uint8_t *featureData, ui
     }
 
     /* Send get feature command */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_GET_FEATURES);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_GET_FEATURES);
 
     /* Send Address */
-    dObj->nandFlashPlib->AddressWrite(dNandFlashData->dataAddress, featureAddress);
+    gDrvNandFlashObj.nandFlashPlib->AddressWrite(gDrvNandFlashData.dataAddress, featureAddress);
 
     /* Get features data */
     for (count = 0; count < featureDataSize; count++)
     {
-        featureData[count] = dObj->nandFlashPlib->DataRead(dNandFlashData->dataAddress);
+        featureData[count] = gDrvNandFlashObj.nandFlashPlib->DataRead(gDrvNandFlashData.dataAddress);
     }
 
     return true;
@@ -793,10 +798,10 @@ bool DRV_NAND_FLASH_ParameterPageRead(const DRV_HANDLE handle, uint8_t *paramete
     }
 
     /* Send Read Parameter Page command */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ_PARAMETER_PAGE);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ_PARAMETER_PAGE);
 
     /* Send Address */
-    dObj->nandFlashPlib->AddressWrite(dNandFlashData->dataAddress, 0x00);
+    gDrvNandFlashObj.nandFlashPlib->AddressWrite(gDrvNandFlashData.dataAddress, 0x00);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -807,12 +812,12 @@ bool DRV_NAND_FLASH_ParameterPageRead(const DRV_HANDLE handle, uint8_t *paramete
     if (transferStatus == DRV_NAND_FLASH_TRANSFER_COMPLETED)
     {
         /* Re-enable the data output mode by sending read mode command */
-        dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_READ1);
+        gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_READ1);
 
         /* Read Parameter Page */
         for (count = 0; count < size; count++)
         {
-            parameterPage[count] = dObj->nandFlashPlib->DataRead(dNandFlashData->dataAddress);
+            parameterPage[count] = gDrvNandFlashObj.nandFlashPlib->DataRead(gDrvNandFlashData.dataAddress);
         }
     }
     else
@@ -879,12 +884,12 @@ bool DRV_NAND_FLASH_SkipBlock_BlockCheck(const DRV_HANDLE handle, uint16_t block
         return status;
     }
 
-    if (DRV_NAND_FLASH_PageRead(handle, blockNum, 0, NULL, dNandFlashData->spareBuffer))
+    if (DRV_NAND_FLASH_PageRead(handle, blockNum, 0, NULL, gDrvNandFlashData.spareBuffer))
     {
-        marker[0] = dNandFlashData->spareBuffer[0];
-        if (DRV_NAND_FLASH_PageRead(handle, blockNum, 1, NULL, dNandFlashData->spareBuffer))
+        marker[0] = gDrvNandFlashData.spareBuffer[0];
+        if (DRV_NAND_FLASH_PageRead(handle, blockNum, 1, NULL, gDrvNandFlashData.spareBuffer))
         {
-            marker[1] = dNandFlashData->spareBuffer[0];
+            marker[1] = gDrvNandFlashData.spareBuffer[0];
             if (marker[0] == 0xFF && marker[1] == 0xFF)
             {
                 /* Good block */
@@ -916,16 +921,16 @@ bool DRV_NAND_FLASH_SkipBlock_BlockErase(const DRV_HANDLE handle, uint16_t block
     }
 
     /* Send block erase command for cycle 1 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_BLOCK_ERASE1);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_BLOCK_ERASE1);
 
     /* Calculate row address used for erase */
-    rowAddress = blockNum * (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize);
+    rowAddress = blockNum * (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize);
 
     /* Send row address */
     DRV_NAND_FLASH_RowAddressWrite(rowAddress);
 
     /* Send block erase command for cycle 2 */
-    dObj->nandFlashPlib->CommandWrite(dNandFlashData->dataAddress, NAND_FLASH_CMD_BLOCK_ERASE2);
+    gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_BLOCK_ERASE2);
 
     /* Read the ready status */
     while (transferStatus == DRV_NAND_FLASH_TRANSFER_BUSY)
@@ -964,17 +969,17 @@ bool DRV_NAND_FLASH_SkipBlock_BlockTag(const DRV_HANDLE handle, uint16_t blockNu
         if (badBlock)
         {
             /* Tag bad block */
-            memset(dNandFlashData->spareBuffer, 0xFF, sizeof(dNandFlashData->spareBuffer));
-            dNandFlashData->spareBuffer[0] = 0xDE;
+            memset(gDrvNandFlashData.spareBuffer, 0xFF, sizeof(gDrvNandFlashData.spareBuffer));
+            gDrvNandFlashData.spareBuffer[0] = 0xDE;
 
             for (count = 0; count < 2; count++)
             {
-                status = DRV_NAND_FLASH_PageWrite(handle, blockNum, count, NULL, dNandFlashData->spareBuffer);
+                status = DRV_NAND_FLASH_PageWrite(handle, blockNum, count, NULL, gDrvNandFlashData.spareBuffer);
                 if (status == false)
                 {
                     return status;
                 }
-                dNandFlashData->spareBuffer[0] = 0xAD;
+                gDrvNandFlashData.spareBuffer[0] = 0xAD;
             }
         }
         else
@@ -1037,7 +1042,7 @@ bool DRV_NAND_FLASH_SkipBlock_BlockRead(const DRV_HANDLE handle, uint16_t blockN
         }
     }
 
-    for (count = 0; count < (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize); count++)
+    for (count = 0; count < (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize); count++)
     {
         if (DRV_NAND_FLASH_ENABLE_PMECC == 0)
         {
@@ -1053,7 +1058,7 @@ bool DRV_NAND_FLASH_SkipBlock_BlockRead(const DRV_HANDLE handle, uint16_t blockN
                 return false;
             }
         }
-        data = data + dNandFlashData->nandFlashGeometry.pageSize;
+        data = data + gDrvNandFlashData.nandFlashGeometry.pageSize;
     }
 
     return true;
@@ -1109,7 +1114,7 @@ bool DRV_NAND_FLASH_SkipBlock_BlockWrite(const DRV_HANDLE handle, uint16_t block
         }
     }
 
-    for (count = 0; count < (dNandFlashData->nandFlashGeometry.blockSize / dNandFlashData->nandFlashGeometry.pageSize); count++)
+    for (count = 0; count < (gDrvNandFlashData.nandFlashGeometry.blockSize / gDrvNandFlashData.nandFlashGeometry.pageSize); count++)
     {
         if (DRV_NAND_FLASH_ENABLE_PMECC == 0)
         {
@@ -1125,7 +1130,7 @@ bool DRV_NAND_FLASH_SkipBlock_BlockWrite(const DRV_HANDLE handle, uint16_t block
                 return false;
             }
         }
-        data = data + dNandFlashData->nandFlashGeometry.pageSize;
+        data = data + gDrvNandFlashData.nandFlashGeometry.pageSize;
     }
 
     return true;
@@ -1135,8 +1140,8 @@ DRV_HANDLE DRV_NAND_FLASH_Open( const SYS_MODULE_INDEX drvIndex, const DRV_IO_IN
 {
     DRV_NAND_FLASH_GEOMETRY geometry;
 
-    if ((dObj->status != SYS_STATUS_READY) ||
-        (dObj->nClients >= DRV_NAND_FLASH_CLIENTS_NUMBER))
+    if ((gDrvNandFlashObj.status != SYS_STATUS_READY) ||
+        (gDrvNandFlashObj.nClients >= DRV_NAND_FLASH_CLIENTS_NUMBER))
     {
         return DRV_HANDLE_INVALID;
     }
@@ -1150,22 +1155,22 @@ DRV_HANDLE DRV_NAND_FLASH_Open( const SYS_MODULE_INDEX drvIndex, const DRV_IO_IN
     /* Store the NAND Flash data */
     if (DRV_NAND_FLASH_GeometryGet((DRV_HANDLE)drvIndex, &geometry))
     {
-        dNandFlashData->nandFlashGeometry.deviceId = geometry.deviceId;
-        dNandFlashData->nandFlashGeometry.dataBusWidth = geometry.dataBusWidth;
-        dNandFlashData->nandFlashGeometry.pageSize = geometry.pageSize;
-        dNandFlashData->nandFlashGeometry.spareSize = geometry.spareSize;
-        dNandFlashData->nandFlashGeometry.blockSize = geometry.blockSize;
-        dNandFlashData->nandFlashGeometry.deviceSize = geometry.deviceSize;
-        dNandFlashData->nandFlashGeometry.numberOfLogicalUnits = geometry.numberOfLogicalUnits;
-        dNandFlashData->nandFlashGeometry.eccCorrectability = geometry.eccCorrectability;
-        if (!DRV_NAND_FLASH_PmeccDescSetup(geometry.pageSize, geometry.spareSize, dObj))
+        gDrvNandFlashData.nandFlashGeometry.deviceId = geometry.deviceId;
+        gDrvNandFlashData.nandFlashGeometry.dataBusWidth = geometry.dataBusWidth;
+        gDrvNandFlashData.nandFlashGeometry.pageSize = geometry.pageSize;
+        gDrvNandFlashData.nandFlashGeometry.spareSize = geometry.spareSize;
+        gDrvNandFlashData.nandFlashGeometry.blockSize = geometry.blockSize;
+        gDrvNandFlashData.nandFlashGeometry.deviceSize = geometry.deviceSize;
+        gDrvNandFlashData.nandFlashGeometry.numberOfLogicalUnits = geometry.numberOfLogicalUnits;
+        gDrvNandFlashData.nandFlashGeometry.eccCorrectability = geometry.eccCorrectability;
+        if (!DRV_NAND_FLASH_PmeccDescSetup(geometry.pageSize, geometry.spareSize, &gDrvNandFlashObj))
         {
             return DRV_HANDLE_INVALID;
         }
         /* Setup data bus width with DMA System Service */
         if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
         {
-            if (dNandFlashData->nandFlashGeometry.dataBusWidth == 16)
+            if (gDrvNandFlashData.nandFlashGeometry.dataBusWidth == 16)
             {
                 SYS_DMA_DataWidthSetup(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX, SYS_DMA_WIDTH_16_BIT);
             }
@@ -1180,9 +1185,9 @@ DRV_HANDLE DRV_NAND_FLASH_Open( const SYS_MODULE_INDEX drvIndex, const DRV_IO_IN
         return DRV_HANDLE_INVALID;
     }
 
-    dObj->nClients++;
+    gDrvNandFlashObj.nClients++;
 
-    dObj->ioIntent = ioIntent;
+    gDrvNandFlashObj.ioIntent = ioIntent;
 
     return ((DRV_HANDLE)drvIndex);
 }
@@ -1190,9 +1195,9 @@ DRV_HANDLE DRV_NAND_FLASH_Open( const SYS_MODULE_INDEX drvIndex, const DRV_IO_IN
 void DRV_NAND_FLASH_Close( const DRV_HANDLE handle )
 {
     if ( (handle != DRV_HANDLE_INVALID) &&
-         (dObj->nClients > 0))
+         (gDrvNandFlashObj.nClients > 0))
     {
-        dObj->nClients--;
+        gDrvNandFlashObj.nClients--;
     }
 }
 
@@ -1205,27 +1210,27 @@ SYS_MODULE_OBJ DRV_NAND_FLASH_Initialize
     DRV_NAND_FLASH_INIT *nandFlashInit = NULL;
 
     /* Check if the instance has already been initialized. */
-    if (dObj->inUse)
+    if (gDrvNandFlashObj.inUse)
     {
         return SYS_MODULE_OBJ_INVALID;
     }
 
-    dObj->status = SYS_STATUS_UNINITIALIZED;
+    gDrvNandFlashObj.status = SYS_STATUS_UNINITIALIZED;
 
     /* Indicate that this object is in use */
-    dObj->inUse = true;
-    dObj->nClients  = 0;
+    gDrvNandFlashObj.inUse = true;
+    gDrvNandFlashObj.nClients  = 0;
 
     /* Assign to the local pointer the init data passed */
     nandFlashInit = (DRV_NAND_FLASH_INIT *)init;
 
     /* Initialize the attached memory device functions */
-    dObj->nandFlashPlib = nandFlashInit->nandFlashPlib;
+    gDrvNandFlashObj.nandFlashPlib = nandFlashInit->nandFlashPlib;
 
     /* Get the data address of NAND Flash */
-    dNandFlashData->dataAddress = dObj->nandFlashPlib->DataAddressGet(DRV_NAND_FLASH_CS);
+    gDrvNandFlashData.dataAddress = gDrvNandFlashObj.nandFlashPlib->DataAddressGet(DRV_NAND_FLASH_CS);
 
-    dObj->transferStatus  = DRV_NAND_FLASH_TRANSFER_COMPLETED;
+    gDrvNandFlashObj.transferStatus  = DRV_NAND_FLASH_TRANSFER_COMPLETED;
 
     /* Register call-backs with the DMA System Service */
     if (DRV_NAND_FLASH_TX_RX_DMA_CH_IDX != SYS_DMA_CHANNEL_NONE)
@@ -1233,7 +1238,7 @@ SYS_MODULE_OBJ DRV_NAND_FLASH_Initialize
         SYS_DMA_ChannelCallbackRegister(DRV_NAND_FLASH_TX_RX_DMA_CH_IDX, DRV_NAND_FLASH_DMA_CallbackHandler, 0);
     }
 
-    dObj->status = SYS_STATUS_READY;
+    gDrvNandFlashObj.status = SYS_STATUS_READY;
 
     /* Return the driver index */
     return drvIndex;
