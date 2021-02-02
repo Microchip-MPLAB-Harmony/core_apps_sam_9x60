@@ -338,12 +338,12 @@ void SYS_Initialize ( void* data )
 
 	SDMMC0_Initialize();
 
+    DBGU_Initialize();
+
  
     TC0_CH0_TimerInitialize(); 
      
     
-    DBGU_Initialize();
-
 
 
     sysObj.drvSDMMC0 = DRV_SDMMC_Initialize(DRV_SDMMC_INDEX_0,(SYS_MODULE_INIT *)&drvSDMMC0InitData);
