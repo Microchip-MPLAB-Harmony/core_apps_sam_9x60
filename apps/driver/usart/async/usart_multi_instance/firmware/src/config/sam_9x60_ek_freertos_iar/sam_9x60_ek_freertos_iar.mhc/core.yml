@@ -172,14 +172,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_1, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: DMA_CH_NEEDED_FOR_DBGU_Transmit}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_1, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: DMA_CH_NEEDED_FOR_FLEXCOM5_Receive}
     children:
