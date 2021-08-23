@@ -1,11 +1,11 @@
 files:
-- generatedChecksum: 3C13720844166A5D97CF4EAD9DDB9FE2
+- generatedChecksum: null
   logicalPath: ''
   name: app.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 3C13720844166A5D97CF4EAD9DDB9FE2
+  userChecksum: null
 - generatedChecksum: 0DC2979D4AE806BF1E5EA401B5255FE9
   logicalPath: config/sam_9x60_ek/bsp
   name: bsp.c
@@ -76,13 +76,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C56B57836556F129397561E3CBEE3699
-- generatedChecksum: F81A00E640818EDFB9E79C9BD241AEF4
+- generatedChecksum: null
   logicalPath: ''
   name: main.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F81A00E640818EDFB9E79C9BD241AEF4
+  userChecksum: null
 - generatedChecksum: 5A346C38CC35BC48751DE62A4A8AD5C1
   logicalPath: config/sam_9x60_ek/peripheral/aic
   name: plib_aic.c
@@ -216,13 +216,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 50E262C9EB2CEB955BA68769EBE3971E
-- generatedChecksum: 452F7AB915EEA4B1529959D0FF80C3F7
+- generatedChecksum: null
   logicalPath: ''
   name: app.h
   physicalPath: ../..
   security: NON_SECURE
   type: HEADER
-  userChecksum: 452F7AB915EEA4B1529959D0FF80C3F7
+  userChecksum: null
 - generatedChecksum: 8715D1F1689C25338A3FF105C5CFCAD9
   logicalPath: packs/SAM9X60_DFP/component
   name: bsc.h
@@ -279,13 +279,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 38C04D1D441D17621F694893A1136983
-- generatedChecksum: C39FF9F8DB9C26362902D836412FE3C5
+- generatedChecksum: 45F4BFD35E618F4B46317CAEDA755FDA
   logicalPath: config/sam_9x60_ek
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: C39FF9F8DB9C26362902D836412FE3C5
+  userChecksum: 45F4BFD35E618F4B46317CAEDA755FDA
 - generatedChecksum: 8B35997040E0D61B0C62411FF7C4E9C1
   logicalPath: config/sam_9x60_ek/peripheral/mmu
   name: cp15.h
@@ -1133,13 +1133,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D48EE71B5ADC58838AD58AF74603102D
-- generatedChecksum: C0A13F5280AE3C6140103C178B189214
+- generatedChecksum: EA65AE931A8E88FC5A5B521D2B854EFE
   logicalPath: config/sam_9x60_ek
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: C0A13F5280AE3C6140103C178B189214
+  userChecksum: EA65AE931A8E88FC5A5B521D2B854EFE
 - generatedChecksum: 9185DCB415C1A1D1CEBC9FEF5E7E5DE7
   logicalPath: packs/SAM9X60_DFP/component
   name: trng.h
@@ -1196,13 +1196,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: C14C1ACED0F5B335051905D601EF23D6
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/sam_9x60_ek
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 5C2CE57A3382CD0DAA93DD25F1AF8136
   logicalPath: packs/SAM9X60_DFP/component
   name: wdt.h
