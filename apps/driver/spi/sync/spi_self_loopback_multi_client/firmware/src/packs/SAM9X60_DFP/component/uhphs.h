@@ -1,5 +1,5 @@
-/**
- * \brief Component description for UHPHS
+/*
+ * Component description for UHPHS
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

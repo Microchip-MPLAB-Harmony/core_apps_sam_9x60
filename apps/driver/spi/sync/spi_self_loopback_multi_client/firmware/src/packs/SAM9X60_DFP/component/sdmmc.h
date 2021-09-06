@@ -1,5 +1,5 @@
-/**
- * \brief Component description for SDMMC
+/*
+ * Component description for SDMMC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

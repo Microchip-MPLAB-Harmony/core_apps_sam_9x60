@@ -1,5 +1,5 @@
-/**
- * \brief Component description for OTPC
+/*
+ * Component description for OTPC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

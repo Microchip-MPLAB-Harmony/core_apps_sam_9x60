@@ -1,5 +1,5 @@
-/**
- * \brief Component description for MPDDRC
+/*
+ * Component description for MPDDRC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

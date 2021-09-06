@@ -1,5 +1,5 @@
-/**
- * \brief Component description for TDES
+/*
+ * Component description for TDES
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

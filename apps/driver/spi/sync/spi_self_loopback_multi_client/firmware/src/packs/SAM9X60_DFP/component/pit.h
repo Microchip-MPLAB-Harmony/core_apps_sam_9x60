@@ -1,5 +1,5 @@
-/**
- * \brief Component description for PIT
+/*
+ * Component description for PIT
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

@@ -1,5 +1,5 @@
-/**
- * \brief Peripheral I/O description for SAM9X60
+/*
+ * Peripheral I/O description for SAM9X60
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

@@ -72,11 +72,11 @@
 
 APP_CLIENT1_DATA app_client1Data;
 
-uint8_t __attribute__ ((aligned (32))) txBufferA[]  = "First client transmitting its txBufferA buffer at frequency 2MHZ";
-uint8_t __attribute__ ((aligned (32))) txBufferB[]  = "First client transmitting its txBufferB buffer at frequency 2MHZ";
+uint8_t CACHE_ALIGN txBufferA[]  = "First client transmitting its txBufferA buffer at frequency 2MHZ";
+uint8_t CACHE_ALIGN txBufferB[]  = "First client transmitting its txBufferB buffer at frequency 2MHZ";
 
-uint8_t __attribute__ ((aligned (32))) rxBufferA[sizeof(txBufferA)];
-uint8_t __attribute__ ((aligned (32))) rxBufferB[sizeof(txBufferB)];
+uint8_t CACHE_ALIGN rxBufferA[CACHE_ALIGNED_SIZE_GET(sizeof(txBufferA))];
+uint8_t CACHE_ALIGN rxBufferB[CACHE_ALIGNED_SIZE_GET(sizeof(txBufferB))];
 
 
 // *****************************************************************************

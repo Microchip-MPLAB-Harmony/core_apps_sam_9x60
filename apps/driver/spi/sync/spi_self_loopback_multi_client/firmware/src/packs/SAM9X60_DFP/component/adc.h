@@ -1,5 +1,5 @@
-/**
- * \brief Component description for ADC
+/*
+ * Component description for ADC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

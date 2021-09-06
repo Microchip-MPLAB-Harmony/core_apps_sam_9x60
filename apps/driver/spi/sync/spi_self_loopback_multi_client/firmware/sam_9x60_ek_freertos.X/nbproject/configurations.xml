@@ -38,6 +38,10 @@
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f3" displayName="mmu" projectFiles="true">
+              <logicalFolder name="f1" displayName="spi" projectFiles="true">
+                <logicalFolder name="f1" displayName="master" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
               <itemPath>../src/config/sam_9x60_ek_freertos/peripheral/mmu/plib_mmu.h</itemPath>
               <itemPath>../src/config/sam_9x60_ek_freertos/peripheral/mmu/cp15.h</itemPath>
             </logicalFolder>
@@ -246,6 +250,7 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_9x60_ek_freertos/harmony-manifest-success.yml</itemPath>
+      <itemPath>spi_self_loopback_multi_client_sam_9x60_ek_freertos.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -288,6 +293,10 @@
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f3" displayName="mmu" projectFiles="true">
+              <logicalFolder name="f1" displayName="spi" projectFiles="true">
+                <logicalFolder name="f1" displayName="master" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
               <itemPath>../src/config/sam_9x60_ek_freertos/peripheral/mmu/plib_mmu.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f4" displayName="pio" projectFiles="true">
@@ -364,9 +373,9 @@
         <targetDevice>SAM9X60</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -439,7 +448,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/sam_9x60_ek_freertos;../src/packs/SAM9X60_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_9x60_ek_freertos;../src/packs/SAM9X60_DFP;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926;../src/third_party/rtos/FreeRTOS/Source/include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -451,6 +460,7 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value=""/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -482,6 +492,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -535,7 +546,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/sam_9x60_ek_freertos;../src/packs/SAM9X60_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_9x60_ek_freertos;../src/packs/SAM9X60_DFP;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926;../src/third_party/rtos/FreeRTOS/Source/include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -563,6 +574,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
@@ -1051,6 +1063,30 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="communication.autoselectspeed" value="true"/>
+        <property key="communication.interface" value="4wire"/>
+        <property key="communication.speed" value="4"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x23ffff"/>
+        <property key="memories.programmemory.start" value="0x200000"/>
+        <property key="programoptions.eraseb4program" value="false"/>
+        <property key="programoptions.preservebootflash" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x23ffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x200000"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
+      </Tool>
       <jlink>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.autoselectspeed" value="true"/>
