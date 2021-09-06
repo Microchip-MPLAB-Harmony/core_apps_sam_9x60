@@ -1,5 +1,5 @@
-/**
- * \brief Component description for PIT64B
+/*
+ * Component description for PIT64B
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

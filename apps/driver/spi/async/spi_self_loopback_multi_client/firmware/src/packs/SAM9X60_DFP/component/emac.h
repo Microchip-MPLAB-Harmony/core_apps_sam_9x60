@@ -1,5 +1,5 @@
-/**
- * \brief Component description for EMAC
+/*
+ * Component description for EMAC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

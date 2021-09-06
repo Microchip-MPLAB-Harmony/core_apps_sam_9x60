@@ -1,5 +1,5 @@
-/**
- * \brief Component description for LCDC
+/*
+ * Component description for LCDC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

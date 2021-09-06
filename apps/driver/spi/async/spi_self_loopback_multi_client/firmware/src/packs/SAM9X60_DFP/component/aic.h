@@ -1,5 +1,5 @@
-/**
- * \brief Component description for AIC
+/*
+ * Component description for AIC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

@@ -1,5 +1,5 @@
-/**
- * \brief Component description for SFR
+/*
+ * Component description for SFR
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

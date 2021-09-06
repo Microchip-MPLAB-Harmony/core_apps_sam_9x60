@@ -1,5 +1,5 @@
-/**
- * \brief Instance header file for SAM9X60D6K
+/*
+ * Instance header file for SAM9X60D6K
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

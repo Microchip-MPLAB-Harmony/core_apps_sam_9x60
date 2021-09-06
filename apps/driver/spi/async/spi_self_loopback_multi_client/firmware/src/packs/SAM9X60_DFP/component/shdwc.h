@@ -1,5 +1,5 @@
-/**
- * \brief Component description for SHDWC
+/*
+ * Component description for SHDWC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

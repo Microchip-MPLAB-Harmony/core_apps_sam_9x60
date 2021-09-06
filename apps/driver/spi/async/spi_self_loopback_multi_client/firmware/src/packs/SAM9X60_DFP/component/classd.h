@@ -1,5 +1,5 @@
-/**
- * \brief Component description for CLASSD
+/*
+ * Component description for CLASSD
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

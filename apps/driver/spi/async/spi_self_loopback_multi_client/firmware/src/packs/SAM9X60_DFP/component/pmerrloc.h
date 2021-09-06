@@ -1,5 +1,5 @@
-/**
- * \brief Component description for PMERRLOC
+/*
+ * Component description for PMERRLOC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

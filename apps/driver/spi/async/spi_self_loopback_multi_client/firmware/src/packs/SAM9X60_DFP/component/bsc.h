@@ -1,5 +1,5 @@
-/**
- * \brief Component description for BSC
+/*
+ * Component description for BSC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *

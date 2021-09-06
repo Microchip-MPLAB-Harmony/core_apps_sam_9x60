@@ -1,5 +1,5 @@
-/**
- * \brief Component description for PMECC
+/*
+ * Component description for PMECC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
