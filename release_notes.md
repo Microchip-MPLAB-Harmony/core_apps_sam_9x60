@@ -41,7 +41,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | IAR applications |
+| Development Kits  | MPLAB X applications | IAR applications |
 |:-----------------:|:-------------------:|:----------------:|
 | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) | 30 | 27 |
 
@@ -51,7 +51,7 @@ Following table provides number of peripheral library examples available for dif
 
 ### Known Issues
 
-- **SAM9X60 family**: SAM9X60_DFP v1.5.50 or higher is required to correctly program and debug the application from within MPLABx 5.45
+- **SAM9X60 family**: SAM9X60_DFP v1.5.50 or higher is required to correctly program and debug the application from within MPLAB X 5.45
 
 ### Development Tools
 
@@ -81,7 +81,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | IAR applications |
+| Development Kits  | MPLAB X applications | IAR applications |
 |:-----------------:|:-------------------:|:----------------:|
 | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) | 28 | 27 |
 
