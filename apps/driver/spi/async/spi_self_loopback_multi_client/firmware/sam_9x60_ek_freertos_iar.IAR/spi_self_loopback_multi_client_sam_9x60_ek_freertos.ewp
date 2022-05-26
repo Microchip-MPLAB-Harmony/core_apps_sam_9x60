@@ -2808,7 +2808,7 @@
                         <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_freertos_iar\cstartup.s</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_freertos_iar\vectortrap.s</name>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_freertos_iar\fault_handlers.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_freertos_iar\freertos_hooks.c</name>
