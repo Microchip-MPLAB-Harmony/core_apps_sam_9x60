@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/qspi/plib_qspi.h"
 #include "bsp/bsp.h"
+#include "peripheral/qspi/plib_qspi.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"

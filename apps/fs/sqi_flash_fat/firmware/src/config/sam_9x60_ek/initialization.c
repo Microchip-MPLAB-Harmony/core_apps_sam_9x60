@@ -284,9 +284,9 @@ void SYS_Initialize ( void* data )
 
 
 
+	BSP_Initialize();
     QSPI_Initialize();
 
-	BSP_Initialize();
     MMU_Initialize();
 
     AIC_INT_Initialize();
