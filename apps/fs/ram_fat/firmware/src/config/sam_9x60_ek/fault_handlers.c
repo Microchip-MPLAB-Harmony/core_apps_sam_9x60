@@ -1,24 +1,5 @@
 /*******************************************************************************
-  RAM PLIB
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    plib_ram.c
-
-  Summary:
-    RAM PLIB Implementation file
-
-  Description:
-    This file defines the interface to the RAM peripheral library. This
-    library provides access to and control of the associated peripheral
-    instance.
-
-*******************************************************************************/
-// DOM-IGNORE-BEGIN
-/*******************************************************************************
-* Copyright (C) 2021 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -38,29 +19,35 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-// DOM-IGNORE-END
-
-#include <string.h>
-#include "plib_ram.h"
-
-bool RAM_Read( uint32_t *data, uint32_t length, const uint32_t address )
+ *******************************************************************************/
+void __attribute((weak, noreturn)) undefined_instruction_irq_handler (void)
 {
-     uint32_t *xaddress_r = (uint32_t *)address;
-    (void) memcpy(data, xaddress_r, length);
-
-    return true;
+    while(1)
+    {
+        // Do Nothing
+    }
 }
 
-bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address )
+void __attribute((weak, noreturn)) software_interrupt_irq_handler(void)
 {
-     uint32_t *xaddress_w = (uint32_t *)address;
-    (void) memcpy(xaddress_w, data, length);
-
-    return true;
+    while(1)
+    {
+        // Do Nothing
+    }
 }
 
-bool RAM_IsBusy(void)
+void __attribute((weak, noreturn)) data_abort_irq_handler(void)
 {
-    return false;
+    while(1)
+    {
+        // Do Nothing
+    }
+}
+
+void __attribute((weak, noreturn)) prefetch_abort_irq_handler(void)
+{
+    while(1)
+    {
+        // Do Nothing
+    }
 }
