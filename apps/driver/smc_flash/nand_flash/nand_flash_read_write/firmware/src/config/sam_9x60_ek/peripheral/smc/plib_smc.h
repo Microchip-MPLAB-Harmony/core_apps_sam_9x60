@@ -63,17 +63,58 @@
 #endif
 // DOM-IGNORE-END
 
+/* Address for transferring command bytes, CLE A22 */
+#define COMMAND_ADDR    0x400000U
+/* Address for transferring address bytes, ALE A21 */
+#define ADDRESS_ADDR    0x200000U
+
 
 void SMC_Initialize( void );
 uint32_t SMC_DataAddressGet(uint8_t chipSelect);
-void SMC_CommandWrite(uint32_t dataAddress, uint8_t command);
-void SMC_CommandWrite16(uint32_t dataAddress, uint16_t command);
-void SMC_AddressWrite(uint32_t dataAddress, uint8_t address);
-void SMC_AddressWrite16(uint32_t dataAddress, uint16_t address);
-void SMC_DataWrite(uint32_t dataAddress, uint8_t data);
-void SMC_DataWrite16(uint32_t dataAddress, uint16_t data);
-uint8_t SMC_DataRead(uint32_t dataAddress);
-uint16_t SMC_DataRead16(uint32_t dataAddress);
+
+static inline void SMC_CommandWrite(uint32_t dataAddress, uint8_t command)
+{
+    /* Send command */
+    *((volatile uint8_t *)(dataAddress | COMMAND_ADDR)) = command;
+}
+
+static inline void SMC_CommandWrite16(uint32_t dataAddress, uint16_t command)
+{
+    /* Send command */
+    *((volatile uint16_t *)(dataAddress | COMMAND_ADDR)) = command;
+}
+
+static inline void SMC_AddressWrite(uint32_t dataAddress, uint8_t address)
+{
+    /* Send address */
+    *((volatile uint8_t *)(dataAddress | ADDRESS_ADDR)) = address;
+}
+
+static inline void SMC_AddressWrite16(uint32_t dataAddress, uint16_t address)
+{
+    /* Send address */
+    *((volatile uint16_t *)(dataAddress | ADDRESS_ADDR)) = address;
+}
+
+static inline void SMC_DataWrite(uint32_t dataAddress, uint8_t data)
+{
+    *((volatile uint8_t *)dataAddress) = data;
+}
+
+static inline void SMC_DataWrite16(uint32_t dataAddress, uint16_t data)
+{
+    *((volatile uint16_t *)dataAddress) = data;
+}
+
+static inline uint8_t SMC_DataRead(uint32_t dataAddress)
+{
+    return *((volatile uint8_t *)dataAddress);
+}
+
+static inline uint16_t SMC_DataRead16(uint32_t dataAddress)
+{
+    return *((volatile uint16_t *)dataAddress);
+}
 
 void PMECC_DataPhaseStart(bool writeEnable);
 bool PMECC_StatusIsBusy(void);

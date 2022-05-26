@@ -43,10 +43,6 @@
 #include "device.h"
 #include <stddef.h>         // NULL
 
-/* Address for transferring command bytes, CLE A22 */
-#define COMMAND_ADDR    0x400000
-/* Address for transferring address bytes, ALE A21 */
-#define ADDRESS_ADDR    0x200000
 
 static void PMECC_Initialize( void );
 static void PMERRLOC_Initialize( void );
@@ -74,25 +70,25 @@ void SMC_Initialize( void )
 
     // Chip Select 3 --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // Configure SETUP register
-    SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_SETUP = SMC_SETUP_NWE_SETUP( 2 )
-                                          | SMC_SETUP_NCS_WR_SETUP( 2 )
-                                          | SMC_SETUP_NRD_SETUP( 2 )
-                                          | SMC_SETUP_NCS_RD_SETUP( 2 )
+    SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_SETUP = SMC_SETUP_NWE_SETUP( 2U )
+                                          | SMC_SETUP_NCS_WR_SETUP( 2U )
+                                          | SMC_SETUP_NRD_SETUP( 2U )
+                                          | SMC_SETUP_NCS_RD_SETUP( 2U )
                                           ;
     // Configure CYCLE register
-    SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_CYCLE = SMC_CYCLE_NWE_CYCLE( 13 )
-                                          | SMC_CYCLE_NRD_CYCLE( 13 )
+    SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_CYCLE = SMC_CYCLE_NWE_CYCLE( 13U )
+                                          | SMC_CYCLE_NRD_CYCLE( 13U )
                                           ;
     // Configure PULSE register
-    SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_PULSE = SMC_PULSE_NWE_PULSE( 7 )
-                                          | SMC_PULSE_NCS_WR_PULSE( 7 )
-                                          | SMC_PULSE_NRD_PULSE( 7 )
-                                          | SMC_PULSE_NCS_RD_PULSE( 7 )
+    SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_PULSE = SMC_PULSE_NWE_PULSE( 7U )
+                                          | SMC_PULSE_NCS_WR_PULSE( 7U )
+                                          | SMC_PULSE_NRD_PULSE( 7U )
+                                          | SMC_PULSE_NCS_RD_PULSE( 7U )
                                           ;
     // Configure MODE register
     SMC_REGS->SMC_CS_NUMBER[ 3 ].SMC_MODE = SMC_MODE_EXNW_MODE_DISABLED
                                           | SMC_MODE_TDF_MODE_Msk
-                                          | SMC_MODE_TDF_CYCLES( 1 )
+                                          | SMC_MODE_TDF_CYCLES( 1U )
                                           | SMC_MODE_DBW_BIT_8
                                           | SMC_MODE_BAT_BYTE_SELECT
                                           | SMC_MODE_WRITE_MODE_NWE_CTRL
@@ -139,57 +135,15 @@ uint32_t SMC_DataAddressGet(uint8_t chipSelect)
             break;
 
         default:
+            /*default*/
             break;
     }
     return dataAddress;
 }
 
-inline void SMC_CommandWrite(uint32_t dataAddress, uint8_t command)
-{
-    /* Send command */
-    *((volatile uint8_t *)(dataAddress | COMMAND_ADDR)) = command;
-}
-
-inline void SMC_CommandWrite16(uint32_t dataAddress, uint16_t command)
-{
-    /* Send command */
-    *((volatile uint16_t *)(dataAddress | COMMAND_ADDR)) = command;
-}
-
-inline void SMC_AddressWrite(uint32_t dataAddress, uint8_t address)
-{
-    /* Send address */
-    *((volatile uint8_t *)(dataAddress | ADDRESS_ADDR)) = address;
-}
-
-inline void SMC_AddressWrite16(uint32_t dataAddress, uint16_t address)
-{
-    /* Send address */
-    *((volatile uint16_t *)(dataAddress | ADDRESS_ADDR)) = address;
-}
-
-inline void SMC_DataWrite(uint32_t dataAddress, uint8_t data)
-{
-    *((volatile uint8_t *)dataAddress) = data;
-}
-
-inline void SMC_DataWrite16(uint32_t dataAddress, uint16_t data)
-{
-    *((volatile uint16_t *)dataAddress) = data;
-}
-
-inline uint8_t SMC_DataRead(uint32_t dataAddress)
-{
-    return *((volatile uint8_t *)dataAddress);
-}
-
-inline uint16_t SMC_DataRead16(uint32_t dataAddress)
-{
-    return *((volatile uint16_t *)dataAddress);
-}
 
 // PMECC =======================================================================
-void PMECC_Initialize( void )
+static void PMECC_Initialize( void )
 {
     // Disable then configure the PMECC module
     PMECC_REGS->PMECC_CTRL = PMECC_CTRL_DISABLE_Msk    // disable PMECC Module
@@ -198,12 +152,12 @@ void PMECC_Initialize( void )
     // PMECC interrupt disable
     PMECC_REGS->PMECC_IDR = PMECC_IDR_ERRID_Msk;
     // Configuration register
-    PMECC_REGS->PMECC_CFG = PMECC_CFG_PAGESIZE(0x3)
-                        | PMECC_CFG_BCH_ERR(0x1)
+    PMECC_REGS->PMECC_CFG = PMECC_CFG_PAGESIZE(0x3U)
+                        | PMECC_CFG_BCH_ERR(0x1U)
                         | PMECC_CFG_AUTO_Msk
                         ;
     // Spare area size register
-    PMECC_REGS->PMECC_SAREA = PMECC_SAREA_SPARESIZE( 57 ); // 56 bytes
+    PMECC_REGS->PMECC_SAREA = PMECC_SAREA_SPARESIZE( 57U ); // 56 bytes
     // Start address register
     PMECC_REGS->PMECC_SADDR = 2;
     // End address register
@@ -285,7 +239,7 @@ uint32_t PMERRLOC_ErrorLocationFindNumOfRoots(uint32_t sectorSizeInBits, uint32_
     return ((PMERRLOC_REGS->PMERRLOC_ELISR & PMERRLOC_ELISR_ERR_CNT_Msk) >> PMERRLOC_ELISR_ERR_CNT_Pos);
 }
 
-void PMERRLOC_Initialize( void )
+static void PMERRLOC_Initialize( void )
 {
     // Disable then configure the PMERRLOC module
     PMERRLOC_REGS->PMERRLOC_ELDIS = PMERRLOC_ELDIS_DIS_Msk;   // disable PMERRLOC Module
