@@ -2,7 +2,7 @@
 A2,PB12,,Available,In,,,,,,,,
 A3,PB2,,Available,In,,,,,,,,
 A4,PB17,,Available,In,,,,,,,,
-A5,PB13,,Available,In,,,,,,,,
+A5,PB13,APP_CLIENT2_CS,GPIO,Out,High,No,Disabled,No,No,Disabled,No,Low
 A7,PB19,,Available,In,,,,,,,,
 A8,PB21,,Available,In,,,,,,,,
 A9,PA25,,Available,In,,,,,,,,
@@ -66,7 +66,7 @@ K1,PA15,,Available,In,,,,,,,,
 K2,PA2,,Available,In,,,,,,,,
 K3,PA3,,Available,In,,,,,,,,
 K14,PD5,,Available,In,,,,,,,,
-K15,PD20,CLIENT1_CS,GPIO,Out,High,No,Disabled,No,No,Disabled,No,Low
+K15,PD20,,Available,In,,,,,,,,
 K16,PD7,,Available,In,,,,,,,,
 K17,PD2,,Available,In,,,,,,,,
 L1,PA4,,Available,In,,,,,,,,
@@ -78,7 +78,7 @@ N1,PA6,,Available,In,,,,,,,,
 N2,PA9,,Available,In,,,,,,,,
 N3,PA5,,Available,In,,,,,,,,
 P2,PA7,,Available,In,,,,,,,,
-P3,PA8,,FLEXCOM5_IO3,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
+P3,PA8,APP_CLIENT1_CS,GPIO,Out,Low,No,Disabled,No,No,Disabled,No,Low
 P5,PC25,,Available,In,,,,,,,,
 P6,PC19,,Available,In,,,,,,,,
 P8,PC21,,Available,In,,,,,,,,

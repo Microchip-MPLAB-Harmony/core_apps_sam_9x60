@@ -55,12 +55,12 @@
 #include "peripheral/aic/plib_aic.h"
 #include "peripheral/xdmac/plib_xdmac.h"
 #include "bsp/bsp.h"
+#include "driver/smc_flash/nand_flash/drv_nand_flash.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "driver/smc_flash/nand_flash/drv_nand_flash.h"
 #include "app.h"
 
 

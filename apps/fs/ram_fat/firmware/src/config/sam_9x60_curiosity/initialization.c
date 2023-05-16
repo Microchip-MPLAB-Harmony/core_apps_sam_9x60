@@ -62,12 +62,16 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 0 Initialization Data">
 
 
 static DRV_MEMORY_CLIENT_OBJECT gDrvMemory0ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX0];
 
-static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0];
+static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX0];
 
 static const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
     .Open               = DRV_RAM_Open,
@@ -90,11 +94,12 @@ static const DRV_MEMORY_INIT drvMemory0InitData =
     .ewBuffer                   = NULL,
     .clientObjPool              = (uintptr_t)&gDrvMemory0ClientObject[0],
     .bufferObj                  = (uintptr_t)&gDrvMemory0BufferObject[0],
-    .queueSize                  = DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0,
+    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX0,
     .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX0
 };
 
 // </editor-fold>
+
 
 
 // *****************************************************************************
@@ -246,7 +251,7 @@ static void SYSC_Disable( void )
 }
 
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -282,6 +287,12 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
 
 
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
+
     sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
 
 
@@ -290,11 +301,14 @@ void SYS_Initialize ( void* data )
     (void) SYS_FS_Initialize( (const void *) sysFSInit );
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
 
+
     /* MISRAC 2012 deviation block end */
+
 }
 
 

@@ -48,10 +48,10 @@
 #define PIO_MAX_NUM_OF_CHANNELS     5U
 
 /* Array to store callback objects of each configured interrupt */
-volatile static PIO_PIN_CALLBACK_OBJ portPinCbObj[0 + 0 + 0 + 0 + 0];
+volatile static PIO_PIN_CALLBACK_OBJ portPinCbObj[1 + 0 + 0 + 0 + 0];
 
 /* Array to store number of interrupts in each PORT Channel + previous interrupt count */
-volatile static uint8_t portNumCb[PIO_MAX_NUM_OF_CHANNELS + 1] = {0U, 0U, 0U, 0U, 0U, 0U};
+volatile static uint8_t portNumCb[PIO_MAX_NUM_OF_CHANNELS + 1] = {0U, 1U, 1U, 1U, 1U, 1U};
  void PIO_Interrupt_Handler ( PIO_PORT port );
 
 /******************************************************************************
@@ -84,6 +84,15 @@ void PIO_Initialize ( void )
     ((pio_registers_t*)PIO_PORT_A)->PIO_ODR = ~0x0U;
     /* Initialize PORTA pin state */
     ((pio_registers_t*)PIO_PORT_A)->PIO_ODSR = 0x0U;
+    /* PORTA Additional interrupt mode Enable */
+    ((pio_registers_t*)PIO_PORT_A)->PIO_AIMER = 0x20000000U;
+    /* PORTA Rising Edge or High Level Interrupt Enable */
+    ((pio_registers_t*)PIO_PORT_A)->PIO_REHLSR = 0x20000000U;
+    /* PORTA Interrupt Status Clear */
+    ((pio_registers_t*)PIO_PORT_A)->PIO_ISR;
+    /* PORTA system level interrupt will be enabled by NVIC Manager */
+    /* PORTA module level Interrupt for every pin has to be enabled by user
+       by calling PIO_PinInterruptEnable() API dynamically as and when needed*/
     /* PORTA Slew rate control */
     ((pio_registers_t*)PIO_PORT_A)->PIO_SLEWR = 0x0U;
     /* PORTA drive control */
@@ -137,8 +146,8 @@ void PIO_Initialize ( void )
     /* PORTD Output Write Enable */
     ((pio_registers_t*)PIO_PORT_D)->PIO_OWER = PIO_OWER_Msk;
     /* PORTD Output Direction Enable */
-    ((pio_registers_t*)PIO_PORT_D)->PIO_OER = 0x0U;
-    ((pio_registers_t*)PIO_PORT_D)->PIO_ODR = ~0x0U;
+    ((pio_registers_t*)PIO_PORT_D)->PIO_OER = 0x2a0000U;
+    ((pio_registers_t*)PIO_PORT_D)->PIO_ODR = ~0x2a0000U;
     /* Initialize PORTD pin state */
     ((pio_registers_t*)PIO_PORT_D)->PIO_ODSR = 0x0U;
     /* PORTD Additional interrupt mode Enable */
@@ -158,7 +167,9 @@ void PIO_Initialize ( void )
 
     uint32_t i;
     /* Initialize Interrupt Pin data structures */
-    for(i=0U; i<0U; i++)
+    portPinCbObj[0].pin = PIO_PIN_PA29;
+    
+    for(i=0U; i<1U; i++)
     {
         portPinCbObj[i].callback = NULL;
     }
@@ -425,6 +436,25 @@ void __attribute__((used)) PIO_Interrupt_Handler ( PIO_PORT port )
 // Section: Interrupt Service Routine (ISR) Implementation(s)
 // *****************************************************************************
 // *****************************************************************************
+// *****************************************************************************
+/* Function:
+    void PIOA_InterruptHandler (void)
+
+  Summary:
+    Interrupt handler for PORTA.
+
+  Description:
+    This function defines the Interrupt service routine for PORTA.
+    This is the function which by default gets into Interrupt Vector Table.
+
+  Remarks:
+    User should not call this function.
+*/
+void __attribute__((used)) PIOA_InterruptHandler(void)
+{
+    /* Local PIO Interrupt Handler */
+    PIO_Interrupt_Handler(PIO_PORT_A);
+}
 
 
 // *****************************************************************************

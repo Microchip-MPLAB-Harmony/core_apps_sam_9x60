@@ -67,8 +67,7 @@ static struct
 }irqData[] =
 {
     { 1U,  SYSC_SharedHandler,         AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
-    { 13U, FLEXCOM4_InterruptHandler,  AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
-    { 20U, XDMAC_InterruptHandler,     AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+    { 14U, FLEXCOM5_InterruptHandler,  AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
 };
 
 // *****************************************************************************

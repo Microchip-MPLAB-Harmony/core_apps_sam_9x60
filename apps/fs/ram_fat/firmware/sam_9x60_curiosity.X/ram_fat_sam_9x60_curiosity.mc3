@@ -507,7 +507,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;272&quot; canvasWidth=&quot;490&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;264&quot; canvasWidth=&quot;490&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Curiosity&quot; x=&quot;320&quot; y=&quot;20&quot;/&gt;
@@ -1443,11 +1443,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIOA_OER_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_OER_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIOA_PDR_VALUE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_PDR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIOA_PUER_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_PUER_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;536870912&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1601,7 +1623,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOD_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;2752512&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2634,7 +2656,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\interrupts.c</file>
-         <hash>1c3fb99920148fab9992bac627e24334f8d782cb290645b1c5aa15a70bb5a0dd</hash>
+         <hash>361f5e1d843df60d762741cff2e30549cff849154b7e8d5aa89a3b3a8b07aa80</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\osal\osal.h</file>
@@ -2802,7 +2824,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\pio\plib_pio.c</file>
-         <hash>6079f24308f530c6f8184f3f9fac375a367584abe0c7b106ca529ebb1eb0de5d</hash>
+         <hash>ec031198f9760e63ffef76ca126226fb517617e3525b5132a6ac3db3130120c9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\driver.h</file>
@@ -2974,7 +2996,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\memory\drv_memory.h</file>
-         <hash>5ddd2680d0d41862d540dc1db5f33c02258cf5bee63d552c83c952bd01fbafda</hash>
+         <hash>614702f2ebbb2a6a2b1baf1c9f8472c94ea3588e370c507c9bf408b1d86702af</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pit64b.h</file>
@@ -3058,7 +3080,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\initialization.c</file>
-         <hash>cc4eb3772273fe66a7060917c98112e1c991750298beee9d299d9d313ab69be6</hash>
+         <hash>0a3644eecac3de9208e9df6d78cd5048f60ecccecabeea9f575e6a8c3b4b9f3b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\isi.h</file>
@@ -3157,12 +3179,12 @@
          <hash>931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\driver\memory\src\drv_memory_file_system.c</file>
-         <hash>ad02bcbc7e97a16a5e8b08c735b79e783435094db2e1803bb0cafa4a7ee7eb25</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\piob.h</file>
          <hash>3e6b61a204296854245a4954892c9593e2e7f5e081e0ebea2f7b859eb48f9a47</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\driver\memory\src\drv_memory_file_system.c</file>
+         <hash>ad02bcbc7e97a16a5e8b08c735b79e783435094db2e1803bb0cafa4a7ee7eb25</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\tc0.h</file>
@@ -3254,7 +3276,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\configuration.h</file>
-         <hash>a768ae42cfd2763fe9e199c1e0836fce5e4704a05e1b0919d90db73f77efede7</hash>
+         <hash>60250f2462ad317b64834d6b633c6ffa81ee9978132bc06877ceca0e6fe7d865</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\system\fs\fat_fs\file_system\ff.h</file>

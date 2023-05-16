@@ -30,7 +30,7 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
-         <string>flexcom4</string>
+         <string>flexcom5</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -901,11 +901,11 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;core&quot; x=&quot;240&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_spi&quot; x=&quot;210&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;flexcom4&quot; x=&quot;50&quot; y=&quot;191&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;flexcom5&quot; x=&quot;34&quot; y=&quot;213&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;pit&quot; x=&quot;340&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;1&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;302&quot; canvasWidth=&quot;641&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -1114,7 +1114,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_CH_FOR_FLEXCOM4_Receive&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;-1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1125,7 +1125,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_CH_FOR_FLEXCOM4_Transmit&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;-1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1136,7 +1136,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_CH_NEEDED_FOR_FLEXCOM4_Receive&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1147,7 +1147,29 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_CH_NEEDED_FOR_FLEXCOM4_Transmit&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="DMA_CH_NEEDED_FOR_FLEXCOM5_Receive"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_CH_NEEDED_FOR_FLEXCOM5_Receive&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="DMA_CH_NEEDED_FOR_FLEXCOM5_Transmit"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_CH_NEEDED_FOR_FLEXCOM5_Transmit&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1158,7 +1180,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DMA_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1477,7 +1499,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1499,7 +1521,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1522,6 +1544,61 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_INTERRUPT_SRC_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FLEXCOM5_CLOCK_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_CLOCK_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FLEXCOM5_CLOCK_FREQUENCY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_CLOCK_FREQUENCY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FLEXCOM5_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FLEXCOM5_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;FLEXCOM5_InterruptHandler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FLEXCOM5_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1836,11 +1913,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_100_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_100_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_100_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_100_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_105_FUNCTION_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_105_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;FLEXCOM4_IO1&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1858,11 +1957,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_111_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_111_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_111_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_111_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_120_FUNCTION_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_120_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;FLEXCOM4_IO2&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1884,7 +2005,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_131_DIR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1895,7 +2016,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_131_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;APP_CLIENT1_CS&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1906,7 +2027,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_131_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1917,7 +2038,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_131_LAT&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;High&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1928,7 +2049,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_131_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1939,7 +2060,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_143_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;FLEXCOM4_IO0&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1994,7 +2115,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_159_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2023,6 +2144,83 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_172_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_172_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_172_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_172_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;CLIENT1_CS&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_172_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_172_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_172_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_172_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;High&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_172_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_172_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_25_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_25_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;FLEXCOM5_IO1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_25_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_25_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;B&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_32_LAT"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_32_LAT&quot;&gt;
@@ -2039,6 +2237,39 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_32_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_40_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;SWITCH_AL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_41_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_41_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;FLEXCOM5_IO2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_41_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_41_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;B&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2089,11 +2320,110 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_5_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_5_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_5_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_5_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;CLIENT2_CS&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_5_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_5_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_5_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_5_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;High&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_5_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_5_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_99_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_99_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_99_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_99_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_9_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_9_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;FLEXCOM5_IO0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_9_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_9_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;B&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIOA_ABCDSR1_VALUE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_ABCDSR1_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;14680064&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2159,7 +2489,18 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_PDR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;14336&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;14694400&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIOA_PUER_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_PUER_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;536870912&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2258,7 +2599,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOB_SODR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;8192&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2357,7 +2698,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOD_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;2752512&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2380,6 +2721,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOD_PUER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;262144&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIOD_SODR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIOD_SODR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2922,7 +3274,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_DAM&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2944,7 +3296,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_DSYNC&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2977,7 +3329,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_PERID&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;FLEXCOM4_Transmit&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;Software Trigger&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2988,7 +3340,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_PERID_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2999,7 +3351,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_PERID_VAL&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;8&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3021,7 +3373,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_SIF&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3043,7 +3395,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3076,7 +3428,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_DIF&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3120,7 +3472,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_PERID&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;FLEXCOM4_Receive&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;Software Trigger&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3131,7 +3483,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_PERID_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3142,7 +3494,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_PERID_VAL&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;9&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3153,7 +3505,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_SAM&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3186,7 +3538,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3197,7 +3549,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CH0_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3208,7 +3560,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CH1_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3219,7 +3571,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_CLOCK_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3241,7 +3593,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3252,7 +3604,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;XDMAC_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;XDMAC_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3263,7 +3615,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3439,7 +3791,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_spi&gt;
   &lt;drv_spi dnOrder=&quot;0&quot; id=&quot;DRV_SPI_SYS_DMA_CODE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi&gt;
 &lt;/drv_spi&gt;
@@ -3450,7 +3802,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_spi&gt;
   &lt;drv_spi dnOrder=&quot;0&quot; id=&quot;DRV_SPI_SYS_DMA_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi&gt;
 &lt;/drv_spi&gt;
@@ -3461,7 +3813,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_spi&gt;
   &lt;drv_spi dnOrder=&quot;0&quot; id=&quot;DRV_SPI_SYS_DMA_ENABLE_CNTR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi&gt;
 &lt;/drv_spi&gt;
@@ -3475,10 +3827,10 @@
       &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;drv_spi_SPI_dependency&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;flexcom4&lt;/Value&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;flexcom5&lt;/Value&gt;
           &lt;/String&gt;
           &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;FLEXCOM4_SPI&lt;/Value&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;FLEXCOM5_SPI&lt;/Value&gt;
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
@@ -3531,7 +3883,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_spi_0&gt;
   &lt;drv_spi_0 dnOrder=&quot;0&quot; id=&quot;DRV_SPI_PLIB&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;FLEXCOM4&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;FLEXCOM5&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi_0&gt;
 &lt;/drv_spi_0&gt;
@@ -3556,11 +3908,11 @@
   &lt;drv_spi_0 dnOrder=&quot;0&quot; id=&quot;DRV_SPI_RX_DMA_CHANNEL&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;-1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi_0&gt;
 &lt;/drv_spi_0&gt;
@@ -3572,11 +3924,11 @@
   &lt;drv_spi_0 dnOrder=&quot;0&quot; id=&quot;DRV_SPI_TX_DMA_CHANNEL&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;-1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi_0&gt;
 &lt;/drv_spi_0&gt;
@@ -3591,9 +3943,6 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
   &lt;/drv_spi_0&gt;
 &lt;/drv_spi_0&gt;
 </value>
@@ -3603,25 +3952,25 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_spi_0&gt;
   &lt;drv_spi_0 dnOrder=&quot;0&quot; id=&quot;DRV_SPI_TX_RX_DMA_EN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_spi_0&gt;
 &lt;/drv_spi_0&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="!@#harmonyAttachmentState"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot;&gt;
     &lt;Attachments dnOrder=&quot;0&quot;&gt;
-      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_I2C&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_I2C&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
             &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
           &lt;/Boolean&gt;
         &lt;/Attributes&gt;
       &lt;/DirectCapability&gt;
-      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;FLEXCOM4_SPI&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;FLEXCOM5_SPI&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
             &lt;Value dnOrder=&quot;0&quot;&gt;drv_spi_0&lt;/Value&gt;
@@ -3631,7 +3980,7 @@
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectCapability&gt;
-      &lt;DirectCapability dnOrder=&quot;2&quot; id=&quot;FLEXCOM4_UART&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;2&quot; id=&quot;FLEXCOM5_UART&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
             &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
@@ -3639,29 +3988,18 @@
         &lt;/Attributes&gt;
       &lt;/DirectCapability&gt;
     &lt;/Attachments&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="#&amp;__MCC_Group_Parrent_id"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="BRG_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;BRG_VALUE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;108&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM4_COMMON_HEADER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_COMMON_HEADER&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM5_COMMON_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_COMMON_HEADER&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;/peripheral/flexcom/spi/master/&lt;/Value&gt;
@@ -3682,14 +4020,14 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;HEADER&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM4_HEADER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_HEADER&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM5_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_HEADER&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;/peripheral/flexcom/spi/master/&lt;/Value&gt;
@@ -3698,7 +4036,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;plib_flexcom4_spi_master.h&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;plib_flexcom5_spi_master.h&lt;/Value&gt;
       &lt;/String&gt;
       &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;config/sam_9x60_curiosity_freertos/peripheral/flexcom/spi/master/&lt;/Value&gt;
@@ -3710,14 +4048,14 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;HEADER&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM4_SOURCE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM4_SOURCE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM5_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM5_SOURCE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;/peripheral/flexcom/spi/master/&lt;/Value&gt;
@@ -3726,7 +4064,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;plib_flexcom4_spi_master.c&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;plib_flexcom5_spi_master.c&lt;/Value&gt;
       &lt;/String&gt;
       &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;config/sam_9x60_curiosity_freertos/peripheral/flexcom/spi/master/&lt;/Value&gt;
@@ -3735,365 +4073,74 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;../peripheral/flexcom_11268/templates/plib_flexcom_spi_master.c.ftl&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_MODE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_MODE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;2&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_BAUD_RATE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_BAUD_RATE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_BAUD_RATE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_BAUD_RATE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;1000000&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_BITS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_BITS&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_CLOCK_MODE_COMMENT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_CLOCK_MODE_COMMENT&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_CPOL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_CPOL&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_DLYBCT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_DLYBCT&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_DLYBS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_DLYBS&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_NCPHA"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_NCPHA&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;1&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR0_SCBR_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_SCBR_VALUE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SPI_CSR0_SCBR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR0_SCBR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR1_SCBR_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR1_SCBR_VALUE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SPI_CSR1_SCBR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR1_SCBR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR2_SCBR_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR2_SCBR_VALUE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SPI_CSR2_SCBR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR2_SCBR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR3_SCBR_VALUE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR3_SCBR_VALUE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SPI_CSR3_SCBR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR3_SCBR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR_BITS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR_BITS&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR_CPOL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR_CPOL&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR_INDEX"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR_INDEX&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_CSR_NCPHA"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_CSR_NCPHA&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_DUMMY_DATA"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_DUMMY_DATA&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Long dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;255&lt;/Value&gt;
-      &lt;/Long&gt;
-      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;255&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_EN_NPCS0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_EN_NPCS0&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_EN_NPCS1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_EN_NPCS1&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_EN_NPCS2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_EN_NPCS2&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_EN_NPCS3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_EN_NPCS3&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_FIFO_ENABLE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_FIFO_ENABLE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_MR_BRSRCCLK"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_MR_BRSRCCLK&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_MR_DLYBCS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_MR_DLYBCS&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_MR_MSTR"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_MR_MSTR&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SPI_MR_MSTR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_MR_MSTR&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
@@ -4103,57 +4150,27 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;MASTER&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;MASTER&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_MR_PCS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_MR_PCS&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;label&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;---&lt;/Value&gt;
-      &lt;/String&gt;
-      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;2&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_NUM_CSR"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_NUM_CSR&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SPI_PERIPHERAL_CLOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_PERIPHERAL_CLOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SPI_PERIPHERAL_CLOCK"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SPI_PERIPHERAL_CLOCK&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200000000&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SYS_DEF"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SYS_DEF&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SYS_DEF"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SYS_DEF&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;markup&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
@@ -4168,14 +4185,14 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;STRING&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_SYS_INIT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SYS_INIT&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_SYS_INIT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_SYS_INIT&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;markup&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
@@ -4190,148 +4207,126 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;STRING&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_TWI_CLK_SRC_FREQ"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CLK_SRC_FREQ&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_TWI_CLK_SRC_FREQ"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CLK_SRC_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_TWI_CWGR_CHDIV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CWGR_CHDIV&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_TWI_CWGR_CHDIV"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CWGR_CHDIV&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;247&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;247&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_TWI_CWGR_CKDIV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CWGR_CKDIV&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_TWI_CWGR_CKDIV"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CWGR_CKDIV&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_TWI_CWGR_CLDIV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CWGR_CLDIV&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEXCOM_TWI_CWGR_CLDIV"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_TWI_CWGR_CLDIV&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;247&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;247&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEXCOM_USART_MR_OVER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEXCOM_USART_MR_OVER&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEX_USART_CLOCK_FREQ"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEX_USART_CLOCK_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEX_USART_CLOCK_FREQ"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEX_USART_CLOCK_FREQ&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="FLEX_USART_IRDA_FILTER_VAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;FLEX_USART_IRDA_FILTER_VAL&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;200000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;278&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="FLEX_USART_IRDA_FILTER_VAL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;FLEX_USART_IRDA_FILTER_VAL&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="RECEIVE_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;RECEIVE_DATA_REGISTER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;278&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;&amp;amp;(FLEXCOM5_REGS-&amp;gt;FLEX_SPI_RDR)&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="RECEIVE_DATA_REGISTER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;RECEIVE_DATA_REGISTER&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;&amp;amp;(FLEXCOM4_REGS-&amp;gt;FLEX_SPI_RDR)&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="SPI_DRIVER_CONTROLLED"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;SPI_DRIVER_CONTROLLED&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_spi_0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="SPI_INTERRUPT_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;SPI_INTERRUPT_MODE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="SPI_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;SPI_INTERRUPT_MODE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;Boolean dnOrder=&quot;1&quot; id=&quot;visible&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="TRANSMIT_DATA_REGISTER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;TRANSMIT_DATA_REGISTER&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="TRANSMIT_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;TRANSMIT_DATA_REGISTER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;&amp;amp;(FLEXCOM4_REGS-&amp;gt;FLEX_SPI_TDR)&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;&amp;amp;(FLEXCOM5_REGS-&amp;gt;FLEX_SPI_TDR)&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom4" name="TWI_INTERRUPT_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom4&gt;
-  &lt;flexcom4 dnOrder=&quot;0&quot; id=&quot;TWI_INTERRUPT_MODE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="flexcom5" name="TWI_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;flexcom5&gt;
+  &lt;flexcom5 dnOrder=&quot;0&quot; id=&quot;TWI_INTERRUPT_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom4&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom5&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/flexcom4&gt;
-&lt;/flexcom4&gt;
+  &lt;/flexcom5&gt;
+&lt;/flexcom5&gt;
 </value>
       </entry>
       <entry>
@@ -4445,7 +4440,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\task.h</file>
-         <hash>85a11a834d04120402087ac61190566f893480e9d6c8fe903218330dc4ea7d30</hash>
+         <hash>45f2245c914ed25ab26a1ea78ddd4ac74cb6522e1b26ac5c44b614ca4c8cee99</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\otpc.h</file>
@@ -4453,11 +4448,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
-         <hash>dae8ab1093eed0eebd86eef7f4e777e3d249d98b75528ff3841d41ce1c8f3fa6</hash>
+         <hash>24962ef361f396aaa5e6e33776eeeddaf2fb251c87b6fe50602acc56c537b093</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</file>
-         <hash>43bd2a4bf5d6495e04c8409187d8f31dfaee58d8f94d7e3a4fd9830e5d7e68dc</hash>
+         <hash>b876d839460197d94d0f95fb93c6aeb457f6fc572d32258480fed7d4de686b6b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\gpbr.h</file>
@@ -4469,7 +4464,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\spi\src\drv_spi.c</file>
-         <hash>bccd4009e3d5480478b84240fab00aa6093d697dfa9bde8907aa0ade3802dfec</hash>
+         <hash>5ad4d68ff23c0d43519ec63fc5a7f04a3408251795ef8de27934fb9ce06f7550</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\driver_common.h</file>
@@ -4477,7 +4472,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\list.h</file>
-         <hash>f288a68b8559a1913dd663136711f7adcaf8b3430627d7102978be4d808a02eb</hash>
+         <hash>dc572f54391c0407fc25db360d912fca9118cddae7bd2e3099eb13f18804e5a9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pioa.h</file>
@@ -4485,7 +4480,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</file>
-         <hash>b6da8ad0cb09303c87eb634679b97f56001c14f45acd1378103504699a95cad4</hash>
+         <hash>cf52c15fa26a8d4f82b55909b75ebfe2aab25468ba7780748912ddead9812b4e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\trng.h</file>
@@ -4529,19 +4524,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pio\plib_pio.h</file>
-         <hash>46ed16ad66d0d755eb15625087f1797045ecf2211c192e67a9db26099e7b310a</hash>
+         <hash>d912a54f03a7987c89f934455184b32b4d6655522070912f7604f3d3544905db</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\can1.h</file>
          <hash>91e4b1c9896fce14d181b3e3baac306214b579f19fb1605eca505a8c39623fb7</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\flexcom\spi\master\plib_flexcom4_spi_master.h</file>
-         <hash>df4a7df99837b749315acc5e67759c5ac90bed78333ed9b226865b59277a6bd8</hash>
+         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\flexcom\spi\master\plib_flexcom5_spi_master.c</file>
+         <hash>6d2748af09fea40cd751c75ed390a90b29d594c72a0e99ece9b3343501ac6af5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\dma\sys_dma_mapping.h</file>
-         <hash>4ff8aeb6274c85bdd6ee30cc2a43f307a17265ec98f56f77c063a262dbb8c5f6</hash>
+         <hash>9f88a55cde1335782ea00df3eddad5a61a345a2bd15fb73d1d6ddc92380f39d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pio.h</file>
@@ -4560,12 +4555,12 @@
          <hash>ae9ef9aebc3281946a79ba85a83c072d1ffd882936dee08bb001db0fba6a9f13</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\flexcom\spi\master\plib_flexcom4_spi_master.c</file>
-         <hash>fe45a9ffa3f25f2f3ccbed833629361b41ff23691344a2b195d33d527f625965</hash>
+         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\flexcom\spi\master\plib_flexcom5_spi_master.h</file>
+         <hash>fce26d66be49019455a6d9ade0c399733bc639c70be1b84ec043120a482ee7db</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
-         <hash>783d9a41c90817eec55d9317475cc2663a785fc9a955c06d3207fcee6e0ec080</hash>
+         <hash>2b46a2511ce5d23a56bc83079333d8d0a2e33763e5829c9383252806887a3dc0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\aes.h</file>
@@ -4593,11 +4588,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</file>
-         <hash>c8d9b7a52d092f37b4c3b821806bd6e8a30dbcc600960f9aed2b2f10f965c09f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\xdmac\plib_xdmac.h</file>
-         <hash>f9f011ac7d1d06f33165fd0711520eaff51dc2010f2b1a3faeb5b75cf4a53944</hash>
+         <hash>03e9c94aba57e3cf7f4f73bc2d3eb4a96ae38f3425eedb5450622ca286475a0b</hash>
       </entry>
       <entry>
          <file>..\src\app_client2.h</file>
@@ -4613,7 +4604,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>285971ccbea8a9fa1c308fa51769edd187c01e5edea9768ced1cfd869b154f8e</hash>
+         <hash>d9af522d8c4a5e1c14e784843d4167dd4443e4a99612b6fb81477b5f061cf688</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom12.h</file>
@@ -4648,10 +4639,6 @@
          <hash>a89035ed86df2a0f91bf0198af374f1a2ae5bf252aa52ef833aba86ef180c6e9</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\xdmac\plib_xdmac.c</file>
-         <hash>88f48c004f57fe0ac05594ca10a37806a87c86c2493f5ca1869319006b1a6c03</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\sdmmc0.h</file>
          <hash>435f418959e205099d8365ad15ac543eb4412a97d3421b9f29635a221a97ad22</hash>
       </entry>
@@ -4673,15 +4660,15 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</file>
-         <hash>1947473678873963f3193497280d907f59a5936f92df6395327f7ca684cb1aa6</hash>
+         <hash>35000a143464bbbd8df7c9a6f066a64598a24da5174a7be33972e62bfbd75f4d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\clk\plib_clk.c</file>
-         <hash>548a5091d13b0a3984a3c7c6894854a465ef2c3a04c9e8eb7606f04f0eb669f2</hash>
+         <hash>e5741bc3da4d409ef93e4dc43c7c9d75730fb04b3fb1ab7d3c6028289746858d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>216067611c196e84a3b14ca3ad5ac5aae0898379a193666f3f5a86aeaa0a6ac7</hash>
+         <hash>b5fc902db9eeda609f50fbe9b55d0cb464584150ec2b5ef9d0219e6136562894</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\xdmac.h</file>
@@ -4701,7 +4688,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\aic\plib_aic.c</file>
-         <hash>3aca86b131a3452d58838a12e5276653987bb8844910a5a3b39b2b5911d033f4</hash>
+         <hash>9f4e096874ff2d88eba38fb49d90900935a797710f9ec86364e588777cc07829</hash>
       </entry>
       <entry>
          <file>..\src\app_client1.h</file>
@@ -4713,7 +4700,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</file>
-         <hash>2bf5b5f5d83684c1e6d90e5bd17da9de41d38ed61ec0410f94595ff343f89174</hash>
+         <hash>ee0f596a54137e26ca806ebf067c4c6219a61348f1cbae8861a43d2d4891e1f9</hash>
       </entry>
       <entry>
          <file>..\src\app_client1.c</file>
@@ -4745,7 +4732,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\dma\sys_dma.c</file>
-         <hash>7ff3098ac82e3249ded5161ea2600e009d1d2011e0f98e9be90ea52b3ee7e2bb</hash>
+         <hash>093cd2dc1d8f6179639884a84681b2f1ac6cfc1f67c48fe43f525224d09aabf4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\ssc.h</file>
@@ -4754,10 +4741,6 @@
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\dma\sys_dma.h</file>
          <hash>b88cabd7557b659548a6fc75cd86e982c6a0eaa508b981ab27293fe5d0e29cd0</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\xdmac\plib_xdmac_common.h</file>
-         <hash>e5a0dc5bf08198069d8bf3ab33895344fc92b184bf5fa23efdbad2940827693e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.c</file>
@@ -4769,7 +4752,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.h</file>
-         <hash>1d7f351cd6c85896bc2908308b70925fa13cf985237ea2b34b392454c27ac4b0</hash>
+         <hash>2e7ccf2341376c3969185c4c3d65ab030e467c9bdb8366ce79b40ce022f69295</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\tc.h</file>
@@ -4777,11 +4760,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\flexcom\spi\master\plib_flexcom_spi_master_common.h</file>
-         <hash>b0cf37872ce3cd5ed544665fef1ec74f8de88f88380ae13561cf9001936dddd4</hash>
+         <hash>f6977fee93a7b21eb4d7de75ec9532d40f7f42af9f73d4a7ff62b648f3c2c429</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MemMang\heap_1.c</file>
-         <hash>d03a08079e678cc6e6a1e2105684ab0082d190bbb731f6807d75e1aca260e98f</hash>
+         <hash>286e3fee81c9107fc6dec40405f500cabdca56836d29747c182f0899bb8997fd</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sdmmc.h</file>
@@ -4801,7 +4784,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</file>
-         <hash>06b5b66a9b98ad4998c82d353c0108b9db1a846951b8865cbdeeef90c5bbe2fe</hash>
+         <hash>3cddf2b3d47ae387e376ac75eb468f9d8ffb575d68c143e08d54af4087474cce</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\cache\sys_cache.h</file>
@@ -4845,7 +4828,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
-         <hash>4452e3b0e6446b74c7d010d308072ba0a35c1f92bcf3882a54bf3796a72517aa</hash>
+         <hash>5cdf4fa35fe059446effff5bf20deaf83ddffb08921bc198fda106b1d17dd894</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\ports\sys_ports_mapping.h</file>
@@ -4965,7 +4948,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\spi\drv_spi_definitions.h</file>
-         <hash>1d80ee4090b3bd4995e85ddc6e36af98b4fe0f4fd8c7346e70102ee3f0c818e3</hash>
+         <hash>146bce9983a74dc4d5a2add3d30523703585f8a4a1ad734fa0db34ebf8e5b721</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\system_common.h</file>
@@ -4973,7 +4956,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\croutine.c</file>
-         <hash>4566d5abfceea128a553ecf2bbb22b9d7c9c8a1d3c1f02f9091182b5290d02fc</hash>
+         <hash>ebf0cdce261dc4a256c06c0d4ad2582e6026a6da0e973d4cb92092e94ce8f370</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\sfr.h</file>
@@ -4997,7 +4980,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
-         <hash>c95eb0d549ff1c20edebfec41d73584b5a20d21df20a724084200954b9e8d252</hash>
+         <hash>7ade8f368002778c723b3c4e14084910b7225cd36363ed0c948e9ea36c6f251f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\uhphs_ehci.h</file>
@@ -5013,7 +4996,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\list.c</file>
-         <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
+         <hash>db5c169cf3efd68da1c6a923ac84eebc724d602c940bde0b9b5f01f05028fde4</hash>
       </entry>
       <entry>
          <file>..\src\app_monitor.h</file>
@@ -5049,11 +5032,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</file>
-         <hash>ff7a2139380ad0e2695bbc0d068db7a3b7e54ec41387b4c77acbe1aaa2921b7c</hash>
+         <hash>1b61c1669091e59798a34c32c0f1e234d3f6a645f47641753eceeb7e1d9ce628</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\spi\src\drv_spi_local.h</file>
-         <hash>5e114dc90b920615274364b4a1fa4bad85d28521a565ec1c256b8e06792b5b7a</hash>
+         <hash>c7cd666ba8104d4b8e47d07efce208276a2ed871b4cdf2b288dd8b2ee120c201</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\stdio\xc32_monitor.c</file>
@@ -5101,7 +5084,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\pin_configurations.csv</file>
-         <hash>ebd94f46a99cb3c5379a7594394ba9d135dedc002bec0583c532cf3068421217</hash>
+         <hash>7bf03c50fdbaa21b5f3b2cfbdccf1ad673faaf4c7cf4d37c6816cbf0ba1fc708</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pit64b.h</file>
@@ -5109,11 +5092,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</file>
-         <hash>6bc571df5182f06bcafe5280fdf762bbba2bf1dbb7867ae3721ce2d7e3e51dae</hash>
+         <hash>c624e8cdfc07844d4cf35382f3cc908c872375c7a3048482bdc110bda88cc4f2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
-         <hash>f97f4e54a7511e5aea34f583061c628bf718b1024af6ec4cff55cb50365305da</hash>
+         <hash>14020d617b96dd2814e1211f6e3b645bcf5e2bd3179c23fe7dd16bc666fe9463</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\matrix.h</file>
@@ -5121,7 +5104,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\event_groups.c</file>
-         <hash>82542c835466f2abd0eeb2988a0bcecf3d6a14c9dd87ad4a7ca325b15afbce95</hash>
+         <hash>76e967b14d231e4f31f014f1564f359a7bfd36bfa263ee6f437afa8c056df657</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pit.h</file>
@@ -5129,7 +5112,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>b30610e92c28350874b5cc2dad788355e43f3b9a113ff83e59f847317b8274ff</hash>
+         <hash>2ec2d827961c45a232cf80707c5671e17e0a7e1d1cc46875c3777687486f30ff</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pmerrloc.h</file>
@@ -5177,7 +5160,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pio\plib_pio.c</file>
-         <hash>dfa00022592a16a8363c7c8ae1bc2dceb1cfc328474f5db87f15cdfd539f6d30</hash>
+         <hash>0edde5f110009b9b68046ae56e41c6143d7b3dc1c2ec0972d5031747b9f6eccd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\freertos_hooks.c</file>
@@ -5185,7 +5168,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</file>
-         <hash>292c78c91dbf63a6aa028f381b1dd548d549949f4fb9fcfd97f949569e013d76</hash>
+         <hash>8faf4220ded25b00fd72424a2fa4e63e154713ae7b42f7270f1e3289362a6312</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\osal\osal_freertos.h</file>
@@ -5197,7 +5180,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</file>
-         <hash>0f5a90e8303d9aa2a9c897d6b90da50df21776c6bde7bf8c792cacffa3048c8d</hash>
+         <hash>9a8141d3d6c8044a57d7e448180c9bd2ed32e45ded32be288d095a39dced91ab</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\lcdc.h</file>
@@ -5209,7 +5192,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
-         <hash>a73c0b319370116d5981d5dacbabad3a775f85ae540ef70b4ced1c99c9ac6cd5</hash>
+         <hash>7b3dd12a50d649c124c1af8be742671b9965b6f924310bda7984fe1b65c7f54a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\lcdc.h</file>
@@ -5217,7 +5200,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</file>
-         <hash>0f7a750669b24c41af51482eb76c867a1ed11c14dd4877d07433db3953d9a792</hash>
+         <hash>5014408cc33f0f616215f2b48c67b0d47ccc35bfd5f0044ac653b5bbc6cf5778</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\mpddrc.h</file>
@@ -5257,7 +5240,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>
-         <hash>a62731cd211dd9caf70958b229d4a3a607ef12e6fbfec573a0d089f21c45f34f</hash>
+         <hash>0ec303ba296caca5de955dc470bcadd134fb15b192ddf61c9afc92070bc1039a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pwm.h</file>

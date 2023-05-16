@@ -48,16 +48,15 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bsp/bsp.h"
 #include "peripheral/pit/plib_pit.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/aic/plib_aic.h"
-#include "peripheral/xdmac/plib_xdmac.h"
-#include "peripheral/flexcom/spi/master/plib_flexcom4_spi_master.h"
+#include "peripheral/flexcom/spi/master/plib_flexcom5_spi_master.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "bsp/bsp.h"
 #include "driver/spi/drv_spi.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
@@ -78,6 +77,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAM9X60D1G"
+#define DEVICE_ARCH			 "ARM926EJ-S"
+#define DEVICE_FAMILY		 "SAM9"
+#define DEVICE_SERIES		 "SAM9X"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 600000000

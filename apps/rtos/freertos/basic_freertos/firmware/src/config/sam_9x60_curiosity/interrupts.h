@@ -58,6 +58,7 @@
 // *****************************************************************************
 
 void SYSC_SharedHandler (void);
+void PIOA_InterruptHandler (void);
 void PIOD_InterruptHandler (void);
 void DBGU_InterruptHandler (void);
 

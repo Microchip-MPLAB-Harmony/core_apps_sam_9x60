@@ -58,8 +58,7 @@
 // *****************************************************************************
 
 void SYSC_SharedHandler (void);
-void FLEXCOM4_InterruptHandler (void);
-void XDMAC_InterruptHandler (void);
+void FLEXCOM5_InterruptHandler (void);
 
 void PIT_InterruptHandler (void);
 

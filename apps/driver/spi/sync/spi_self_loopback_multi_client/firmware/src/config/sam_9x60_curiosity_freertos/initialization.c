@@ -75,16 +75,16 @@ static DRV_SPI_CLIENT_OBJ drvSPI0ClientObjPool[DRV_SPI_CLIENTS_NUMBER_IDX0];
 static const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
 
     /* SPI PLIB Setup */
-    .setup = (DRV_SPI_PLIB_SETUP)FLEXCOM4_SPI_TransferSetup,
+    .setup = (DRV_SPI_PLIB_SETUP)FLEXCOM5_SPI_TransferSetup,
 
     /* SPI PLIB WriteRead function */
-    .writeRead = (DRV_SPI_PLIB_WRITE_READ)FLEXCOM4_SPI_WriteRead,
+    .writeRead = (DRV_SPI_PLIB_WRITE_READ)FLEXCOM5_SPI_WriteRead,
 
     /* SPI PLIB Transfer Status function */
-    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)FLEXCOM4_SPI_IsTransmitterBusy,
+    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)FLEXCOM5_SPI_IsTransmitterBusy,
 
     /* SPI PLIB Callback Register */
-    .callbackRegister = (DRV_SPI_PLIB_CALLBACK_REGISTER)FLEXCOM4_SPI_CallbackRegister,
+    .callbackRegister = (DRV_SPI_PLIB_CALLBACK_REGISTER)FLEXCOM5_SPI_CallbackRegister,
 };
 
 static const uint32_t drvSPI0remapDataBits[]= { 0x0, 0x10, 0x20, 0x30, 0x40, 0x50, 0x60, 0x70, 0x80, 0xFFFFFFFFU };
@@ -109,17 +109,6 @@ static const DRV_SPI_INIT drvSPI0InitData =
     /* SPI Client Objects Pool */
     .clientObjPool = (uintptr_t)&drvSPI0ClientObjPool[0],
 
-    /* DMA Channel for Transmit */
-    .dmaChannelTransmit = DRV_SPI_XMIT_DMA_CH_IDX0,
-
-    /* DMA Channel for Receive */
-    .dmaChannelReceive  = DRV_SPI_RCV_DMA_CH_IDX0,
-
-    /* SPI Transmit Register */
-    .spiTransmitAddress =  (void *)&(FLEXCOM4_REGS->FLEX_SPI_TDR),
-
-    /* SPI Receive Register */
-    .spiReceiveAddress  = (void *)&(FLEXCOM4_REGS->FLEX_SPI_RDR),
 
 };
 // </editor-fold>
@@ -228,8 +217,6 @@ void SYS_Initialize ( void* data )
 
 	PIO_Initialize();
 
-    XDMAC_Initialize();
-
 
 
 	PIT_TimerInitialize();
@@ -241,7 +228,7 @@ void SYS_Initialize ( void* data )
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
 
-    FLEXCOM4_SPI_Initialize();
+    FLEXCOM5_SPI_Initialize();
 
 	BSP_Initialize();
 

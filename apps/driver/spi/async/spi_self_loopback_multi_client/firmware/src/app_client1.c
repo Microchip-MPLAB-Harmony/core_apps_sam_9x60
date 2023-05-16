@@ -177,7 +177,7 @@ void APP_CLIENT1_Tasks ( void )
             app_client1Data.setup.clockPhase = DRV_SPI_CLOCK_PHASE_VALID_TRAILING_EDGE;
             app_client1Data.setup.clockPolarity = DRV_SPI_CLOCK_POLARITY_IDLE_LOW;
             app_client1Data.setup.dataBits = DRV_SPI_DATA_BITS_8;
-            app_client1Data.setup.chipSelect = (SYS_PORT_PIN)CLIENT1_CS_PIN;
+            app_client1Data.setup.chipSelect = (SYS_PORT_PIN)APP_CLIENT1_CS_PIN;
             app_client1Data.setup.csPolarity = DRV_SPI_CS_POLARITY_ACTIVE_LOW;
         
             app_client1Data.state = APP_CLIENT1_STATE_OPEN_DRIVER;

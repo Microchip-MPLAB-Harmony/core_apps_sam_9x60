@@ -48,7 +48,7 @@ G4,PA12,,Available,In,,,,,,,,
 G15,PD18,,Available,In,,,,,,,,
 G16,PD19,LED_GREEN,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 G17,PD21,LED_BLUE,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
-H1,PA30,GPIO_PA30,Available,In,,,,,,,,
+H1,PA30,,Available,In,,,,,,,,
 H2,PA31,,Available,In,,,,,,,,
 H3,PA18,,Available,In,,,,,,,,
 H4,PA17,,Available,In,,,,,,,,
