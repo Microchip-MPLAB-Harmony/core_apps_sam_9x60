@@ -28,12 +28,12 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| sam_9x60_ek.X | MPLABX project for [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
+| sam_9x60_curiosity.X | MPLABX project for [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A) |
 |||
 
 ## Setting up AT91Bootstrap loader
 
-To load the application binary onto the target device, we need to use at91bootstrap loader. Refer to the [at91bootstrap loader documentation](../../../docs/readme_bootstrap.md) for details on how to configure, build and run bootstrap loader project and use it to bootstrap the application binaries.
+To load the application binary onto the target device, we need to use at91bootstrap loader. Refer to the [at91bootstrap loader documentation](../../../docs/readme_bootstrap.md) for details on how to use it to bootstrap the application binaries.
 
 ## Setting up the hardware
 
@@ -41,41 +41,28 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| sam_9x60_ek.X | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
+| sam_9x60_curiosity.X | [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A) |
 |||
 
-### Setting up [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
+### Setting up [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A)
 
 #### Addtional hardware required
 
-- SD Card with FAT32 file system
-
-#### Setting up the SD Card
-
-- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin)
-- Copy the downloaded boot loader binary( boot.bin) onto the SD card
-
-#### Setting up the board
-
-- SDMMC slot used for bootloading the application is SDMMC0 (J4)
-- Connect the USB port J22 on board to the computer using a micro USB cable (to enable debug com port)
-- Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
-- *NOTE - Reset push button is labelled as SW3*
+- Connect the USB port J1 on board to the computer using a micro USB cable (to power the board)
+- Connect the JTAG J12 on board to the computer using a JTAG based debugger
+- Connect the J11 on board to the computer using a UART-FTDI cable (to enable debug com port)
 
 ## Running the Application
 
-1. Build the application using its IDE
-2. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
-3. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
-4. Open the Terminal application (Ex.:Tera term) on the computer.
-5. Connect to the EDBG/Jlink Virtual COM port and configure the serial settings as follows:
+1. Open the Terminal application (Ex.:Tera term) on the computer.
+2. Connect to the UART COM port and configure the serial settings as follows:
     - Baud : 115200
     - Data : 8 Bits
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-6. Reset the board to run the application
-7. Observe the following output on the terminal
+3. Build and program the application using its IDE
+4. Observe the following output on the terminal
 
     ![output_1](images/output_sys_console_debug_uart_read_write_1.png)
 
@@ -83,7 +70,7 @@ The following table shows the target hardware for the application projects.
     - It then prints the free space available in the receive buffer
     - It then asks the user to enter 10 characters
 
-8. After entering 10 characters, observe the following output on the terminal
+5. After entering 10 characters, observe the following output on the terminal
 
     ![output_2](images/output_sys_console_debug_uart_read_write_2.png)
 
@@ -93,7 +80,7 @@ The following table shows the target hardware for the application projects.
     - Application then waits for the transmit buffer to become empty
     - Once empty, the application prints the free space available in the transmit buffer, which should be same as the size of the transmit buffer configured in MHC minus 1
 
-9. After this, the demonstration asks the user to enter a character, and echoes it back on the terminal.
+6. After this, the demonstration asks the user to enter a character, and echoes it back on the terminal.
 
     ![output_3](images/output_sys_console_debug_uart_read_write_3.png)
 
@@ -103,5 +90,5 @@ Refer to the following table for LED name:
 
 | Board | LED Name |
 | ----- | -------- |
-|  [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)  | RGB_LED(Green) |
+|  [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A)  | RGB_LED(Green) |
 |||

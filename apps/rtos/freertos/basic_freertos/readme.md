@@ -42,13 +42,12 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| sam_9x60_ek.X | MPLABX project for [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
-| sam_9x60_ek_iar.IAR/basic_freertos_sam_9x60_ek.eww | IAR project for [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
+| sam_9x60_curiosity.X | MPLABX project for [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A) |
 |||
 
 ## Setting up AT91Bootstrap loader
 
-To load the application binary onto the target device, we need to use at91bootstrap loader. Refer to the [at91bootstrap loader documentation](../../../docs/readme_bootstrap.md) for details on how to configure, build and run bootstrap loader project and use it to bootstrap the application binaries.
+To load the application binary onto the target device, we need to use at91bootstrap loader. Refer to the [at91bootstrap loader documentation](../../../docs/readme_bootstrap.md) for details on how to use it to bootstrap the application binaries.
 
 ## Setting up the hardware
 
@@ -56,31 +55,19 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| sam_9x60_ek.X <br> sam_9x60_ek_iar.IAR/basic_freertos_sam_9x60_ek.eww | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
+| sam_9x60_curiosity.X | [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A) |
 |||
 
-### Setting up [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
+### Setting up [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A)
 
-#### Addtional hardware required
-
-- SD Card with FAT32 file system
-
-#### Setting up the SD Card
-
-- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin)
-- Copy the downloaded boot loader binary( boot.bin) onto the SD card
-
-#### Setting up the board
-
-- SDMMC slot used for bootloading the application is SDMMC0 (J4)
-- Connect the USB port J22 on board to the computer using a micro USB cable (to enable debug com port)
-- Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
-- *NOTE - Reset push button is labelled as SW3*
+- Connect the USB port J1 on board to the computer using a micro USB cable (to power the board)
+- Connect the JTAG J12 on board to the computer using a JTAG based debugger
+- Connect the J11 on board to the computer using a UART-FTDI cable (to enable debug com port)
 
 ## Running the Application
 
 1. Open the Terminal application (Ex.:Tera Term) on the computer.
-2. Connect to the JLink CDC UART Port and configure the serial settings as follows:
+2. Connect to the UART Port and configure the serial settings as follows:
 
     Baud : 115200
 
@@ -91,21 +78,18 @@ The following table shows the target hardware for the application projects.
     Stop : 1 Bit
     
     Flow Control : None
-3. Build the application using its IDE
-4. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
-5. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
-6. Reset the board to run the application
-7. Observe the following output on the terminal.
+3. Build and program the application using its IDE
+4. Observe the following output on the terminal.
 
    ![output](images/output1.png)
 
-8. Enter any character on the terminal to run task3. Notice how task1 and task2 are pre-empted by task3 as task3 is of higher priority than task1 and task2. Pressing character 'l' or "L' toggles the on board LED. Notice how task1 and task2 are not run when characters are entered continuously on the terminal.
+5. Enter any character on the terminal to run task3. Notice how task1 and task2 are pre-empted by task3 as task3 is of higher priority than task1 and task2. Pressing character 'l' or "L' toggles the on board LED. Notice how task1 and task2 are not run when characters are entered continuously on the terminal.
 
    ![output](images/output2.png)
 
    ![output](images/output2_1.png)
 
-9. Press the user switch on the board to run task4. Notice how task4 preempts all other tasks as it is of highest priority.
+6. Press the user switch on the board to run task4. Notice how task4 preempts all other tasks as it is of highest priority.
 
    ![output](images/output3.png)
 
@@ -113,5 +97,5 @@ Refer to the following table for LED and Switch name:
 
 | Board | LED Name | Switch Name |
 | ----- | -------- | ----------- |
-|  [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)  | RGB_LED(Green) | SW1 |
+|  [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A)  | RGB_LED(Green) | USER |
 |||
