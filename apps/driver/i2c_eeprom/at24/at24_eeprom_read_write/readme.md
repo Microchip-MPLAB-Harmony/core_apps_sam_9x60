@@ -45,8 +45,6 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAM9X60-Curiosity board](https://www.microchip.com/en-us/development-tool/EV40E67A)
 
-#### Addtional hardware required
-
 - Insert [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board into MIKROBUS Connector J8
 - Connect the USB port J1 on board to the computer using a micro USB cable (to power the board)
 - Connect the JTAG J12 on board to the computer using a JTAG based debugger
