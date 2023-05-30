@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_9x60_driver_sdmmc_async_sdmmc_read_write_sam_9x60_curiosity",
-		"version": "3.2.0",
+		"version": "3.4.0",
 		"displayName": "SDMMC driver asynchronous - SDMMC Read Write Example for SAM 9x60 Family",
 		"projectName": "sdmmc_read_write_sam_9x60_curiosity",
 		"shortDescription": "This example application shows how to use the SDMMC driver in asynchronous mode to perform block operations on the SD Card Media.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
 			"name": "SAM9X6_DFP",
-			"semverRange": "^1.4.40"
+			"semverRange": "^1.7.85"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.8.5"
+			"name": "MCC",
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

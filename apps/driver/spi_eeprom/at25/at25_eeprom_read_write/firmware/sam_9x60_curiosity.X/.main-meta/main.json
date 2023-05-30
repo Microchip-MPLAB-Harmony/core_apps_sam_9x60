@@ -3,11 +3,11 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_9x60_driver_spi_async_spi_self_loopback_multi_client_sam_9x60_curiosity_freertos",
+		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_9x60_driver_spi_eeprom_at25_at25_eeprom_read_write_sam_9x60_curiosity",
 		"version": "3.4.0",
-		"displayName": "SPI Driver asynchronous - Self loopback multi client Example for SAM 9x60 Family",
-		"projectName": "spi_self_loopback_multi_client_sam_9x60_curiosity_freertos",
-		"shortDescription": "This example demonstrates how to use the SPI driver in asynchronous mode to achieve self-loop back between multiple clients",
+		"displayName": "SPI EEPROM AT25 driver - EEPROM Read Write Example for SAM 9x60 Family",
+		"projectName": "at25_eeprom_read_write_sam_9x60_curiosity",
+		"shortDescription": "This example application shows how to use the AT25 driver to perform read and write operations on AT25 series of EEPROM.",
 		"ide": {
 			"name": "MPLABX",
 			"semverRange": ">=6.5.0"
@@ -45,15 +45,15 @@
 			[
 				"Harmony",
 				"Drivers",
-				"SPI"
+				"SPI_EEPROM"
 			],
 			[
 				"Peripherals",
-				"SPI"
+				"SPI_EEPROM"
 			]
 		],
 		"peripherals": [
-			"SPI"
+			"SPI_EEPROM"
 		],
 		"keywords": [
 			"MHC",
