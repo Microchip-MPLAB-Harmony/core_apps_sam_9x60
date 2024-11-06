@@ -60,14 +60,6 @@
 #define INT_InterruptPendingSet     SYS_INT_SourceStatusSet
 #define INT_InterruptPendingClear   SYS_INT_SourceStatusClear
 
-#ifndef CPSR_I_Pos
-#define CPSR_I_Pos      7U
-#endif
-
-#ifndef CPSR_I_Msk
-#define CPSR_I_Msk      (1UL << CPSR_I_Pos)
-#endif
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Implementation
@@ -77,7 +69,7 @@
 // private methods *************************************************************
 
 static aic_registers_t *
-_aicInstanceGet( IRQn_Type aSrcSelection )
+laicInstanceGet( IRQn_Type aSrcSelection )
 {   return( AIC_REGS ); }
 
 // public methods **************************************************************
@@ -87,7 +79,8 @@ INT_AreIrqsEnabled( void )
 {
     bool retval = true;
 
-    if( CPSR_I_Msk & __get_CPSR() ){
+    if(( CPSR_I_Msk & __get_CPSR() ) != 0U)
+    {
         retval = false;
     }
     return( retval );
@@ -115,10 +108,11 @@ bool
 INT_IsInterruptEnabled( INT_SOURCE aSrcSelection )
 {
     bool retval = false;
-    aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+    aic_registers_t * aicPtr = laicInstanceGet( aSrcSelection );
     bool processorStatus = INT_IrqDisable();
     aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
-    if( aicPtr->AIC_IMR & AIC_IMR_Msk ){
+    if(( aicPtr->AIC_IMR & AIC_IMR_Msk ) != 0U)
+    {
         retval = true;
     }
     INT_IrqRestore(processorStatus);
@@ -128,7 +122,7 @@ INT_IsInterruptEnabled( INT_SOURCE aSrcSelection )
 void
 INT_InterruptEnable( INT_SOURCE aSrcSelection )
 {
-    aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+    aic_registers_t * aicPtr = laicInstanceGet( aSrcSelection );
     bool processorStatus = INT_IrqDisable();
     aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
     aicPtr->AIC_IECR = AIC_IECR_Msk;
@@ -137,12 +131,12 @@ INT_InterruptEnable( INT_SOURCE aSrcSelection )
 }
 
 bool
-INT_InterruptDisable( INT_SOURCE aSrcSelection )
+INT_InterruptDisable( INT_SOURCE source )
 {
-    bool previousValue = INT_IsInterruptEnabled( aSrcSelection );
-    aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+    bool previousValue = INT_IsInterruptEnabled( source );
+    aic_registers_t * aicPtr = laicInstanceGet( source );
     bool processorStatus = INT_IrqDisable();
-    aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
+    aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) source );
     aicPtr->AIC_IDCR = AIC_IDCR_Msk;
     __DSB();
     __ISB();
@@ -151,13 +145,13 @@ INT_InterruptDisable( INT_SOURCE aSrcSelection )
 }
 
 void
-INT_InterruptRestore( INT_SOURCE aSrcSelection, bool state )
+INT_InterruptRestore( INT_SOURCE source, bool status )
 {
-    if( state )
+    if( status )
     {
-        aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+        aic_registers_t * aicPtr = laicInstanceGet( source );
         bool processorStatus = INT_IrqDisable();
-        aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
+        aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) source );
         aicPtr->AIC_IECR = AIC_IECR_Msk;
         INT_IrqRestore(processorStatus);
     }
@@ -168,12 +162,12 @@ bool
 INT_IsInterruptPendingFor( INT_SOURCE aSrcSelection )
 {
     bool retval = false;
-    if( aSrcSelection < 127 )
+    if( (uint32_t)aSrcSelection < 127U )
     {
         uint32_t regValue = 0;
-        uint32_t regSelection = aSrcSelection >> 5; // 32 status bits per register
-        uint32_t bitSelection = aSrcSelection - (regSelection << 5);
-        aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+        uint32_t regSelection = (uint32_t)aSrcSelection >> 5; // 32 status bits per register
+        uint32_t bitSelection = (uint32_t)aSrcSelection - (regSelection << 5);
+        aic_registers_t * aicPtr = laicInstanceGet( aSrcSelection );
         bool processorStatus = INT_IrqDisable();
         aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
         switch( regSelection )
@@ -193,7 +187,8 @@ INT_IsInterruptPendingFor( INT_SOURCE aSrcSelection )
             break;
         }
         INT_IrqRestore(processorStatus);
-        if( regValue & (0x00000001Ul << bitSelection) ) {
+        if(( regValue & (0x00000001UL << bitSelection) ) != 0U)
+        {
             retval = true;
         }
     }
@@ -203,7 +198,7 @@ INT_IsInterruptPendingFor( INT_SOURCE aSrcSelection )
 void
 INT_InterruptPendingSet( INT_SOURCE aSrcSelection )
 {
-    aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+    aic_registers_t * aicPtr = laicInstanceGet( aSrcSelection );
     bool processorStatus = INT_IrqDisable();
     aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
     aicPtr->AIC_ISCR = AIC_ISCR_Msk;
@@ -214,7 +209,7 @@ INT_InterruptPendingSet( INT_SOURCE aSrcSelection )
 void
 INT_InterruptPendingClear( INT_SOURCE aSrcSelection )
 {
-    aic_registers_t * aicPtr = _aicInstanceGet( aSrcSelection );
+    aic_registers_t * aicPtr = laicInstanceGet( aSrcSelection );
     bool processorStatus = INT_IrqDisable();
     aicPtr->AIC_SSR = AIC_SSR_INTSEL( (uint32_t) aSrcSelection );
     aicPtr->AIC_ICCR = AIC_ICCR_Msk;

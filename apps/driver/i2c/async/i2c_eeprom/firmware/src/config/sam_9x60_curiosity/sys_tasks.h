@@ -1,26 +1,23 @@
-#ifndef PLIB_AIC_H
-#define PLIB_AIC_H
 /*******************************************************************************
-  AIC PLIB Header
-
-  Company:
-    Microchip Technology Inc.
+ System Tasks Header File
 
   File Name:
-    plib_aic.h
+    sys_tasks.h
 
   Summary:
-    This file provides the public declarations for the Advanced Interrupt
-    Controller.
+    This file contains declarations for task handles.
 
   Description:
-    None
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
 
-*******************************************************************************/
+  Remarks:
+    None
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -40,29 +37,20 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-#ifdef __cplusplus  // Provide C++ Compatibility
-    extern "C" {
-#endif
-// DOM-IGNORE-END
-#include <stddef.h>
-#include <stdbool.h>
-
-
-
-
-void AIC_INT_Initialize( void );
-void AIC_INT_IrqEnable( void );
-bool AIC_INT_IrqDisable( void );
-void AIC_INT_IrqRestore( bool state );
-bool AIC_INT_SourceDisable( IRQn_Type aSrcSelection );
-void AIC_INT_SourceRestore( IRQn_Type aSrcSelection, bool status );
-bool AIC_INT_IsInterruptEnabled( IRQn_Type aSrcSelection );
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-    }
-#endif
+ *******************************************************************************/
 // DOM-IGNORE-END
 
-#endif // PLIB_AIC_H
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+
+#include "configuration.h"
+#include "definitions.h"
+
+
+#endif //SYS_TASKS_H
