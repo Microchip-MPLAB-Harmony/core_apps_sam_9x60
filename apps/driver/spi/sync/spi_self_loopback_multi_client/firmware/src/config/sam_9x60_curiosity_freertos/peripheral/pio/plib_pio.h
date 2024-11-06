@@ -63,21 +63,21 @@
 
 
 /*** Macros for CLIENT2_CS pin ***/
-#define CLIENT2_CS_Set()               (PIOB_REGS->PIO_SODR = (1<<13))
-#define CLIENT2_CS_Clear()             (PIOB_REGS->PIO_CODR = (1<<13))
-#define CLIENT2_CS_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<13))
-#define CLIENT2_CS_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<13))
-#define CLIENT2_CS_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<13))
-#define CLIENT2_CS_Get()               ((PIOB_REGS->PIO_PDSR >> 13) & 0x1)
+#define CLIENT2_CS_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<13U))
+#define CLIENT2_CS_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<13U))
+#define CLIENT2_CS_Toggle()            (PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<13U))
+#define CLIENT2_CS_OutputEnable()      (PIOB_REGS->PIO_OER = ((uint32_t)1U<<13U))
+#define CLIENT2_CS_InputEnable()       (PIOB_REGS->PIO_ODR = ((uint32_t)1U<<13U))
+#define CLIENT2_CS_Get()               ((PIOB_REGS->PIO_PDSR >> 13U) & 0x1U)
 #define CLIENT2_CS_PIN                  PIO_PIN_PB13
 
 /*** Macros for CLIENT1_CS pin ***/
-#define CLIENT1_CS_Set()               (PIOA_REGS->PIO_SODR = (1<<8))
-#define CLIENT1_CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<8))
-#define CLIENT1_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<8))
-#define CLIENT1_CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<8))
-#define CLIENT1_CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<8))
-#define CLIENT1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8) & 0x1)
+#define CLIENT1_CS_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<8U))
+#define CLIENT1_CS_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<8U))
+#define CLIENT1_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= ((uint32_t)1U<<8U))
+#define CLIENT1_CS_OutputEnable()      (PIOA_REGS->PIO_OER = ((uint32_t)1U<<8U))
+#define CLIENT1_CS_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<8U))
+#define CLIENT1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8U) & 0x1U)
 #define CLIENT1_CS_PIN                  PIO_PIN_PA8
 
 
