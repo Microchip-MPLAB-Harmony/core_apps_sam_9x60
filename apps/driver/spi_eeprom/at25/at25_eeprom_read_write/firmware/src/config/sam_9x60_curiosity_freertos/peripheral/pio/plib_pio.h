@@ -63,30 +63,30 @@
 
 
 /*** Macros for HOLD pin ***/
-#define HOLD_Set()               (PIOB_REGS->PIO_SODR = (1<<13))
-#define HOLD_Clear()             (PIOB_REGS->PIO_CODR = (1<<13))
-#define HOLD_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<13))
-#define HOLD_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<13))
-#define HOLD_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<13))
-#define HOLD_Get()               ((PIOB_REGS->PIO_PDSR >> 13) & 0x1)
+#define HOLD_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<13U))
+#define HOLD_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<13U))
+#define HOLD_Toggle()            (PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<13U))
+#define HOLD_OutputEnable()      (PIOB_REGS->PIO_OER = ((uint32_t)1U<<13U))
+#define HOLD_InputEnable()       (PIOB_REGS->PIO_ODR = ((uint32_t)1U<<13U))
+#define HOLD_Get()               ((PIOB_REGS->PIO_PDSR >> 13U) & 0x1U)
 #define HOLD_PIN                  PIO_PIN_PB13
 
 /*** Macros for GPIO_PD16 pin ***/
-#define GPIO_PD16_Set()               (PIOD_REGS->PIO_SODR = (1<<16))
-#define GPIO_PD16_Clear()             (PIOD_REGS->PIO_CODR = (1<<16))
-#define GPIO_PD16_Toggle()            (PIOD_REGS->PIO_ODSR ^= (1<<16))
-#define GPIO_PD16_OutputEnable()      (PIOD_REGS->PIO_OER = (1<<16))
-#define GPIO_PD16_InputEnable()       (PIOD_REGS->PIO_ODR = (1<<16))
-#define GPIO_PD16_Get()               ((PIOD_REGS->PIO_PDSR >> 16) & 0x1)
+#define GPIO_PD16_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<16U))
+#define GPIO_PD16_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<16U))
+#define GPIO_PD16_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<16U))
+#define GPIO_PD16_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<16U))
+#define GPIO_PD16_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<16U))
+#define GPIO_PD16_Get()               ((PIOD_REGS->PIO_PDSR >> 16U) & 0x1U)
 #define GPIO_PD16_PIN                  PIO_PIN_PD16
 
 /*** Macros for CS pin ***/
-#define CS_Set()               (PIOA_REGS->PIO_SODR = (1<<8))
-#define CS_Clear()             (PIOA_REGS->PIO_CODR = (1<<8))
-#define CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<8))
-#define CS_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<8))
-#define CS_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<8))
-#define CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8) & 0x1)
+#define CS_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<8U))
+#define CS_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<8U))
+#define CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= ((uint32_t)1U<<8U))
+#define CS_OutputEnable()      (PIOA_REGS->PIO_OER = ((uint32_t)1U<<8U))
+#define CS_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<8U))
+#define CS_Get()               ((PIOA_REGS->PIO_PDSR >> 8U) & 0x1U)
 #define CS_PIN                  PIO_PIN_PA8
 
 
