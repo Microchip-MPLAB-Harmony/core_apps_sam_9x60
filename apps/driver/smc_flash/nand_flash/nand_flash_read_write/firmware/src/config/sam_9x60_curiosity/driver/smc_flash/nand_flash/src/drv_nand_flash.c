@@ -633,7 +633,7 @@ static bool DRV_NAND_FLASH_PageWriteWithPMECC(const DRV_HANDLE handle, uint16_t 
     if (gDrvNandFlashObj.txrxDMAChannel != SYS_DMA_CHANNEL_NONE)
     {
         /* Clean the data buffer to push the data to the main memory */
-        SYS_CACHE_CleanDCache_by_Addr(gDrvNandFlashData.spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
+        SYS_CACHE_CleanDCache_by_Addr(gDrvNandFlashData.spareBuffer, (int32_t)DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
         gDrvNandFlashObj.transferStatus = DRV_NAND_FLASH_TRANSFER_BUSY;
 
         (void) SYS_DMA_ChannelTransfer(gDrvNandFlashObj.txrxDMAChannel,

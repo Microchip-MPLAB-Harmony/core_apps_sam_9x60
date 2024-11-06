@@ -51,8 +51,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _PLIB_SMC_H
-#define _PLIB_SMC_H
+#ifndef PLIB_SMC_H
+#define PLIB_SMC_H
 
 #include <stdint.h>         // uint32_t, uintptr_t
 #include <stdbool.h>
@@ -132,7 +132,7 @@ uint32_t PMERRLOC_ErrorLocationFindNumOfRoots(uint32_t sectorSizeInBits, uint32_
 #endif
 // DOM-IGNORE-END
 
-#endif // _PLIB_SMC_H
+#endif // PLIB_SMC_H
 
 /*******************************************************************************
  End of File

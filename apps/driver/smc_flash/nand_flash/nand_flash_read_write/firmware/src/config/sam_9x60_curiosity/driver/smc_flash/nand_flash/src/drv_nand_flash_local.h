@@ -181,7 +181,7 @@ typedef struct
 
     /* Indicates the number of clients that have opened this driver */
     size_t nClients;
-    
+
     SYS_DMA_CHANNEL txrxDMAChannel;
 
     /* NAND Flash transfer status. Used for DMA operation only */
