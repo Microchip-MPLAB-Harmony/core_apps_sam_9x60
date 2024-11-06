@@ -57,11 +57,11 @@
 #include "task.h"
 #include "bsp/bsp.h"
 #include "peripheral/flexcom/twi/master/plib_flexcom0_twi_master.h"
+#include "driver/i2c/drv_i2c.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "driver/i2c/drv_i2c.h"
 #include "app_i2c_eeprom.h"
 
 
@@ -75,13 +75,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAM9X60D1G"
-#define DEVICE_ARCH			 "ARM926EJ-S"
-#define DEVICE_FAMILY		 "SAM9"
-#define DEVICE_SERIES		 "SAM9X"
+#define DEVICE_NAME          "SAM9X60D1G"
+#define DEVICE_ARCH          "ARM926EJ-S"
+#define DEVICE_FAMILY        "SAM9"
+#define DEVICE_SERIES        "SAM9X6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 600000000
+#define CPU_CLOCK_FREQUENCY 600000000U
 
 // *****************************************************************************
 // *****************************************************************************
