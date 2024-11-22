@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>i2c_eeprom_sam_9x60_curiosity</name>
+            <name>i2c_eeprom_async_sam_9x60_curiosity</name>
             <creation-uuid>c8ad23fb-9dcc-4580-b238-869376b7c5d8</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
