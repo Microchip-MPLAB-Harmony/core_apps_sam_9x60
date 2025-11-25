@@ -236,9 +236,23 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos"
+                     displayName="i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/BSP_SAM_9X60_Curiosity.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/FreeRTOS.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/HarmonyCore.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/core.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/dfp.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/drv_i2c.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/drv_i2c_0.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/flexcom0.yml</itemPath>
+          <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/components/pit.yml</itemPath>
+        </logicalFolder>
+        <itemPath>i2c_eeprom_sync_sam_9x60_curiosity_freertos_sam_9x60_curiosity_freertos/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_9x60_curiosity_freertos/harmony-manifest-success.yml</itemPath>
-      <itemPath>i2c_eeprom_sam_9x60_curiosity_freertos.mc3</itemPath>
       <itemPath>../src/config/sam_9x60_curiosity_freertos/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -356,7 +370,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>j32</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
