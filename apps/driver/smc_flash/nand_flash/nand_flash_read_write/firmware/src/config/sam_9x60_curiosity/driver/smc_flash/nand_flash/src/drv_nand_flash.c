@@ -124,9 +124,9 @@ static void DRV_NAND_FLASH_RowAddressWrite(uint32_t rowAddress)
         rowAddress >>= 8;
     }
 }
-/* MISRA C-2012 Rule 11.1, 11.3, 11.6 and 11.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_11_1_DR_1, H3_MISRAC_2012_R_11_3_DR_1
-   H3_MISRAC_2012_R_11_6_DR_1 and H3_MISRAC_2012_R_11_8_DR_1*/
+/* MISRA C-2023 Rule 11.1, 11.3, 11.6 and 11.8 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_11_1_DR_1, H3_MISRAC_2023_R_11_3_DR_1
+   H3_MISRAC_2023_R_11_6_DR_1 and H3_MISRAC_2023_R_11_8_DR_1*/
 static void DRV_NAND_FLASH_DataWrite(uint32_t dataAddress, uint8_t *data, uint32_t size)
 {
     uint32_t count = 0;
