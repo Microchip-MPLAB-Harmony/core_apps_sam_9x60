@@ -1,0 +1,233 @@
+configVersion: 1.0.0
+componentName: drv_memory_0
+coreVersion: 5.9.0
+device: SAM9X60
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: drv_memory_0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.2
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: drv_memory_MEMORY_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: ram
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: RAM_MEMORY
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: drv_memory_0
+  elementPosition: {}
+  symbols:
+    DRV_MEMORY_BUFFER_QUEUE_SIZE:
+      attributes:
+        id: DRV_MEMORY_BUFFER_QUEUE_SIZE
+        label: Buffer Queue Size
+      type: Integer
+    DRV_MEMORY_DEVICE:
+      attributes:
+        id: DRV_MEMORY_DEVICE
+        label: Memory Device Used
+      children:
+      - children:
+        - attributes:
+            id: drv_memory_0
+            value: RAM
+          type: Dynamic
+        type: Values
+      type: String
+    DRV_MEMORY_DEVICE_POLL_US:
+      attributes:
+        id: DRV_MEMORY_DEVICE_POLL_US
+        label: Memory Device Status Polling Rate MicroSeconds
+      type: Integer
+    DRV_MEMORY_DEVICE_TYPE:
+      attributes:
+        id: DRV_MEMORY_DEVICE_TYPE
+        label: Memory Device Type
+      type: Combo
+    DRV_MEMORY_ERASE_ENABLE:
+      attributes:
+        id: DRV_MEMORY_ERASE_ENABLE
+        label: Enable Erase for Memory Device
+      children:
+      - children:
+        - attributes:
+            id: drv_memory_0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DRV_MEMORY_FS_ENABLE:
+      attributes:
+        id: DRV_MEMORY_FS_ENABLE
+        label: File system Enabled for Memory Driver
+      children:
+      - children:
+        - attributes:
+            id: drv_memory_0
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DRV_MEMORY_INTERRUPT_ENABLE:
+      attributes:
+        id: DRV_MEMORY_INTERRUPT_ENABLE
+        label: Enable Interrupt for Memory Device
+      children:
+      - children:
+        - attributes:
+            id: drv_memory_0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DRV_MEMORY_NUM_CLIENTS:
+      attributes:
+        id: DRV_MEMORY_NUM_CLIENTS
+        label: Number of Clients
+      type: Integer
+    DRV_MEMORY_PLIB:
+      attributes:
+        id: DRV_MEMORY_PLIB
+        label: Plib Used
+      children:
+      - children:
+        - attributes:
+            id: drv_memory_0
+            value: DRV_RAM
+          type: Dynamic
+        type: Values
+      type: String
+    DRV_MEMORY_PLIB_HEADER:
+      attributes:
+        id: DRV_MEMORY_PLIB_HEADER
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: name
+          children:
+          - type: Value
+            value: drv_memory_ram.h
+          type: String
+        type: Attributes
+      type: File
+    DRV_MEMORY_PLIB_SOURCE:
+      attributes:
+        id: DRV_MEMORY_PLIB_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: name
+          children:
+          - type: Value
+            value: drv_memory_ram.c
+          type: String
+        type: Attributes
+      type: File
+    DRV_MEMORY_PLIB_SYS_DEF:
+      attributes:
+        id: DRV_MEMORY_PLIB_SYS_DEF
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    DRV_MEMORY_RTOS:
+      attributes:
+        id: DRV_MEMORY_RTOS
+        label: Run Library Tasks As
+      type: Combo
+    DRV_MEMORY_RTOS_DELAY:
+      attributes:
+        id: DRV_MEMORY_RTOS_DELAY
+        label: Task Delay
+      type: Integer
+    DRV_MEMORY_RTOS_STACK_SIZE:
+      attributes:
+        id: DRV_MEMORY_RTOS_STACK_SIZE
+        label: Stack Size (in bytes)
+      type: Integer
+    DRV_MEMORY_RTOS_TASK_MSG_QTY:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_MSG_QTY
+        label: Maximum Message Queue Size
+      type: Integer
+    DRV_MEMORY_RTOS_TASK_OPT_NONE:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_OPT_NONE
+        label: Task Specific Options
+      type: Boolean
+    DRV_MEMORY_RTOS_TASK_OPT_NO_TLS:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_OPT_NO_TLS
+        label: TLS (Thread Local Storage) support needed for the task
+      type: Boolean
+    DRV_MEMORY_RTOS_TASK_OPT_SAVE_FP:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_OPT_SAVE_FP
+        label: Floating-point registers needs to be saved
+      type: Boolean
+    DRV_MEMORY_RTOS_TASK_OPT_STK_CHK:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_OPT_STK_CHK
+        label: Stack checking is allowed for the task
+      type: Boolean
+    DRV_MEMORY_RTOS_TASK_OPT_STK_CLR:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_OPT_STK_CLR
+        label: Stack needs to be cleared
+      type: Boolean
+    DRV_MEMORY_RTOS_TASK_PRIORITY:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_PRIORITY
+        label: Task Priority
+      type: Integer
+    DRV_MEMORY_RTOS_TASK_TIME_QUANTA:
+      attributes:
+        id: DRV_MEMORY_RTOS_TASK_TIME_QUANTA
+        label: Task Time Quanta
+      type: Integer
+    DRV_MEMORY_RTOS_USE_DELAY:
+      attributes:
+        id: DRV_MEMORY_RTOS_USE_DELAY
+        label: Use Task Delay?
+      type: Boolean
+  userData: {}

@@ -1,0 +1,100 @@
+configVersion: 1.0.0
+componentName: ram
+coreVersion: 5.9.0
+device: SAM9X60
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: ram
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.26.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: RAM_MEMORY
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: drv_memory_0
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: drv_memory_MEMORY_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: ram
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: ram
+          x: '5'
+          y: '251'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    DRV_MEMORY_CONNECTED:
+      attributes:
+        id: DRV_MEMORY_CONNECTED
+        label: Memory Driver Connected
+      children:
+      - children:
+        - attributes:
+            id: drv_memory_0
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    ERASE_ENABLE:
+      attributes:
+        id: ERASE_ENABLE
+        label: RAM Erase Enable
+      type: Boolean
+    FLASH_PROGRAM_SIZE:
+      attributes:
+        id: FLASH_PROGRAM_SIZE
+        label: RAM Program Size (Bytes)
+      type: String
+    INTERRUPT_ENABLE:
+      attributes:
+        id: INTERRUPT_ENABLE
+        label: Enable Interrupt?
+      type: Boolean
+    MEMORY_MEDIA_SIZE:
+      attributes:
+        id: MEMORY_MEDIA_SIZE
+        label: RAM Media Size (KB)
+      type: Integer
+    RAM_INSTANCE_NAME:
+      attributes:
+        id: RAM_INSTANCE_NAME
+        label: RAM_INSTANCE_NAME
+      type: String
+    START_ADDRESS:
+      attributes:
+        id: START_ADDRESS
+        label: RAM Media Start Address (Hex)
+      type: String
+    WRITE_API_NAME:
+      attributes:
+        id: WRITE_API_NAME
+        label: WRITE_API_NAME
+      type: String
+  userData: {}
