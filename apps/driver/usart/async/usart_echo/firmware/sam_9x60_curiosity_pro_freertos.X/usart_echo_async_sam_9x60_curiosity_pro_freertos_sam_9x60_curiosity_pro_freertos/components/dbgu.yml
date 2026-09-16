@@ -44,8 +44,8 @@ data:
     - children:
       - attributes:
           id: dbgu
-          x: '75'
-          y: '243'
+          x: '5'
+          y: '257'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

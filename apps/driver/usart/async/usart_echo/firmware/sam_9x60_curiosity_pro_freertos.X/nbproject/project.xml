@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro</name>
-            <creation-uuid>11df6afa-a946-4738-8c30-e885c4b4a3df</creation-uuid>
+            <name>usart_echo_async_sam_9x60_curiosity_pro_freertos</name>
+            <creation-uuid>5f52eef9-003e-4332-a349-7e3cecb4d202</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

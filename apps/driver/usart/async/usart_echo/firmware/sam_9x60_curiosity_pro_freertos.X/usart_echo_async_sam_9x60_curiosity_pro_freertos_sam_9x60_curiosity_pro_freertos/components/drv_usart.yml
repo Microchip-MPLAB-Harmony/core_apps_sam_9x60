@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: drv_usart
-          x: '407'
-          y: '183'
+          x: '382'
+          y: '178'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

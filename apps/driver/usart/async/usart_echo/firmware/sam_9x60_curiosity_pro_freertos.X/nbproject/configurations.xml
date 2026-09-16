@@ -235,21 +235,21 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
-      <logicalFolder name="usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos"
-                     displayName="usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos"
+      <logicalFolder name="usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos"
+                     displayName="usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/BSP_SAM_9X60_Evaluation_Kit.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/drv_usart_0.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/FreeRTOS.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/dbgu.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/dfp.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/pit.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/drv_usart.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/HarmonyCore.yml</itemPath>
-          <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/components/core.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/FreeRTOS.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/drv_usart.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/dbgu.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/BSP_SAM_9X60_Evaluation_Kit.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/drv_usart_0.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/dfp.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/HarmonyCore.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/pit.yml</itemPath>
+          <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/components/core.yml</itemPath>
         </logicalFolder>
-        <itemPath>usart_echo_async_sam_9x60_curiosity_freertos_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro_freertos/mcc-config.mc4</itemPath>
+        <itemPath>usart_echo_async_sam_9x60_curiosity_pro_freertos_sam_9x60_curiosity_pro_freertos/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_9x60_curiosity_pro_freertos/pin_configurations.csv</itemPath>
@@ -375,12 +375,6 @@
         <pack name="SAM9X6_DFP" vendor="Microchip" version="1.16.283"/>
       </packs>
       <ScriptingSettings>
-        <ScriptingSetting key="boot.load_adr" value=""/>
-        <ScriptingSetting key="boot.use" value="true"/>
-        <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\..\..\..\..\..\..\deps\at91bootstrap_sam_9x60_binaries\sam9x60_cpro_binaries\at91bootstrap.elf"/>
-        <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
@@ -584,9 +578,9 @@
       <Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.adaptivespeed" value="false"/>
-        <property key="communication.autoselectspeed" value="true"/>
-        <property key="communication.interface" value="4wire"/>
-        <property key="communication.speed" value="4"/>
+        <property key="communication.autoselectspeed" value="false"/>
+        <property key="communication.interface" value="${com.default}"/>
+        <property key="communication.speed" value="${communication.speed}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="event.recorder.debugger.behavior" value="Running"/>
@@ -603,12 +597,13 @@
         <property key="memories.instruction.ram.ranges"
                   value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0x300000-0xeff00fff"/>
+        <property key="memories.programmemory.ranges"
+                  value="${memories.programmemory.ranges.default}"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogrammemory.ranges"
-                  value="0x300000-0xeff00fff"/>
+                  value="${memories.programmemory.ranges.default}"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
@@ -619,9 +614,9 @@
       <j32>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.adaptivespeed" value="false"/>
-        <property key="communication.autoselectspeed" value="true"/>
-        <property key="communication.interface" value="4wire"/>
-        <property key="communication.speed" value="4"/>
+        <property key="communication.autoselectspeed" value="false"/>
+        <property key="communication.interface" value="${com.default}"/>
+        <property key="communication.speed" value="${communication.speed}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="event.recorder.debugger.behavior" value="Running"/>
@@ -638,12 +633,13 @@
         <property key="memories.instruction.ram.ranges"
                   value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0x300000-0xeff00fff"/>
+        <property key="memories.programmemory.ranges"
+                  value="${memories.programmemory.ranges.default}"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogrammemory.ranges"
-                  value="0x300000-0xeff00fff"/>
+                  value="${memories.programmemory.ranges.default}"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
