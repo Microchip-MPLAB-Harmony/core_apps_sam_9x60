@@ -88,11 +88,11 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\peripheral\mmu\plib_mmu.h
   hash: 7fb6e6b8ad6a80b7fc04c0264b7cdf49e6d6b887e4f3c5aa394eda88e32e0116
 - file: ..\src\config\sam_9x60_curiosity_pro\peripheral\pio\plib_pio.c
-  hash: 48105bf27ea5ad0ce288c1c6f92167983fbf69c9d3cd984f7e29697410a4de82
+  hash: 6752b243f5f6acedf6d2d30af01e6dada35b17ee139d2d07c5c4e894176163c5
 - file: ..\src\config\sam_9x60_curiosity_pro\peripheral\pio\plib_pio.h
   hash: 273e461ca0b4ff5759545905988f6a5176c1bab76d7fd3f98ab395d6e1dcb7e4
 - file: ..\src\config\sam_9x60_curiosity_pro\pin_configurations.csv
-  hash: 3179798fb83903f97f2b7281188edf24d07dd4f518750e2c81b37fd8e2c082e2
+  hash: 3dd280eb6b5e7e233cb52e3075fafe35f71f0413f77bef10cb7412a219ff3294
 - file: ..\src\config\sam_9x60_curiosity_pro\stdio\xc32_monitor.c
   hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
 - file: ..\src\config\sam_9x60_curiosity_pro\sys_tasks.h

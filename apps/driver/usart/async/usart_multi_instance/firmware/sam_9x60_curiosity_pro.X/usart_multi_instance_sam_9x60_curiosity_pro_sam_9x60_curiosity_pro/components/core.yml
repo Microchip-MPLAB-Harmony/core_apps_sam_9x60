@@ -323,7 +323,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: FLEXCOM5_IO0
           type: User
         type: Values
       type: String
@@ -334,7 +334,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: B
           type: User
         type: Values
       type: String
@@ -345,7 +345,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: FLEXCOM5_IO1
           type: User
         type: Values
       type: String
@@ -356,7 +356,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: B
           type: User
         type: Values
       type: String
@@ -390,7 +390,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0'
+            value: '6291456'
           type: Dynamic
         type: Values
       type: Hex
@@ -414,7 +414,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1536'
+            value: '6292992'
           type: Dynamic
         type: Values
       type: Hex
@@ -473,7 +473,7 @@ data:
       children:
       - children:
         - attributes:
-            value: FLEXCOM7_IO0
+            value: ''
           type: User
         type: Values
       type: String
@@ -485,7 +485,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '3'
+            value: '0'
           type: Dynamic
         type: Values
       type: Hex
@@ -509,7 +509,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '3'
+            value: '0'
           type: Dynamic
         type: Values
       type: Hex
@@ -520,7 +520,7 @@ data:
       children:
       - children:
         - attributes:
-            value: C
+            value: ''
           type: User
         type: Values
       type: String
@@ -531,7 +531,7 @@ data:
       children:
       - children:
         - attributes:
-            value: FLEXCOM7_IO1
+            value: ''
           type: User
         type: Values
       type: String
@@ -542,7 +542,7 @@ data:
       children:
       - children:
         - attributes:
-            value: C
+            value: ''
           type: User
         type: Values
       type: String

@@ -1,0 +1,99 @@
+configVersion: 1.0.0
+componentName: drv_usart
+coreVersion: 5.9.0
+device: SAM9X60
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: drv_usart
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.2
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: drv_usart
+          x: '557'
+          y: '138'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    DRV_USART_BUFFER_POOL_SIZE:
+      attributes:
+        id: DRV_USART_BUFFER_POOL_SIZE
+        label: Buffer Pool Size
+      type: Integer
+    DRV_USART_COMMON_MODE:
+      attributes:
+        id: DRV_USART_COMMON_MODE
+        label: Driver Mode
+      children:
+      - children:
+        - attributes:
+            value: Asynchronous
+          type: User
+        type: Values
+      type: Combo
+    USART_ASYNC_LOCAL:
+      attributes:
+        id: USART_ASYNC_LOCAL
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    USART_ASYNC_SOURCE:
+      attributes:
+        id: USART_ASYNC_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    USART_SYNC_LOCAL:
+      attributes:
+        id: USART_SYNC_LOCAL
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      type: File
+    USART_SYNC_SOURCE:
+      attributes:
+        id: USART_SYNC_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      type: File
+  userData: {}
