@@ -1,0 +1,64 @@
+configVersion: 1.0.0
+componentName: sdmmc0
+coreVersion: 5.8.4
+device: SAM9X60
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sdmmc0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.26.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: SDMMC0_SDHC
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: drv_sdmmc_0
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: drv_sdmmc_SDHC_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: sdmmc0
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sdmmc0
+          x: '205'
+          y: '330'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SDCARD_EMMCEN:
+      attributes:
+        id: SDCARD_EMMCEN
+      children:
+      - children:
+        - attributes:
+            id: drv_sdmmc_0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}
