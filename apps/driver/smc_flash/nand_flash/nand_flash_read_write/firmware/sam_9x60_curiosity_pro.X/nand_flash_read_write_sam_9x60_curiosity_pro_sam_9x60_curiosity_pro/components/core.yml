@@ -1,0 +1,451 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.4
+device: SAM9X60
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.26.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition: {}
+  symbols:
+    COMPONENT_PACKAGE:
+      attributes:
+        id: COMPONENT_PACKAGE
+      children:
+      - children:
+        - attributes:
+            value: TFBGA228
+          type: User
+        type: Values
+      type: Combo
+    EXT_MEMORY_CLOCK_ENABLE:
+      attributes:
+        id: EXT_MEMORY_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_124_FUNCTION_TYPE:
+      attributes:
+        id: PIN_124_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D19
+          type: User
+        type: Values
+      type: String
+    PIN_124_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_124_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_126_FUNCTION_TYPE:
+      attributes:
+        id: PIN_126_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D17
+          type: User
+        type: Values
+      type: String
+    PIN_126_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_126_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_129_FUNCTION_TYPE:
+      attributes:
+        id: PIN_129_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D23
+          type: User
+        type: Values
+      type: String
+    PIN_129_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_129_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_138_FUNCTION_TYPE:
+      attributes:
+        id: PIN_138_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D21
+          type: User
+        type: Values
+      type: String
+    PIN_138_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_138_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_141_FUNCTION_TYPE:
+      attributes:
+        id: PIN_141_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D18
+          type: User
+        type: Values
+      type: String
+    PIN_141_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_141_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_142_FUNCTION_TYPE:
+      attributes:
+        id: PIN_142_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D16
+          type: User
+        type: Values
+      type: String
+    PIN_142_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_142_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_157_FUNCTION_TYPE:
+      attributes:
+        id: PIN_157_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D22
+          type: User
+        type: Values
+      type: String
+    PIN_157_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_157_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_158_FUNCTION_TYPE:
+      attributes:
+        id: PIN_158_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_D20
+          type: User
+        type: Values
+      type: String
+    PIN_158_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_158_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_180_FUNCTION_TYPE:
+      attributes:
+        id: PIN_180_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_NWAIT
+          type: User
+        type: Values
+      type: String
+    PIN_180_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_180_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_182_FUNCTION_TYPE:
+      attributes:
+        id: PIN_182_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_A22/NANDCLE
+          type: User
+        type: Values
+      type: String
+    PIN_182_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_182_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_197_FUNCTION_TYPE:
+      attributes:
+        id: PIN_197_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_A21/NANDALE
+          type: User
+        type: Values
+      type: String
+    PIN_197_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_197_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_211_FUNCTION_TYPE:
+      attributes:
+        id: PIN_211_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_NANDOE
+          type: User
+        type: Values
+      type: String
+    PIN_211_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_211_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_212_FUNCTION_TYPE:
+      attributes:
+        id: PIN_212_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_NCS3/NANDCS
+          type: User
+        type: Values
+      type: String
+    PIN_212_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_212_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_227_FUNCTION_TYPE:
+      attributes:
+        id: PIN_227_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EBI_NANDWE
+          type: User
+        type: Values
+      type: String
+    PIN_227_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_227_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_32_LAT:
+      attributes:
+        id: PIN_32_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_49_LAT:
+      attributes:
+        id: PIN_49_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_4_LAT:
+      attributes:
+        id: PIN_4_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIOB_OER_VALUE:
+      attributes:
+        id: PIOB_OER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '14336'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOB_SODR_VALUE:
+      attributes:
+        id: PIOB_SODR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOD_ABCDSR1_VALUE:
+      attributes:
+        id: PIOD_ABCDSR1_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOD_ABCDSR2_VALUE:
+      attributes:
+        id: PIOD_ABCDSR2_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOD_OER_VALUE:
+      attributes:
+        id: PIOD_OER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOD_PDR_VALUE:
+      attributes:
+        id: PIOD_PDR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '16383'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOD_PUER_VALUE:
+      attributes:
+        id: PIOD_PUER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '262144'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SMC_CLOCK_ENABLE:
+      attributes:
+        id: SMC_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: smc
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '0'
+        canvasWidth: '0'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData
