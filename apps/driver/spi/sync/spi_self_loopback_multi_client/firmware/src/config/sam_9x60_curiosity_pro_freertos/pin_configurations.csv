@@ -1,7 +1,7 @@
 "Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Slew Rate Control,Drive Strength
 A2,PB9,,Available,In,,,,,,,,
 A3,PB10,,Available,In,,,,,,,,
-A4,PB13,CLIENT2_CS,GPIO,Out,High,No,Disabled,No,No,Disabled,No,Low
+A4,PB13,LED_BLUE,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 A5,PB7,,Available,In,,,,,,,,
 A6,PB20,,Available,In,,,,,,,,
 A7,PB21,,Available,In,,,,,,,,
@@ -17,7 +17,7 @@ C6,PB19,,Available,In,,,,,,,,
 D1,PB3,,Available,In,,,,,,,,
 D2,PB6,,Available,In,,,,,,,,
 D3,PB2,,Available,In,,,,,,,,
-D6,PB11,,Available,In,,,,,,,,
+D6,PB11,LED_RED,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 E1,PB5,,Available,In,,,,,,,,
 E2,PB25,,Available,In,,,,,,,,
 E3,PB4,,Available,In,,,,,,,,
@@ -58,7 +58,7 @@ K15,PD8,,Available,In,,,,,,,,
 K16,PD6,,Available,In,,,,,,,,
 L1,PA12,,FLEXCOM4_IO0,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 L2,PA10,,Available,In,,,,,,,,
-L3,PA3,,Available,In,,,,,,,,
+L3,PA3,CLIENT2_CS,GPIO,Out,High,No,Disabled,No,No,Disabled,No,Low
 L4,PA5,,Available,In,,,,,,,,
 L5,PC4,,Available,In,,,,,,,,
 L7,PC13,,Available,In,,,,,,,,

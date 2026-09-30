@@ -62,15 +62,6 @@
 // *****************************************************************************
 
 
-/*** Macros for APP_CLIENT2_CS pin ***/
-#define APP_CLIENT2_CS_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<13U))
-#define APP_CLIENT2_CS_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<13U))
-#define APP_CLIENT2_CS_Toggle()            (PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<13U))
-#define APP_CLIENT2_CS_OutputEnable()      (PIOB_REGS->PIO_OER = ((uint32_t)1U<<13U))
-#define APP_CLIENT2_CS_InputEnable()       (PIOB_REGS->PIO_ODR = ((uint32_t)1U<<13U))
-#define APP_CLIENT2_CS_Get()               ((PIOB_REGS->PIO_PDSR >> 13U) & 0x1U)
-#define APP_CLIENT2_CS_PIN                  PIO_PIN_PB13
-
 /*** Macros for APP_CLIENT1_CS pin ***/
 #define APP_CLIENT1_CS_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<14U))
 #define APP_CLIENT1_CS_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<14U))
@@ -79,6 +70,15 @@
 #define APP_CLIENT1_CS_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<14U))
 #define APP_CLIENT1_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 14U) & 0x1U)
 #define APP_CLIENT1_CS_PIN                  PIO_PIN_PA14
+
+/*** Macros for APP_CLIENT2_CS pin ***/
+#define APP_CLIENT2_CS_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<2U))
+#define APP_CLIENT2_CS_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<2U))
+#define APP_CLIENT2_CS_Toggle()            (PIOA_REGS->PIO_ODSR ^= ((uint32_t)1U<<2U))
+#define APP_CLIENT2_CS_OutputEnable()      (PIOA_REGS->PIO_OER = ((uint32_t)1U<<2U))
+#define APP_CLIENT2_CS_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<2U))
+#define APP_CLIENT2_CS_Get()               ((PIOA_REGS->PIO_PDSR >> 2U) & 0x1U)
+#define APP_CLIENT2_CS_PIN                  PIO_PIN_PA2
 
 
 // *****************************************************************************

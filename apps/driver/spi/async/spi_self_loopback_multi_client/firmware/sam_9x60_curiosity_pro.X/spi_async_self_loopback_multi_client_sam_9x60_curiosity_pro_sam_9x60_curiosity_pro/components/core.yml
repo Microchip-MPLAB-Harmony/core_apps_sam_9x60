@@ -240,7 +240,7 @@ data:
       children:
       - children:
         - attributes:
-            value: APP_CLIENT2_CS
+            value: LED_BLUE
           type: User
         type: Values
       type: String
@@ -250,7 +250,7 @@ data:
       children:
       - children:
         - attributes:
-            value: GPIO
+            value: LED_AH
           type: User
         type: Values
       type: String
@@ -260,7 +260,7 @@ data:
       children:
       - children:
         - attributes:
-            value: High
+            value: ''
           type: User
         type: Values
       type: String
@@ -270,7 +270,7 @@ data:
       children:
       - children:
         - attributes:
-            value: GPIO
+            value: LED_AH
           type: User
         type: Values
       type: String
@@ -303,7 +303,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '16384'
+            value: '16388'
           type: Dynamic
         type: Values
       type: Hex
@@ -325,7 +325,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '16384'
+            value: '16388'
           type: Dynamic
         type: Values
       type: Hex
@@ -380,7 +380,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '8192'
+            value: '0'
           type: Dynamic
         type: Values
       type: Hex
@@ -406,6 +406,66 @@ data:
           type: Dynamic
         type: Values
       type: Hex
+    PIN_4_DIR:
+      attributes:
+        id: PIN_4_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_185_FUNCTION_TYPE:
+      attributes:
+        id: PIN_185_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_185_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_185_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_185_FUNCTION_NAME:
+      attributes:
+        id: PIN_185_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: APP_CLIENT2_CS
+          type: User
+        type: Values
+      type: String
+    PIN_185_DIR:
+      attributes:
+        id: PIN_185_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_185_LAT:
+      attributes:
+        id: PIN_185_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
   userData:
     children:
     - attributes:
