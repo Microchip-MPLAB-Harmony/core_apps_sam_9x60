@@ -61,4 +61,37 @@ data:
           type: Dynamic
         type: Values
       type: Boolean
+    SDMMC_HCLOCK_FREQ:
+      attributes:
+        id: SDMMC_HCLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: sdmmc0
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC_BASECLK_FREQ:
+      attributes:
+        id: SDMMC_BASECLK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: sdmmc0
+            value: '50000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC_MULTCLK_FREQ:
+      attributes:
+        id: SDMMC_MULTCLK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: sdmmc0
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
   userData: {}

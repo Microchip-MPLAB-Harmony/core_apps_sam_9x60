@@ -213,16 +213,16 @@
                      displayName="sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/sys_time.yml</itemPath>
-          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/drv_sdmmc.yml</itemPath>
-          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/tc0.yml</itemPath>
           <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/BSP_SAM_9X60_Evaluation_Kit.yml</itemPath>
           <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/drv_sdmmc_0.yml</itemPath>
           <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/dbgu.yml</itemPath>
+          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/tc0.yml</itemPath>
+          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/sys_time.yml</itemPath>
+          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/drv_sdmmc.yml</itemPath>
           <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/HarmonyCore.yml</itemPath>
           <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/sdmmc0.yml</itemPath>
-          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/BSP_SAM_9X60_Evaluation_Kit.yml</itemPath>
-          <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/dfp.yml</itemPath>
           <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/components/stdio.yml</itemPath>
         </logicalFolder>
         <itemPath>sdio_read_write_sam_9x60_curiosity_pro_sam_9x60_curiosity_pro/mcc-config.mc4</itemPath>

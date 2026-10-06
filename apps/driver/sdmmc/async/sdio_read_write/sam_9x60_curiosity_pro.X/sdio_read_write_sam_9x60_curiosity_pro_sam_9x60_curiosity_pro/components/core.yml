@@ -574,6 +574,80 @@ data:
           type: User
         type: Values
       type: String
+    SDMMC0_CLOCK_FREQUENCY:
+      attributes:
+        id: SDMMC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_BASECLK_FREQUENCY:
+      attributes:
+        id: SDMMC0_BASECLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '50000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_MULTCLK_FREQUENCY:
+      attributes:
+        id: SDMMC0_MULTCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_GCLK_FREQUENCY:
+      attributes:
+        id: SDMMC0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_SDMMC0_GCLKEN:
+      attributes:
+        id: CLK_SDMMC0_GCLKEN
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    CLK_SDMMC0_GCLKCSS:
+      attributes:
+        id: CLK_SDMMC0_GCLKCSS
+      children:
+      - children:
+        - attributes:
+            value: '4'
+          type: User
+        type: Values
+      type: KeyValueSet
+    CLK_SDMMC0_GCLKDIV:
+      attributes:
+        id: CLK_SDMMC0_GCLKDIV
+      children:
+      - children:
+        - attributes:
+            value: '5'
+          type: User
+        type: Values
+      type: Integer
   userData:
     children:
     - attributes:
