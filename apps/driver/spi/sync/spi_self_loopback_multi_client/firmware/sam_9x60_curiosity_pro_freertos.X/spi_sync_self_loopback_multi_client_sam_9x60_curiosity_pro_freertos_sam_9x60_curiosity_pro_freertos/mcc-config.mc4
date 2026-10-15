@@ -26,7 +26,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\bsp\bsp.c
   hash: 2b9a75a0e831af6b21b257bc43585098657e6c43e7eb02521f95e9a393618196
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\bsp\bsp.h
-  hash: d582134ab9c2ac3b86b77a7d6c5d3d76c179eddf869519c1879393fb7054396b
+  hash: 0bc1ee0af789487f3113916f15c3bc0009b5466c3940c7a1bce4da3bba4c0e95
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\configuration.h
   hash: 2ec2d827961c45a232cf80707c5671e17e0a7e1d1cc46875c3777687486f30ff
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\cstartup.S
@@ -90,15 +90,15 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\mmu\plib_mmu.h
   hash: 7fb6e6b8ad6a80b7fc04c0264b7cdf49e6d6b887e4f3c5aa394eda88e32e0116
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pio\plib_pio.c
-  hash: 2ab8d7d1cbfa1ec2d4d556c7eca5e183e726666006e403bcd5e5d61386b12ee9
+  hash: f525db5d3f5b18891ec3f8fae3360a8687f6a8ac573270965e1b5caf3c7faae7
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pio\plib_pio.h
-  hash: d09174be3ab69249bbd4a294d51888f4b27e5025a35a7a1e8c099b8a316319eb
+  hash: fa65b238630f0536bbf74ef8f147a3192fb6190b0d00fae1104ef776acd1a3e0
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pit\plib_pit.c
   hash: 28e49c0ff6e3eacd2f343aac3e8c2a52ee0f4d313ace921cd88afc397e7d34be
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pit\plib_pit.h
   hash: 05552497ada087ffbfbcf7190aa4ac216399c208c72f8014c207c01c074dafa0
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\pin_configurations.csv
-  hash: 468530b3805502f47f0ed038d023146be0f938b47e918db54563ec243c2e5a46
+  hash: 3cbd2072f34197f81fb9044991db68d21dd8e8008dcdd8fc91f1e0e0e7daea06
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\stdio\xc32_monitor.c
   hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\sys_tasks.h

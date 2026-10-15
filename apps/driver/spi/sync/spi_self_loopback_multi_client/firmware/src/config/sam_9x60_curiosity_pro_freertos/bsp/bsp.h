@@ -67,6 +67,10 @@
 #define LED_GREEN_Toggle() (PIOB_REGS->PIO_ODSR ^= (1UL<<12))
 #define LED_GREEN_On() (PIOB_REGS->PIO_SODR = (1UL<<12))
 #define LED_GREEN_Off() (PIOB_REGS->PIO_CODR = (1UL<<12))
+/*** SWITCH Macros for LED_BLUE ***/
+#define LED_BLUE_Get() ((PIOB_REGS->PIO_PDSR >> 13) & 0x1U)
+#define LED_BLUE_STATE_PRESSED 1
+#define LED_BLUE_STATE_RELEASED 0
 /*** SWITCH Macros for SW1 ***/
 #define SW1_Get() ((PIOD_REGS->PIO_PDSR >> 18) & 0x1U)
 #define SW1_STATE_PRESSED 0
