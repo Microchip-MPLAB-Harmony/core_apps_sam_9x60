@@ -1,7 +1,7 @@
 "Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Slew Rate Control,Drive Strength
 A2,PB9,,Available,In,,,,,,,,
 A3,PB10,,Available,In,,,,,,,,
-A4,PB13,APP_CLIENT2_CS,GPIO,Out,High,No,Disabled,No,No,Disabled,No,Low
+A4,PB13,,Available,In,,,,,,,,
 A5,PB7,,Available,In,,,,,,,,
 A6,PB20,,Available,In,,,,,,,,
 A7,PB21,,Available,In,,,,,,,,
@@ -89,7 +89,7 @@ N9,PC28,,Available,In,,,,,,,,
 N11,PD5,,Available,In,,,,,,,,
 N14,PD3,,Available,In,,,,,,,,
 N16,PD17,,Available,In,,,,,,,,
-P1,PA2,,Available,In,,,,,,,,
+P1,PA2,APP_CLIENT2_CS,GPIO,Out,High,No,Disabled,No,No,Disabled,No,Low
 P2,PA0,,Available,In,,,,,,,,
 P4,PC1,,Available,In,,,,,,,,
 P5,PC3,,Available,In,,,,,,,,

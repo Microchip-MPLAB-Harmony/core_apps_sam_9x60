@@ -90,15 +90,15 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\mmu\plib_mmu.h
   hash: 7fb6e6b8ad6a80b7fc04c0264b7cdf49e6d6b887e4f3c5aa394eda88e32e0116
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pio\plib_pio.c
-  hash: 567c45e53d762018bac1af4179df3fda0c6f24b3a909d505e3119531e8470dbd
+  hash: 4be11aaead2292d52bbf473c7c6d8491b6dc36bceedca1023d5cc3a52ed0d547
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pio\plib_pio.h
-  hash: 4749d6a672b88d9f801bc4ece719f91c2d74567d4c52f0ec457cdde992846b84
+  hash: 0b35922e7d2bbd9a4a7ed460ea970647eb90e379f4d5eb72e466119ae06ae196
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pit\plib_pit.c
   hash: 28e49c0ff6e3eacd2f343aac3e8c2a52ee0f4d313ace921cd88afc397e7d34be
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\peripheral\pit\plib_pit.h
   hash: 05552497ada087ffbfbcf7190aa4ac216399c208c72f8014c207c01c074dafa0
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\pin_configurations.csv
-  hash: 7c379a36f629ac298ec33a609277349d4c8a6189797544cbd47ecf76b701e1dd
+  hash: bc3de71a3da2f0c57801e26c0d0835b3353b38695703f4249b475319fc4eee0f
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\stdio\xc32_monitor.c
   hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\sys_tasks.h
