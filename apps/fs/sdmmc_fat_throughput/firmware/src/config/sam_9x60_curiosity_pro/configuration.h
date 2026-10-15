@@ -90,7 +90,7 @@ extern "C" {
 #define SYS_FS_MAX_FILES                  (1U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (512U)
 #define SYS_FS_USE_LFN                    (1)
 #define SYS_FS_FILE_NAME_LEN              (255U)
 #define SYS_FS_CWD_STRING_LEN             (1024)

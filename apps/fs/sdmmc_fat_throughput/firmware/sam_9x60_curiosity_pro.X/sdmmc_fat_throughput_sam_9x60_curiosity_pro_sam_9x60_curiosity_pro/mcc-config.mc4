@@ -1,5 +1,5 @@
 configVersion: 1.0.0
-coreVersion: 5.8.4
+coreVersion: 5.9.0
 spaHostVersion: 1.2.1
 device: SAM9X60
 deviceLibrary: {}
@@ -25,13 +25,13 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\bsp\bsp.h
   hash: 994c6468fd27c7223b32488b0b90fa44ebd857b585aca74a4c89f416b7b8ee05
 - file: ..\src\config\sam_9x60_curiosity_pro\configuration.h
-  hash: 613779187299d84a92f6fb3c5142fcd90bf31c3691709d1995a3a0ee3dcfcf53
+  hash: 1fc051f2e8f0bac19e3d106e0d8511f829174ccdc17763b899c51cb517fa2180
 - file: ..\src\config\sam_9x60_curiosity_pro\cstartup.S
   hash: bab52b245ee3ee78ff26156c06ac67761ea78039030859fa772ece111fd5dab3
 - file: ..\src\config\sam_9x60_curiosity_pro\ddram.ld
   hash: 6726b057f4693885faf7e71c8cfe44e210a9ae72e9af402661357fdf82e47276
 - file: ..\src\config\sam_9x60_curiosity_pro\definitions.h
-  hash: 677b2b720e487d0b35e4777875512a43e6c0f0e406bcf78052dd9cdb170c9161
+  hash: 605b501e34be15c507d92228d59e37c57697e7ab24f26ab45f6aaf235f9226a5
 - file: ..\src\config\sam_9x60_curiosity_pro\device.h
   hash: 921233cd30258b2ffd44b6086dc807be0918329627d862f645fb4c83806c5227
 - file: ..\src\config\sam_9x60_curiosity_pro\device_cache.h
@@ -55,7 +55,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\fault_handlers.c
   hash: 931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c
 - file: ..\src\config\sam_9x60_curiosity_pro\initialization.c
-  hash: 7bde4486b1bc64047cd136f92358c1a2dac3da3427fb72981e29f3c7d6422162
+  hash: 9035d139221565ddec1d230010cdbb578308e7ad9b78452029edc07ca5d48bb7
 - file: ..\src\config\sam_9x60_curiosity_pro\interrupts.c
   hash: 3f257c1c617c901d65c7a959e95e16fa3baaacb7c3667d18059a321a4dbab6bf
 - file: ..\src\config\sam_9x60_curiosity_pro\interrupts.h
@@ -127,7 +127,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\fat_fs\hardware_access\diskio.h
   hash: eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\src\sys_fs.c
-  hash: 88a754c3218872fe4110b62b29cd9f2991ab16e532572b4207a6511c0f2ac5d0
+  hash: 82eec4c8191b40428b14b5fb805a0ac2e36fe802ba04744188cd86e57769fe6b
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\src\sys_fs_fat_interface.c
   hash: 3f9af79a4b9c76ae7216556056916b802642e0dc28755f394ff4da4f55615805
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\src\sys_fs_local.h
