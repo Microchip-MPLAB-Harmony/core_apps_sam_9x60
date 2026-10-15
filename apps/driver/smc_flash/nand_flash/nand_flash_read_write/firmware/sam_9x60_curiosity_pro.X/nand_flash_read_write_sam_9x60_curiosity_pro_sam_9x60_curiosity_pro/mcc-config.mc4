@@ -1,5 +1,5 @@
 configVersion: 1.0.0
-coreVersion: 5.8.4
+coreVersion: 5.9.0
 spaHostVersion: 1.2.1
 device: SAM9X60
 deviceLibrary: {}
@@ -19,13 +19,13 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\bsp\bsp.h
   hash: 994c6468fd27c7223b32488b0b90fa44ebd857b585aca74a4c89f416b7b8ee05
 - file: ..\src\config\sam_9x60_curiosity_pro\configuration.h
-  hash: 85760c01e827000a05708103f2dbd119331534ec9ecff6a7454b391bcc2d8a4b
+  hash: 19dc900dc1a70974f86773cb860f1a30a63cbfad9b733c4a0f53bfc64433e8f0
 - file: ..\src\config\sam_9x60_curiosity_pro\cstartup.S
   hash: bab52b245ee3ee78ff26156c06ac67761ea78039030859fa772ece111fd5dab3
 - file: ..\src\config\sam_9x60_curiosity_pro\ddram.ld
   hash: 6726b057f4693885faf7e71c8cfe44e210a9ae72e9af402661357fdf82e47276
 - file: ..\src\config\sam_9x60_curiosity_pro\definitions.h
-  hash: 23cfc98fbcf4c406937afdc17f84e6ad0266461d9ac982e6844183ada2b70dd1
+  hash: 92dee6ec5fbea5bc590aab11287be934d7a63411008cb5a82151e56aef7c0041
 - file: ..\src\config\sam_9x60_curiosity_pro\device.h
   hash: 921233cd30258b2ffd44b6086dc807be0918329627d862f645fb4c83806c5227
 - file: ..\src\config\sam_9x60_curiosity_pro\device_cache.h
@@ -39,11 +39,11 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\driver\smc_flash\nand_flash\drv_nand_flash_definitions.h
   hash: 122d521e2683f7ad0bfb3f0d613842d29d83ca08c1770236676d9ed652cde588
 - file: ..\src\config\sam_9x60_curiosity_pro\driver\smc_flash\nand_flash\src\drv_nand_flash.c
-  hash: 7ee2d63f56252043779ff2252a38c62714f4975bd55bb1bc1dfafb8f209598ca
+  hash: 488a281b930e1126247ede4c230587cb372144f2a93aad6ddba9402ebbed1280
 - file: ..\src\config\sam_9x60_curiosity_pro\driver\smc_flash\nand_flash\src\drv_nand_flash_local.h
   hash: 96762e9a2a6ed02cca0ed3a38c437a6b07b9bd8e0ee1e25546979a8edbfa63e2
 - file: ..\src\config\sam_9x60_curiosity_pro\driver\smc_flash\nand_flash\src\drv_nand_flash_pmecc.c
-  hash: 88dd1241c61cfec3bb659e3a61df7484cb50db5f785b09501e527a60db5cbdbe
+  hash: dc99cc8b51d341bbd2cc8475835e740ae39627cd68cd0a83214f301bafee8a03
 - file: ..\src\config\sam_9x60_curiosity_pro\driver\smc_flash\nand_flash\src\drv_nand_flash_pmecc.h
   hash: 67fb1b72019d73357fc49cec85e4292f49565356e52266e8ac0b0111e0534801
 - file: ..\src\config\sam_9x60_curiosity_pro\fault_handlers.c

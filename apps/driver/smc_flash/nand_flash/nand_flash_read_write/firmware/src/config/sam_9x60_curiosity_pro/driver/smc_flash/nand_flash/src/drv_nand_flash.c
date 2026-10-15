@@ -50,6 +50,8 @@
 #include "driver/smc_flash/nand_flash/src/drv_nand_flash_local.h"
 #include "driver/smc_flash/nand_flash/src/drv_nand_flash_pmecc.h"
 
+/* MISRAC 2023 deviation block start */
+/* MISRA C-2023 Rule 10.8 deviated in this file. Deviation record ID - H3_MISRAC_2023_R_10_8_DR_1 */
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global objects
@@ -345,7 +347,7 @@ static bool DRV_NAND_FLASH_PageReadPmecc(const DRV_HANDLE handle, uint16_t block
 
         /* Read data page */
         DRV_NAND_FLASH_DataRead(gDrvNandFlashData.dataAddress, data,
-        (gDrvNandFlashData.nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE));
+        (gDrvNandFlashData.nandFlashGeometry.pageSize + DRV_NAND_FLASH_PMECC_ECC_START_ADDR + DRV_NAND_FLASH_PMECC_ECC_SIZE));
 
         /* Wait until PMECC is not busy */
         while (gDrvNandFlashObj.nandFlashPlib->StatusIsBusy() == true)
@@ -460,15 +462,15 @@ static bool DRV_NAND_FLASH_PageWriteWithPMECC(const DRV_HANDLE handle, uint16_t 
     /* Read all ECC registers */
     for (count = 0; count < (uint32_t)DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS; count++)
     {
-        for (byteIndex = 0; byteIndex < ((uint32_t)DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE / (uint32_t)DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS); byteIndex++)
+        for (byteIndex = 0; byteIndex < ((uint32_t)DRV_NAND_FLASH_PMECC_ECC_SIZE / (uint32_t)DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS); byteIndex++)
         {
-            gDrvNandFlashData.spareBuffer[(count * ((uint32_t)DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE / (uint32_t)DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS)) + byteIndex] =
+            gDrvNandFlashData.spareBuffer[(count * ((uint32_t)DRV_NAND_FLASH_PMECC_ECC_SIZE / (uint32_t)DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS)) + byteIndex] =
             gDrvNandFlashObj.nandFlashPlib->ECCGet(count, byteIndex);
         }
     }
 
     /* Write spare page */
-    DRV_NAND_FLASH_DataWrite(gDrvNandFlashData.dataAddress, gDrvNandFlashData.spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE);
+    DRV_NAND_FLASH_DataWrite(gDrvNandFlashData.dataAddress, gDrvNandFlashData.spareBuffer, DRV_NAND_FLASH_PMECC_ECC_SIZE);
 
     /* Send page program command for cycle 2 */
     gDrvNandFlashObj.nandFlashPlib->CommandWrite(gDrvNandFlashData.dataAddress, NAND_FLASH_CMD_PAGE_PROGRAM2);
@@ -1055,3 +1057,4 @@ SYS_STATUS DRV_NAND_FLASH_Status( const SYS_MODULE_INDEX drvIndex )
     /* Return the driver status */
     return (gDrvNandFlashObj.status);
 }
+/* MISRAC 2023 deviation block end */
