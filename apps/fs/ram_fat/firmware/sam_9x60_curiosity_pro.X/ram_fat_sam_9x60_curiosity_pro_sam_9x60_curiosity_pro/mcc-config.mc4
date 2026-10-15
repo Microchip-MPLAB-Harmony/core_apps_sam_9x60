@@ -113,7 +113,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\fat_fs\hardware_access\diskio.h
   hash: eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\src\sys_fs.c
-  hash: 88a754c3218872fe4110b62b29cd9f2991ab16e532572b4207a6511c0f2ac5d0
+  hash: 82eec4c8191b40428b14b5fb805a0ac2e36fe802ba04744188cd86e57769fe6b
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\src\sys_fs_fat_interface.c
   hash: 3f9af79a4b9c76ae7216556056916b802642e0dc28755f394ff4da4f55615805
 - file: ..\src\config\sam_9x60_curiosity_pro\system\fs\src\sys_fs_local.h
