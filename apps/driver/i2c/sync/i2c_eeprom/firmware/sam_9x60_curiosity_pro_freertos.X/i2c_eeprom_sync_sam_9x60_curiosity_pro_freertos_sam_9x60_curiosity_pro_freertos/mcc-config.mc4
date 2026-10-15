@@ -1,5 +1,5 @@
 configVersion: 1.0.0
-coreVersion: 5.8.4
+coreVersion: 5.9.0
 spaHostVersion: 1.2.1
 device: SAM9X60
 deviceLibrary: {}
@@ -30,7 +30,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\ddram.ld
   hash: 6726b057f4693885faf7e71c8cfe44e210a9ae72e9af402661357fdf82e47276
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\definitions.h
-  hash: c6db3dbaae2ec9b9a1a090e4881c8567ad0e7a70f6937b31d5dc54401e47efb5
+  hash: 74e241005416223344eb8b7d5486d0d562231544e2853258ced810d4ee56b65f
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\device.h
   hash: 921233cd30258b2ffd44b6086dc807be0918329627d862f645fb4c83806c5227
 - file: ..\src\config\sam_9x60_curiosity_pro_freertos\device_cache.h
