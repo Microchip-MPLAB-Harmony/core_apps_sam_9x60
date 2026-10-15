@@ -63,10 +63,6 @@
 #define sam_9x60_ek
 #define BSP_NAME             "sam_9x60_ek"
 
-/*** LED Macros for LED_BLUE ***/
-#define LED_BLUE_Toggle() (PIOB_REGS->PIO_ODSR ^= (1UL<<13))
-#define LED_BLUE_On() (PIOB_REGS->PIO_SODR = (1UL<<13))
-#define LED_BLUE_Off() (PIOB_REGS->PIO_CODR = (1UL<<13))
 /*** LED Macros for LED_GREEN ***/
 #define LED_GREEN_Toggle() (PIOB_REGS->PIO_ODSR ^= (1UL<<12))
 #define LED_GREEN_On() (PIOB_REGS->PIO_SODR = (1UL<<12))
