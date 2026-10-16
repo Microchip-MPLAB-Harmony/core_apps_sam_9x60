@@ -11,7 +11,7 @@ mcc_version: v5.7.0
 mcc_core_version: v5.9.0
 mplabx_version: v6.35        # if MPLAB X plugin only
 harmony_version: 1.7.0
-compiler: XC32 5.10
+compiler: XC32 6.00
 
 modules:
     - {name: "csp", version: "v3.26.1"}

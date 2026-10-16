@@ -7,7 +7,7 @@ operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.35
 device_name: SAM9X60
-compiler: XC32 5.10
+compiler: XC32 6.00
 mcc_version: 5.7.0
 mcc_core_version: 5.9.0
 content_manager_version: 7.0.0
